@@ -4,10 +4,7 @@
 
 
 <p>This project is currently in developing!</p>
-<br><br>
 <p>So errors are present!</p>
-<br><br>
 <p>Normally, we make Roblox Games. Now we will also work on minecraft modding.</p>
-<br><br>
+<br>
 <p>(We = I) Im currently alone :(</p>
-<br><br>
