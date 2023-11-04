@@ -1,3 +1,6 @@
+<p align="center" style="border: 1px; border-radius: 50%;"><img src="https://i.imgur.com/WY6UnXu.jpg" alt="Logo" width="200"></p>
+<h1 align="center">Redstone Utilz  <br></h1>
+
 This project is currently in developing!
 So errors are present!
 
