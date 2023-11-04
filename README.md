@@ -1,6 +1,7 @@
 <p align="center" style="border: 1px; border-radius: 50%;"><img src="https://i.imgur.com/WY6UnXu.jpg" alt="Logo" width="200"></p>
 <h1 align="center">Redstone Utilz  <br></h1>
 
+
 This project is currently in developing!
 So errors are present!
 
@@ -54,7 +55,7 @@ https://github.com/MinecraftForge/MCPConfig/blob/master/Mojang.md
 
 Additional Resources:
 =========================
-Community Documentation: https://mcforge.readthedocs.io/en/latest/gettingstarted/
-LexManos' Install Video: https://www.youtube.com/watch?v=8VEdtQLuLO0
-Forge Forum: https://forums.minecraftforge.net/
-Forge Discord: https://discord.gg/UvedJ9m
+<button href="https://mcforge.readthedocs.io/en/latest/gettingstarted/">Community Documentation</button>
+<button href="https://www.youtube.com/watch?v=8VEdtQLuLO0">LexManos' Install Video</button>
+<button href="https://forums.minecraftforge.net/">Forge Forum</button>
+<button href="https://discord.gg/UvedJ9m">Forge Discord</button>
