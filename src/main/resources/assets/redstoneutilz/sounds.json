@@ -1,0 +1,15 @@
+{
+  "howl_ore_finder_found": {
+    "subtitles": "sounds.werwolves.subtitle.howl_ore_finder_found",
+    "sounds": [
+      "werwolves:howl_ore_finder_found"
+    ]
+  },
+
+  "howl_ore_finder_notfound": {
+    "subtitles": "sounds.werwolves.subtitle.howl_ore_finder_notfound",
+    "sounds": [
+      "werwolves:howl_ore_finder_notfound"
+    ]
+  }
+}

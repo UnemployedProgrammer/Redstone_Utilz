@@ -23,7 +23,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-
+        this.dropSelf(ModBlocks.COPYCAT_BLOCK.get());
+        this.dropSelf(ModBlocks.COPYCAT_BUTTON.get());
     }
 
     protected LootTable.Builder createCopperLikeOreDrops(Block pBlock, Item item) {

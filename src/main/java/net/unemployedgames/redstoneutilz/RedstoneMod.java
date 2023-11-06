@@ -1,6 +1,8 @@
 package net.unemployedgames.redstoneutilz;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -11,6 +13,10 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.unemployedgames.redstoneutilz.block.ModBlocks;
+import net.unemployedgames.redstoneutilz.block.entities.RegisterBlockEntities;
+import net.unemployedgames.redstoneutilz.item.ModCreativeModTabs;
+import net.unemployedgames.redstoneutilz.item.ModItems;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -28,9 +34,12 @@ public class RedstoneMod
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        MinecraftForge.EVENT_BUS.register(this);
+        ModCreativeModTabs.register(modEventBus);
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+        RegisterBlockEntities.BLOCK_ENTITY_TYPE_DEFERRED_REGISTER.register(modEventBus);
 
-        // Register the item to a creative tab
+        MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
     }
 
@@ -61,6 +70,9 @@ public class RedstoneMod
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             // Some client setup code
+
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.COPYCAT_BLOCK.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.COPYCAT_BUTTON.get(), RenderType.translucent());
 
         }
     }

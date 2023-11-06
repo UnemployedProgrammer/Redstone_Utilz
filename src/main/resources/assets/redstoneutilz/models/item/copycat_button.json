@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "redstone_utilz:block/copycat_block"
+  }
+}

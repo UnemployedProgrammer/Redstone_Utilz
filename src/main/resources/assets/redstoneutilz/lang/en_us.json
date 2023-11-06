@@ -1,0 +1,11 @@
+{
+  "creativetab.redstone_utilz.main": "Redstone Utilz",
+
+  "ui.redstoneutilz.misc.done": "Done",
+  "ui.redstoneutilz.misc.close": "Close",
+  "ui.redstoneutilz.misc.error": "Error!",
+  "ui.redstoneutilz.copycatconfigurationscreen.title": "Configure Button",
+  "ui.redstoneutilz.copycatconfigurationscreen.components.slider_tickspressed.label": " Ticks Pressed",
+  "ui.redstoneutilz.copycatconfigurationscreen.components.slider_signalstrengh.label": " Output Redstone Strengh",
+  "ui.redstoneutilz.copycatconfigurationscreen.error_setfailed": "We are so sorry. It failed to set the slider values to the button data. Please try again! If it still  work, prese roport here: https://github.com/sebastianmueller1306/Redstone_Utilz/issues"
+}
