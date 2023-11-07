@@ -68,6 +68,12 @@ public class CopyCatButtonConfigurationScreen extends Screen {
 
     private void handleButtonConfirm(Button button) {
         try {
+            System.out.println("Set!");
+            System.out.println("Power:");
+            System.out.println(this.sliderButtonPowerStrengh.getValueInt());
+            System.out.println("Ticks:");
+            System.out.println(this.sliderButtonTickPressed.getValueInt());
+
             this.entity.setSignalstrengh(this.sliderButtonPowerStrengh.getValueInt());
             this.entity.setTicksdelayed(this.sliderButtonTickPressed.getValueInt());
         } catch (Exception e) {

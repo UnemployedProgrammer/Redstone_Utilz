@@ -6,6 +6,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
@@ -54,20 +55,16 @@ public class ConfigurableCustomButton extends ButtonBlockRedstoneMod implements 
         if (!(pHand == InteractionHand.MAIN_HAND)) return InteractionResult.PASS;
         if(pLevel.isClientSide()) {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
+            Boolean hasConfigItem;
             if(blockEntity instanceof ConfigurableCustomButtonEntity buttonEntity) {
-
-                if (pPlayer.isShiftKeyDown()) {
+                    hasConfigItem = pPlayer.getItemInHand(InteractionHand.MAIN_HAND).is(Items.REDSTONE);
+                if (hasConfigItem) {
                     DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> ClientHooks.openCopyCatButtonConfigurationScreen(pPos));
                     return InteractionResult.SUCCESS;
                 } else {
-                    if (pState.getValue(POWERED)) {
-                        return InteractionResult.CONSUME;
-                    } else {
-                        this.press(pState, pLevel, pPos);
-                        this.playSound(pPlayer, pLevel, pPos, true);
-                        pLevel.gameEvent(pPlayer, GameEvent.BLOCK_ACTIVATE, pPos);
-                        return InteractionResult.sidedSuccess(pLevel.isClientSide);
-                    }
+                    this.signalOutputStrengh = buttonEntity.getSignalstrengh();
+                    this.ticksToStayPressed = buttonEntity.getTicksdelayed();
+                    this.usebtn(pState, pLevel, pPos, pPlayer, pHand, pHit);
                 }
             }
         }

@@ -1,3 +1,11 @@
 {
-  "creativetab.redstone_utilz.main": "Redstone Utilz"
+  "creativetab.redstone_utilz.main": "Redstone Utilz",
+
+  "ui.redstoneutilz.misc.done": "Fertig",
+  "ui.redstoneutilz.misc.close": "Schließen",
+  "ui.redstoneutilz.misc.error": "Fehler!",
+  "ui.redstoneutilz.copycatconfigurationscreen.title": "Knopf Konfigurieren",
+  "ui.redstoneutilz.copycatconfigurationscreen.components.slider_tickspressed.label": " Ticks bleibt der Knopf Gedrückt",
+  "ui.redstoneutilz.copycatconfigurationscreen.components.slider_signalstrengh.label": " Ausgangssignalstärke",
+  "ui.redstoneutilz.copycatconfigurationscreen.error_setfailed": "Wir entschuldigen uns sehr! das setzen von den daten hat leider nicht geklappt. Bitte versuche es erneut! Wenn es immer noch nicht funktioniert, bitte melde das hier: https://github.com/sebastianmueller1306/Redstone_Utilz/issues"
 }

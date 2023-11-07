@@ -14,8 +14,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class ConfigurableCustomButtonEntity extends BlockEntity implements TickableBlockEntity {
-    private int ticksdelayed;
-    private int signalstrengh;
+    private int ticksdelayedl;
+    private int signalstrenghl;
     public ConfigurableCustomButtonEntity(BlockPos pPos, BlockState pBlockState) {
         super(RegisterBlockEntities.CONFIGURABLE_CUSTOM_BUTTON_ENTITY.get(), pPos, pBlockState);
     }
@@ -24,16 +24,16 @@ public class ConfigurableCustomButtonEntity extends BlockEntity implements Ticka
     public void load(@NotNull CompoundTag pTag) {
         super.load(pTag);
 
-        this.ticksdelayed = pTag.getInt("ticks_pressed");
-        this.signalstrengh = pTag.getInt("signal_strengh");
+        this.ticksdelayedl = pTag.getInt("ticks_pressed");
+        this.signalstrenghl = pTag.getInt("signal_strengh");
     }
 
     @Override
-    protected void saveAdditional(CompoundTag pTag) {
+    protected void saveAdditional(@NotNull CompoundTag pTag) {
         super.saveAdditional(pTag);
 
-        pTag.putInt("ticks_pressed", this.ticksdelayed);
-        pTag.putInt("signal_strengh", this.signalstrengh);
+        pTag.putInt("ticks_pressed", this.ticksdelayedl);
+        pTag.putInt("signal_strengh", this.signalstrenghl);
     }
 
     @Override
@@ -44,19 +44,21 @@ public class ConfigurableCustomButtonEntity extends BlockEntity implements Ticka
     }
 
     public int getTicksdelayed() {
-        return this.ticksdelayed;
+        return this.ticksdelayedl;
     }
     public int getSignalstrengh() {
-        return this.signalstrengh;
+        return this.signalstrenghl;
     }
 
-    public void setSignalstrengh(int signalstrengh) {
-        this.signalstrengh = signalstrengh;
+    public void setSignalstrengh(int ss) {
+        this.signalstrenghl = ss;
+        saveAdditional(this.getUpdateTag());
         setChanged();
     }
 
-    public void setTicksdelayed(int ticksdelayed) {
-        this.ticksdelayed = ticksdelayed;
+    public void setTicksdelayed(int td) {
+        this.ticksdelayedl = td;
+        saveAdditional(this.getUpdateTag());
         setChanged();
     }
 
@@ -76,12 +78,17 @@ public class ConfigurableCustomButtonEntity extends BlockEntity implements Ticka
         return ClientboundBlockEntityDataPacket.create(this);
     }
 
-   // @Override
-    //public void onDataPacket(Connection net, ClientboundBlockEntityDataPacket pkt) {
-        //this.ticksdelayed = pkt.getTag().getInt("ticks_pressed");
-        //this.signalstrengh = pkt.getTag().getInt("signal_strengh");
+    @Override
+    public void onDataPacket(Connection net, ClientboundBlockEntityDataPacket pkt) {
+        super.onDataPacket(net, pkt); // Call the superclass method to handle the default behavior.
 
-    //    handleUpdateTag(pkt.getTag());
-    //     load(pkt.getTag());
-    //}
+        CompoundTag tag = pkt.getTag();
+        this.ticksdelayedl = tag.getInt("ticks_pressed");
+        this.signalstrenghl = tag.getInt("signal_strengh");
+    }
+
+    @Override
+    public void handleUpdateTag(CompoundTag tag) {
+        load(tag);
+    }
 }

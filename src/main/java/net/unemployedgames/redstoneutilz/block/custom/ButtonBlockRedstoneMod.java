@@ -107,7 +107,7 @@ public class ButtonBlockRedstoneMod extends FaceAttachedHorizontalDirectionalBlo
             }
         }
 
-        public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
+        public InteractionResult usebtn(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
             if (pState.getValue(POWERED)) {
                 return InteractionResult.CONSUME;
             } else {
