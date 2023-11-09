@@ -6,10 +6,15 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -33,6 +38,7 @@ public class ConfigurableCustomButton extends ButtonBlockRedstoneMod implements 
     //public static final IntegerProperty SignalStrengh = IntegerProperty.create("signal_strengh", 1, 15);
     public static final EnumProperty<Wood_Types_Vanilla> TYPE = EnumProperty.create("wood_type", Wood_Types_Vanilla.class);
     public static enum Wood_Types_Vanilla implements StringRepresentable {
+        NOT_SET("not_set"),
         OAK("oak"),
         SPRUCE("spruce"),
         BIRCH("birch"),
@@ -98,13 +104,140 @@ public class ConfigurableCustomButton extends ButtonBlockRedstoneMod implements 
                 this.signalStrengh = buttonEntity.getSignalstrengh();
                 this.ticksToStayPressed = buttonEntity.getTicksdelayed();
                 hasConfigItem = pPlayer.getItemInHand(InteractionHand.MAIN_HAND).is(Items.REDSTONE);
-                if (!hasConfigItem) {
+                if (!hasConfigItem && getWoodTypeFromPlayerHandString(pPlayer, pHand) == "_") {
                     super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
                     System.out.println("Button Vals, S: " + this.signalStrengh + " | T: " + this.ticksToStayPressed);
+                } else if(!(getWoodTypeFromPlayerHandString(pPlayer, pHand) == "_")) {
+                    System.out.println("Got here!");
+                    String strtype = getWoodTypeFromPlayerHandString(pPlayer, pHand);
+                    dropItemFromLast(pState, pPos, pLevel, getBlockStateType(pState, pPos, pLevel));
+                    System.out.println("2");
+                    if(strtype == Wood_Types_Vanilla.OAK.name) {
+                        updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.OAK);
+                        System.out.println("OAK");
+                    }
+                    if(strtype == Wood_Types_Vanilla.SPRUCE.name) {
+                        updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.SPRUCE);
+                        System.out.println("SPRUCE");
+                    }
+                    if(strtype == Wood_Types_Vanilla.BIRCH.name) {
+                        updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.BIRCH);
+                    }
+                    if(strtype == Wood_Types_Vanilla.JUNGLE.name) {
+                        updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.JUNGLE);
+                    }
+                    if(strtype == Wood_Types_Vanilla.ACACIA.name) {
+                        updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.ACACIA);
+                    }
+                    if(strtype == Wood_Types_Vanilla.DARK_OAK.name) {
+                        updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.DARK_OAK);
+                    }
+                    if(strtype == Wood_Types_Vanilla.MANGROVE.name) {
+                        updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.MANGROVE);
+                    }
+                    if(strtype == Wood_Types_Vanilla.CHERRY.name) {
+                        updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.CHERRY);
+                    }
+                    if(strtype == Wood_Types_Vanilla.CRIMSON.name) {
+                        updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.CRIMSON);
+                    }
+                    if(strtype == Wood_Types_Vanilla.WARPED.name) {
+                        updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.WARPED);
+                    }
+                    if(strtype == Wood_Types_Vanilla.NOT_SET.name) {
+                        updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.NOT_SET);
+                    }
                 }
             }
+
         }
-        return InteractionResult.PASS;
+        return InteractionResult.CONSUME;
+    }
+
+    public static void updateBlockState(BlockState blockState, BlockPos blockPos, Level world, Wood_Types_Vanilla val) {
+        BlockState newblockstate = blockState.setValue(TYPE, val);
+        world.setBlockAndUpdate(blockPos, newblockstate);
+    }
+    public static Wood_Types_Vanilla getBlockStateType(BlockState blockState, BlockPos blockPos, Level world) {
+        Wood_Types_Vanilla newblockstate = blockState.getValue(TYPE);
+        return newblockstate;
+    }
+
+    public static void dropItemFromLast(BlockState blockState, BlockPos blockPos, Level world, Wood_Types_Vanilla val) {
+        ItemStack itemStack = null;
+        ItemEntity item = null;
+
+        if(val == Wood_Types_Vanilla.OAK)
+            itemStack = new ItemStack(Blocks.OAK_LOG);
+        if(val == Wood_Types_Vanilla.SPRUCE)
+            itemStack = new ItemStack(Blocks.SPRUCE_LOG);
+        if(val == Wood_Types_Vanilla.BIRCH)
+            itemStack = new ItemStack(Blocks.BIRCH_LOG);
+        if(val == Wood_Types_Vanilla.JUNGLE)
+            itemStack = new ItemStack(Blocks.JUNGLE_LOG);
+        if(val == Wood_Types_Vanilla.ACACIA)
+            itemStack = new ItemStack(Blocks.ACACIA_LOG);
+        if(val == Wood_Types_Vanilla.DARK_OAK)
+            itemStack = new ItemStack(Blocks.DARK_OAK_LOG);
+        if(val == Wood_Types_Vanilla.MANGROVE)
+            itemStack = new ItemStack(Blocks.MANGROVE_LOG);
+        if(val == Wood_Types_Vanilla.CHERRY)
+            itemStack = new ItemStack(Blocks.CHERRY_LOG);
+        if(val == Wood_Types_Vanilla.CRIMSON)
+            itemStack = new ItemStack(Blocks.CRIMSON_STEM);
+        if(val == Wood_Types_Vanilla.WARPED)
+            itemStack = new ItemStack(Blocks.WARPED_STEM);
+
+        if(itemStack != new ItemStack(Items.DIRT))
+            item = new ItemEntity(world, blockPos.getX() + 0.5, blockPos.getY(), blockPos.getZ() + 0.5, itemStack);
+
+
+        if(!(null == item)&&!(null == itemStack)){
+            item = new ItemEntity(world, blockPos.getX() + 0.5, blockPos.getY(), blockPos.getZ() + 0.5, itemStack);
+            item.setDeltaMovement(0, 0.2, 0);
+            world.addFreshEntity(item);
+        }
+    }
+
+    public static String getWoodTypeFromPlayerHandString(Player pPlayer, InteractionHand pHand) {
+        String output = "_";
+
+        if (pPlayer.getItemInHand(pHand).getItem() instanceof BlockItem blockItem) {
+            if (blockItem.getBlock() == Blocks.OAK_LOG) {
+                output = "oak";
+            }
+            if (blockItem.getBlock() == Blocks.SPRUCE_LOG) {
+                output = "spruce";
+            }
+            if (blockItem.getBlock() == Blocks.BIRCH_LOG) {
+                output = "birch";
+            }
+            if (blockItem.getBlock() == Blocks.JUNGLE_LOG) {
+                output = "jungle";
+            }
+            if (blockItem.getBlock() == Blocks.ACACIA_LOG) {
+                output = "acacia";
+            }
+            if (blockItem.getBlock() == Blocks.DARK_OAK_LOG) {
+                output = "darkoak";
+            }
+            if (blockItem.getBlock() == Blocks.MANGROVE_LOG) {
+                output = "mangrove";
+            }
+            if (blockItem.getBlock() == Blocks.CHERRY_LOG) {
+                output = "cherry";
+            }
+            if (blockItem.getBlock() == Blocks.CRIMSON_STEM) {
+                output = "crimson";
+            }
+            if (blockItem.getBlock() == Blocks.WARPED_STEM) {
+                output = "warped";
+            }
+            if (pPlayer.getItemInHand(pHand).getItem().asItem().equals(Items.AIR)) {
+                output = "not_set";
+            }
+        }
+        return output;
     }
 
     private void setStrengh(ConfigurableCustomButtonEntity configurableCustomButtonEntity, int strengh) {
