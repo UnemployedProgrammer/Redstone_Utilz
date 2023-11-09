@@ -52,13 +52,11 @@ public class ConfigurableCustomButtonEntity extends BlockEntity implements Ticka
 
     public void setSignalstrengh(int ss) {
         this.signalstrenghl = ss;
-        saveAdditional(this.getUpdateTag());
         setChanged();
     }
 
     public void setTicksdelayed(int td) {
         this.ticksdelayedl = td;
-        saveAdditional(this.getUpdateTag());
         setChanged();
     }
 

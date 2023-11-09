@@ -3,6 +3,7 @@ package net.unemployedgames.redstoneutilz.block.entities;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -29,8 +30,32 @@ import org.jetbrains.annotations.Nullable;
 
 public class ConfigurableCustomButton extends ButtonBlockRedstoneMod implements EntityBlock {
 
-    //public static final IntegerProperty TicksPressed = IntegerProperty.create("ticks_pressed", 10, 3600);
     //public static final IntegerProperty SignalStrengh = IntegerProperty.create("signal_strengh", 1, 15);
+    public static final EnumProperty<Wood_Types_Vanilla> TYPE = EnumProperty.create("wood_type", Wood_Types_Vanilla.class);
+    public static enum Wood_Types_Vanilla implements StringRepresentable {
+        OAK("oak"),
+        SPRUCE("spruce"),
+        BIRCH("birch"),
+        JUNGLE("jungle"),
+        ACACIA("acacia"),
+        DARK_OAK("darkoak"),
+        MANGROVE("mangrove"),
+        CHERRY("cherry"),
+        CRIMSON("crimson"),
+        WARPED("warped")
+        ;
+
+        private final String name;
+
+        @Override
+        public String getSerializedName() {
+            return this.name;
+        }
+        Wood_Types_Vanilla(String name) {
+            this.name = name;
+        }
+    }
+
 
     public ConfigurableCustomButton(Properties pProperties, BlockSetType pType, int pTicksToStayPressed, boolean pArrowsCanPress) {
         super(pProperties, pType, pTicksToStayPressed, pArrowsCanPress);
@@ -48,6 +73,7 @@ public class ConfigurableCustomButton extends ButtonBlockRedstoneMod implements 
 
         //pBuilder.add(TicksPressed);
         //pBuilder.add(SignalStrengh);
+        pBuilder.add(TYPE);
     }
 
     @Override
@@ -57,14 +83,24 @@ public class ConfigurableCustomButton extends ButtonBlockRedstoneMod implements 
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
             Boolean hasConfigItem;
             if(blockEntity instanceof ConfigurableCustomButtonEntity buttonEntity) {
-                    hasConfigItem = pPlayer.getItemInHand(InteractionHand.MAIN_HAND).is(Items.REDSTONE);
+                this.signalStrengh = buttonEntity.getSignalstrengh();
+                this.ticksToStayPressed = buttonEntity.getTicksdelayed();
+                hasConfigItem = pPlayer.getItemInHand(InteractionHand.MAIN_HAND).is(Items.REDSTONE);
                 if (hasConfigItem) {
                     DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> ClientHooks.openCopyCatButtonConfigurationScreen(pPos));
                     return InteractionResult.SUCCESS;
-                } else {
-                    this.signalOutputStrengh = buttonEntity.getSignalstrengh();
-                    this.ticksToStayPressed = buttonEntity.getTicksdelayed();
-                    this.usebtn(pState, pLevel, pPos, pPlayer, pHand, pHit);
+                }
+            }
+        } else {
+            BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
+            Boolean hasConfigItem;
+            if(blockEntity instanceof ConfigurableCustomButtonEntity buttonEntity) {
+                this.signalStrengh = buttonEntity.getSignalstrengh();
+                this.ticksToStayPressed = buttonEntity.getTicksdelayed();
+                hasConfigItem = pPlayer.getItemInHand(InteractionHand.MAIN_HAND).is(Items.REDSTONE);
+                if (!hasConfigItem) {
+                    super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
+                    System.out.println("Button Vals, S: " + this.signalStrengh + " | T: " + this.ticksToStayPressed);
                 }
             }
         }
@@ -73,7 +109,7 @@ public class ConfigurableCustomButton extends ButtonBlockRedstoneMod implements 
 
     private void setStrengh(ConfigurableCustomButtonEntity configurableCustomButtonEntity, int strengh) {
         configurableCustomButtonEntity.setSignalstrengh(strengh);
-        signalOutputStrengh = strengh;
+        signalStrengh = strengh;
     }
 
     private void setTicksStayPressed(ConfigurableCustomButtonEntity configurableCustomButtonEntity, int ticksstaypressed) {

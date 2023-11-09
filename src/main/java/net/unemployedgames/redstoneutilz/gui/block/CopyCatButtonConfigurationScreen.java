@@ -6,6 +6,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractSliderButton;
 import net.minecraft.client.gui.components.AbstractWidget;
 import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.client.gui.screens.AlertScreen;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
@@ -18,7 +19,11 @@ import net.minecraftforge.client.gui.widget.ForgeSlider;
 import net.minecraftforge.client.gui.widget.ScrollPanel;
 import net.unemployedgames.redstoneutilz.RedstoneMod;
 import net.unemployedgames.redstoneutilz.block.entities.ConfigurableCustomButtonEntity;
+import net.unemployedgames.redstoneutilz.networking.PkgHandler;
+import net.unemployedgames.redstoneutilz.networking.pkgs.SSetNbtCopyCatButtonPck;
 import org.jetbrains.annotations.NotNull;
+
+import javax.swing.plaf.PanelUI;
 
 public class CopyCatButtonConfigurationScreen extends Screen {
 
@@ -39,6 +44,11 @@ public class CopyCatButtonConfigurationScreen extends Screen {
 
         this.imageWidth = 264 - 7;
         this.imageHeight = 165;
+    }
+
+    @Override
+    public void tick() {
+        this.sliderButtonTickPressed.setTooltip(Tooltip.create(Component.literal(ticksToString(this.sliderButtonTickPressed.getValueInt()))));
     }
 
     @Override
@@ -68,20 +78,30 @@ public class CopyCatButtonConfigurationScreen extends Screen {
 
     private void handleButtonConfirm(Button button) {
         try {
-            System.out.println("Set!");
-            System.out.println("Power:");
-            System.out.println(this.sliderButtonPowerStrengh.getValueInt());
-            System.out.println("Ticks:");
-            System.out.println(this.sliderButtonTickPressed.getValueInt());
+            PkgHandler.INSTANCE.sendToServer(new SSetNbtCopyCatButtonPck(this.sliderButtonTickPressed.getValueInt(), this.sliderButtonPowerStrengh.getValueInt(), this.position));
+            //this.sliderButtonTickPressed.getValueInt(), this.sliderButtonPowerStrengh.getValueInt()
 
-            this.entity.setSignalstrengh(this.sliderButtonPowerStrengh.getValueInt());
-            this.entity.setTicksdelayed(this.sliderButtonTickPressed.getValueInt());
         } catch (Exception e) {
             this.minecraft.setScreen(new AlertScreen(() -> System.out.println("Error screen clicked away"),
                     Component.translatable("ui.redstoneutilz.misc.error"),
                     Component.translatable("ui.redstoneutilz.copycatconfigurationscreen.error_setfailed")));
         }
         this.onClose();
+    }
+
+    public static String ticksToString(int ticks) {
+        if (ticks < 20) {
+            return "%n Ticks".replace("%n", String.valueOf(ticks));
+        }
+
+        int numSeconds = ticks / 20;
+        if (numSeconds < 60) {
+            return numSeconds + " Sec.";
+        } else {
+            int minutes = numSeconds / 60;
+            int seconds = numSeconds % 60;
+            return minutes + " Min. and " + seconds + " Sec.";
+        }
     }
 
     @Override
