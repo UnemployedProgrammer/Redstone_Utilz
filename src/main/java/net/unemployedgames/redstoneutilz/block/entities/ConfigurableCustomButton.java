@@ -13,10 +13,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.ButtonBlock;
-import net.minecraft.world.level.block.EntityBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -104,45 +101,53 @@ public class ConfigurableCustomButton extends ButtonBlockRedstoneMod implements 
                 this.signalStrengh = buttonEntity.getSignalstrengh();
                 this.ticksToStayPressed = buttonEntity.getTicksdelayed();
                 hasConfigItem = pPlayer.getItemInHand(InteractionHand.MAIN_HAND).is(Items.REDSTONE);
-                if (!hasConfigItem && getWoodTypeFromPlayerHandString(pPlayer, pHand) == "_") {
+                if (!hasConfigItem && getWoodTypeFromPlayerHandString(pPlayer, pHand) == "_" && !pPlayer.isShiftKeyDown()) {
                     super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
                     System.out.println("Button Vals, S: " + this.signalStrengh + " | T: " + this.ticksToStayPressed);
                 } else if(!(getWoodTypeFromPlayerHandString(pPlayer, pHand) == "_")) {
-                    System.out.println("Got here!");
                     String strtype = getWoodTypeFromPlayerHandString(pPlayer, pHand);
-                    dropItemFromLast(pState, pPos, pLevel, getBlockStateType(pState, pPos, pLevel));
-                    System.out.println("2");
+                    if(!(getBlockStateType(pState, pPos, pLevel).name == Wood_Types_Vanilla.NOT_SET.name))
+                        dropItemFromLast(pState, pPos, pLevel, getBlockStateType(pState, pPos, pLevel));
+
                     if(strtype == Wood_Types_Vanilla.OAK.name) {
                         updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.OAK);
-                        System.out.println("OAK");
+                        removeOneItemFromCurrentPlayerInHandItemStack(pPlayer, pHand);
                     }
                     if(strtype == Wood_Types_Vanilla.SPRUCE.name) {
                         updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.SPRUCE);
-                        System.out.println("SPRUCE");
+                        removeOneItemFromCurrentPlayerInHandItemStack(pPlayer, pHand);
                     }
                     if(strtype == Wood_Types_Vanilla.BIRCH.name) {
                         updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.BIRCH);
+                        removeOneItemFromCurrentPlayerInHandItemStack(pPlayer, pHand);
                     }
                     if(strtype == Wood_Types_Vanilla.JUNGLE.name) {
                         updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.JUNGLE);
+                        removeOneItemFromCurrentPlayerInHandItemStack(pPlayer, pHand);
                     }
                     if(strtype == Wood_Types_Vanilla.ACACIA.name) {
                         updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.ACACIA);
+                        removeOneItemFromCurrentPlayerInHandItemStack(pPlayer, pHand);
                     }
                     if(strtype == Wood_Types_Vanilla.DARK_OAK.name) {
                         updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.DARK_OAK);
+                        removeOneItemFromCurrentPlayerInHandItemStack(pPlayer, pHand);
                     }
                     if(strtype == Wood_Types_Vanilla.MANGROVE.name) {
                         updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.MANGROVE);
+                        removeOneItemFromCurrentPlayerInHandItemStack(pPlayer, pHand);
                     }
                     if(strtype == Wood_Types_Vanilla.CHERRY.name) {
                         updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.CHERRY);
+                        removeOneItemFromCurrentPlayerInHandItemStack(pPlayer, pHand);
                     }
                     if(strtype == Wood_Types_Vanilla.CRIMSON.name) {
                         updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.CRIMSON);
+                        removeOneItemFromCurrentPlayerInHandItemStack(pPlayer, pHand);
                     }
                     if(strtype == Wood_Types_Vanilla.WARPED.name) {
                         updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.WARPED);
+                        removeOneItemFromCurrentPlayerInHandItemStack(pPlayer, pHand);
                     }
                     if(strtype == Wood_Types_Vanilla.NOT_SET.name) {
                         updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.NOT_SET);
@@ -151,7 +156,7 @@ public class ConfigurableCustomButton extends ButtonBlockRedstoneMod implements 
             }
 
         }
-        return InteractionResult.CONSUME;
+        return InteractionResult.SUCCESS;
     }
 
     public static void updateBlockState(BlockState blockState, BlockPos blockPos, Level world, Wood_Types_Vanilla val) {
@@ -194,8 +199,9 @@ public class ConfigurableCustomButton extends ButtonBlockRedstoneMod implements 
 
         if(!(null == item)&&!(null == itemStack)){
             item = new ItemEntity(world, blockPos.getX() + 0.5, blockPos.getY(), blockPos.getZ() + 0.5, itemStack);
-            item.setDeltaMovement(0, 0.2, 0);
             world.addFreshEntity(item);
+
+            item.setDeltaMovement(0.0, 0.2, 0.0);
         }
     }
 
@@ -233,11 +239,30 @@ public class ConfigurableCustomButton extends ButtonBlockRedstoneMod implements 
             if (blockItem.getBlock() == Blocks.WARPED_STEM) {
                 output = "warped";
             }
-            if (pPlayer.getItemInHand(pHand).getItem().asItem().equals(Items.AIR)) {
-                output = "not_set";
-            }
+        }
+        if (pPlayer.getItemInHand(pHand).isEmpty() && pPlayer.isShiftKeyDown()) {
+            output = "not_set";
         }
         return output;
+    }
+
+    private void removeOneItemFromCurrentPlayerInHandItemStack(Player player, InteractionHand interactionHand) {
+        if(player.isCreative())
+            return;
+
+        player.getItemInHand(interactionHand).setCount(player.getItemInHand(interactionHand).getCount() - 1);
+    }
+
+    @Override
+    public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
+        super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
+
+        if(pLevel.isEmptyBlock(pPos))
+            if(!(getBlockStateType(pState, pPos, pLevel).name == Wood_Types_Vanilla.NOT_SET.name))
+                dropItemFromLast(pState, pPos, pLevel, getBlockStateType(pState, pPos, pLevel));
+
+        //if(!(getBlockStateType(pState, pPos, pLevel).name == Wood_Types_Vanilla.NOT_SET.name))
+            //dropItemFromLast(pState, pPos, pLevel, getBlockStateType(pState, pPos, pLevel));
     }
 
     private void setStrengh(ConfigurableCustomButtonEntity configurableCustomButtonEntity, int strengh) {

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/button_pressed",
   "textures": {
-    "texture": "redstoneutilz:block/copycat_button"
+    "texture": "minecraft:block/spruce_planks"
   }
 }
