@@ -45,7 +45,8 @@ public class ConfigurableCustomButton extends ButtonBlockRedstoneMod implements 
         MANGROVE("mangrove"),
         CHERRY("cherry"),
         CRIMSON("crimson"),
-        WARPED("warped")
+        WARPED("warped"),
+        BAMBOO("bamboo")
         ;
 
         private final String name;
@@ -149,6 +150,10 @@ public class ConfigurableCustomButton extends ButtonBlockRedstoneMod implements 
                         updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.WARPED);
                         removeOneItemFromCurrentPlayerInHandItemStack(pPlayer, pHand);
                     }
+                    if(strtype == Wood_Types_Vanilla.BAMBOO.name) {
+                        updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.BAMBOO);
+                        removeOneItemFromCurrentPlayerInHandItemStack(pPlayer, pHand);
+                    }
                     if(strtype == Wood_Types_Vanilla.NOT_SET.name) {
                         updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.NOT_SET);
                     }
@@ -192,6 +197,8 @@ public class ConfigurableCustomButton extends ButtonBlockRedstoneMod implements 
             itemStack = new ItemStack(Blocks.CRIMSON_STEM);
         if(val == Wood_Types_Vanilla.WARPED)
             itemStack = new ItemStack(Blocks.WARPED_STEM);
+        if(val == Wood_Types_Vanilla.BAMBOO)
+            itemStack = new ItemStack(Blocks.BAMBOO);
 
         if(itemStack != new ItemStack(Items.DIRT))
             item = new ItemEntity(world, blockPos.getX() + 0.5, blockPos.getY(), blockPos.getZ() + 0.5, itemStack);
@@ -238,6 +245,9 @@ public class ConfigurableCustomButton extends ButtonBlockRedstoneMod implements 
             }
             if (blockItem.getBlock() == Blocks.WARPED_STEM) {
                 output = "warped";
+            }
+            if (blockItem.getBlock() == Blocks.BAMBOO_BLOCK) {
+                output = "bamboo";
             }
         }
         if (pPlayer.getItemInHand(pHand).isEmpty() && pPlayer.isShiftKeyDown()) {

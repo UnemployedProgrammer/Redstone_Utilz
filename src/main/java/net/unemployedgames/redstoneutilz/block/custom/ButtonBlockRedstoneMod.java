@@ -1,8 +1,13 @@
 package net.unemployedgames.redstoneutilz.block.custom;
 
 import javax.annotation.Nullable;
+
+import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.Style;
+import net.minecraft.network.chat.TextColor;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
@@ -107,14 +112,23 @@ public class ButtonBlockRedstoneMod extends FaceAttachedHorizontalDirectionalBlo
     }
 
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
-        if (pState.getValue(POWERED)) {
-            return InteractionResult.CONSUME;
+        if(this.ticksToStayPressed == 0 || this.signalStrengh == 0){
+            if(pLevel.isClientSide()) {
+                if(pPlayer instanceof LocalPlayer localPlayer) {
+                    Component component = Component.translatable("block.redstoneutilz.copycat_button.err_firstsetvalwithwrench").setStyle(Style.EMPTY.withColor(TextColor.fromRgb(0x00FF00)));
+                    localPlayer.displayClientMessage(component, true);
+                }
+            }
         } else {
-            this.press(pState, pLevel, pPos);
-            this.playSound(pPlayer, pLevel, pPos, true);
-            pLevel.gameEvent(pPlayer, GameEvent.BLOCK_ACTIVATE, pPos);
-            return InteractionResult.sidedSuccess(pLevel.isClientSide);
+            if (pState.getValue(POWERED)) {
+                return InteractionResult.CONSUME;
+            } else {
+                this.press(pState, pLevel, pPos);
+                this.playSound(pPlayer, pLevel, pPos, true);
+                pLevel.gameEvent(pPlayer, GameEvent.BLOCK_ACTIVATE, pPos);
+            }
         }
+        return InteractionResult.sidedSuccess(pLevel.isClientSide);
     }
 
     public void press(BlockState pState, Level pLevel, BlockPos pPos) {

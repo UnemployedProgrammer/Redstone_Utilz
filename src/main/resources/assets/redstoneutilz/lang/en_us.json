@@ -7,5 +7,8 @@
   "ui.redstoneutilz.copycatconfigurationscreen.title": "Configure Button",
   "ui.redstoneutilz.copycatconfigurationscreen.components.slider_tickspressed.label": " Ticks Pressed",
   "ui.redstoneutilz.copycatconfigurationscreen.components.slider_signalstrengh.label": " Output Redstone Strength",
-  "ui.redstoneutilz.copycatconfigurationscreen.error_setfailed": "We are so sorry. It failed to set the slider values to the button data. Please try again! If it still doesn´t work, please report here: https://github.com/sebastianmueller1306/Redstone_Utilz/issues"
+  "ui.redstoneutilz.copycatconfigurationscreen.error_setfailed": "We are so sorry. It failed to set the slider values to the button data. Please try again! If it still doesn´t work, please report here: https://github.com/sebastianmueller1306/Redstone_Utilz/issues",
+
+  "block.redstoneutilz.copycat_button": "Copycat Button",
+  "block.redstoneutilz.copycat_button.err_firstsetvalwithwrench": "▒▒▒ Please set first, what Output Strengh should come out and How long the Button stays pressed. ▒▒▒"
 }
