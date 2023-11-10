@@ -116,575 +116,575 @@
     },
 
     "face=ceiling,facing=east,powered=false,wood_type=oak": {
-      "model": "minecraft:block/oak_button",
+      "model": "redstoneutilz:block/copycat_button_oak",
       "x": 180,
       "y": 270
     },
     "face=ceiling,facing=east,powered=true,wood_type=oak": {
-      "model": "minecraft:block/oak_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_oak_pressed",
       "x": 180,
       "y": 270
     },
     "face=ceiling,facing=north,powered=false,wood_type=oak": {
-      "model": "minecraft:block/oak_button",
+      "model": "redstoneutilz:block/copycat_button_oak",
       "x": 180,
       "y": 180
     },
     "face=ceiling,facing=north,powered=true,wood_type=oak": {
-      "model": "minecraft:block/oak_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_oak_pressed",
       "x": 180,
       "y": 180
     },
     "face=ceiling,facing=south,powered=false,wood_type=oak": {
-      "model": "minecraft:block/oak_button",
+      "model": "redstoneutilz:block/copycat_button_oak",
       "x": 180
     },
     "face=ceiling,facing=south,powered=true,wood_type=oak": {
-      "model": "minecraft:block/oak_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_oak_pressed",
       "x": 180
     },
     "face=ceiling,facing=west,powered=false,wood_type=oak": {
-      "model": "minecraft:block/oak_button",
+      "model": "redstoneutilz:block/copycat_button_oak",
       "x": 180,
       "y": 90
     },
     "face=ceiling,facing=west,powered=true,wood_type=oak": {
-      "model": "minecraft:block/oak_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_oak_pressed",
       "x": 180,
       "y": 90
     },
     "face=floor,facing=east,powered=false,wood_type=oak": {
-      "model": "minecraft:block/oak_button",
+      "model": "redstoneutilz:block/copycat_button_oak",
       "y": 90
     },
     "face=floor,facing=east,powered=true,wood_type=oak": {
-      "model": "minecraft:block/oak_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_oak_pressed",
       "y": 90
     },
     "face=floor,facing=north,powered=false,wood_type=oak": {
-      "model": "minecraft:block/oak_button"
+      "model": "redstoneutilz:block/copycat_button_oak"
     },
     "face=floor,facing=north,powered=true,wood_type=oak": {
-      "model": "minecraft:block/oak_button_pressed"
+      "model": "redstoneutilz:block/copycat_button_oak_pressed"
     },
     "face=floor,facing=south,powered=false,wood_type=oak": {
-      "model": "minecraft:block/oak_button",
+      "model": "redstoneutilz:block/copycat_button_oak",
       "y": 180
     },
     "face=floor,facing=south,powered=true,wood_type=oak": {
-      "model": "minecraft:block/oak_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_oak_pressed",
       "y": 180
     },
     "face=floor,facing=west,powered=false,wood_type=oak": {
-      "model": "minecraft:block/oak_button",
+      "model": "redstoneutilz:block/copycat_button_oak",
       "y": 270
     },
     "face=floor,facing=west,powered=true,wood_type=oak": {
-      "model": "minecraft:block/oak_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_oak_pressed",
       "y": 270
     },
     "face=wall,facing=east,powered=false,wood_type=oak": {
-      "model": "minecraft:block/oak_button",
+      "model": "redstoneutilz:block/copycat_button_oak",
       "uvlock": true,
       "x": 90,
       "y": 90
     },
     "face=wall,facing=east,powered=true,wood_type=oak": {
-      "model": "minecraft:block/oak_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_oak_pressed",
       "uvlock": true,
       "x": 90,
       "y": 90
     },
     "face=wall,facing=north,powered=false,wood_type=oak": {
-      "model": "minecraft:block/oak_button",
+      "model": "redstoneutilz:block/copycat_button_oak",
       "uvlock": true,
       "x": 90
     },
     "face=wall,facing=north,powered=true,wood_type=oak": {
-      "model": "minecraft:block/oak_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_oak_pressed",
       "uvlock": true,
       "x": 90
     },
     "face=wall,facing=south,powered=false,wood_type=oak": {
-      "model": "minecraft:block/oak_button",
+      "model": "redstoneutilz:block/copycat_button_oak",
       "uvlock": true,
       "x": 90,
       "y": 180
     },
     "face=wall,facing=south,powered=true,wood_type=oak": {
-      "model": "minecraft:block/oak_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_oak_pressed",
       "uvlock": true,
       "x": 90,
       "y": 180
     },
     "face=wall,facing=west,powered=false,wood_type=oak": {
-      "model": "minecraft:block/oak_button",
+      "model": "redstoneutilz:block/copycat_button_oak",
       "uvlock": true,
       "x": 90,
       "y": 270
     },
     "face=wall,facing=west,powered=true,wood_type=oak": {
-      "model": "minecraft:block/oak_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_oak_pressed",
       "uvlock": true,
       "x": 90,
       "y": 270
     },
 
     "face=ceiling,facing=east,powered=false,wood_type=spruce": {
-      "model": "minecraft:block/spruce_button",
+      "model": "redstoneutilz:block/copycat_button_spruce",
       "x": 180,
       "y": 270
     },
     "face=ceiling,facing=east,powered=true,wood_type=spruce": {
-      "model": "minecraft:block/spruce_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_spruce_pressed",
       "x": 180,
       "y": 270
     },
     "face=ceiling,facing=north,powered=false,wood_type=spruce": {
-      "model": "minecraft:block/spruce_button",
+      "model": "redstoneutilz:block/copycat_button_spruce",
       "x": 180,
       "y": 180
     },
     "face=ceiling,facing=north,powered=true,wood_type=spruce": {
-      "model": "minecraft:block/spruce_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_spruce_pressed",
       "x": 180,
       "y": 180
     },
     "face=ceiling,facing=south,powered=false,wood_type=spruce": {
-      "model": "minecraft:block/spruce_button",
+      "model": "redstoneutilz:block/copycat_button_spruce",
       "x": 180
     },
     "face=ceiling,facing=south,powered=true,wood_type=spruce": {
-      "model": "minecraft:block/spruce_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_spruce_pressed",
       "x": 180
     },
     "face=ceiling,facing=west,powered=false,wood_type=spruce": {
-      "model": "minecraft:block/spruce_button",
+      "model": "redstoneutilz:block/copycat_button_spruce",
       "x": 180,
       "y": 90
     },
     "face=ceiling,facing=west,powered=true,wood_type=spruce": {
-      "model": "minecraft:block/spruce_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_spruce_pressed",
       "x": 180,
       "y": 90
     },
     "face=floor,facing=east,powered=false,wood_type=spruce": {
-      "model": "minecraft:block/spruce_button",
+      "model": "redstoneutilz:block/copycat_button_spruce",
       "y": 90
     },
     "face=floor,facing=east,powered=true,wood_type=spruce": {
-      "model": "minecraft:block/spruce_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_spruce_pressed",
       "y": 90
     },
     "face=floor,facing=north,powered=false,wood_type=spruce": {
-      "model": "minecraft:block/spruce_button"
+      "model": "redstoneutilz:block/copycat_button_spruce"
     },
     "face=floor,facing=north,powered=true,wood_type=spruce": {
-      "model": "minecraft:block/spruce_button_pressed"
+      "model": "redstoneutilz:block/copycat_button_spruce_pressed"
     },
     "face=floor,facing=south,powered=false,wood_type=spruce": {
-      "model": "minecraft:block/spruce_button",
+      "model": "redstoneutilz:block/copycat_button_spruce",
       "y": 180
     },
     "face=floor,facing=south,powered=true,wood_type=spruce": {
-      "model": "minecraft:block/spruce_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_spruce_pressed",
       "y": 180
     },
     "face=floor,facing=west,powered=false,wood_type=spruce": {
-      "model": "minecraft:block/spruce_button",
+      "model": "redstoneutilz:block/copycat_button_spruce",
       "y": 270
     },
     "face=floor,facing=west,powered=true,wood_type=spruce": {
-      "model": "minecraft:block/spruce_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_spruce_pressed",
       "y": 270
     },
     "face=wall,facing=east,powered=false,wood_type=spruce": {
-      "model": "minecraft:block/spruce_button",
+      "model": "redstoneutilz:block/copycat_button_spruce",
       "uvlock": true,
       "x": 90,
       "y": 90
     },
     "face=wall,facing=east,powered=true,wood_type=spruce": {
-      "model": "minecraft:block/spruce_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_spruce_pressed",
       "uvlock": true,
       "x": 90,
       "y": 90
     },
     "face=wall,facing=north,powered=false,wood_type=spruce": {
-      "model": "minecraft:block/spruce_button",
+      "model": "redstoneutilz:block/copycat_button_spruce",
       "uvlock": true,
       "x": 90
     },
     "face=wall,facing=north,powered=true,wood_type=spruce": {
-      "model": "minecraft:block/spruce_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_spruce_pressed",
       "uvlock": true,
       "x": 90
     },
     "face=wall,facing=south,powered=false,wood_type=spruce": {
-      "model": "minecraft:block/spruce_button",
+      "model": "redstoneutilz:block/copycat_button_spruce",
       "uvlock": true,
       "x": 90,
       "y": 180
     },
     "face=wall,facing=south,powered=true,wood_type=spruce": {
-      "model": "minecraft:block/spruce_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_spruce_pressed",
       "uvlock": true,
       "x": 90,
       "y": 180
     },
     "face=wall,facing=west,powered=false,wood_type=spruce": {
-      "model": "minecraft:block/spruce_button",
+      "model": "redstoneutilz:block/copycat_button_spruce",
       "uvlock": true,
       "x": 90,
       "y": 270
     },
     "face=wall,facing=west,powered=true,wood_type=spruce": {
-      "model": "minecraft:block/spruce_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_spruce_pressed",
       "uvlock": true,
       "x": 90,
       "y": 270
     },
 
     "face=ceiling,facing=east,powered=false,wood_type=birch": {
-      "model": "minecraft:block/birch_button",
+      "model": "redstoneutilz:block/copycat_button_birch",
       "x": 180,
       "y": 270
     },
     "face=ceiling,facing=east,powered=true,wood_type=birch": {
-      "model": "minecraft:block/birch_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_birch_pressed",
       "x": 180,
       "y": 270
     },
     "face=ceiling,facing=north,powered=false,wood_type=birch": {
-      "model": "minecraft:block/birch_button",
+      "model": "redstoneutilz:block/copycat_button_birch",
       "x": 180,
       "y": 180
     },
     "face=ceiling,facing=north,powered=true,wood_type=birch": {
-      "model": "minecraft:block/birch_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_birch_pressed",
       "x": 180,
       "y": 180
     },
     "face=ceiling,facing=south,powered=false,wood_type=birch": {
-      "model": "minecraft:block/birch_button",
+      "model": "redstoneutilz:block/copycat_button_birch",
       "x": 180
     },
     "face=ceiling,facing=south,powered=true,wood_type=birch": {
-      "model": "minecraft:block/birch_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_birch_pressed",
       "x": 180
     },
     "face=ceiling,facing=west,powered=false,wood_type=birch": {
-      "model": "minecraft:block/birch_button",
+      "model": "redstoneutilz:block/copycat_button_birch",
       "x": 180,
       "y": 90
     },
     "face=ceiling,facing=west,powered=true,wood_type=birch": {
-      "model": "minecraft:block/birch_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_birch_pressed",
       "x": 180,
       "y": 90
     },
     "face=floor,facing=east,powered=false,wood_type=birch": {
-      "model": "minecraft:block/birch_button",
+      "model": "redstoneutilz:block/copycat_button_birch",
       "y": 90
     },
     "face=floor,facing=east,powered=true,wood_type=birch": {
-      "model": "minecraft:block/birch_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_birch_pressed",
       "y": 90
     },
     "face=floor,facing=north,powered=false,wood_type=birch": {
-      "model": "minecraft:block/birch_button"
+      "model": "redstoneutilz:block/copycat_button_birch"
     },
     "face=floor,facing=north,powered=true,wood_type=birch": {
-      "model": "minecraft:block/birch_button_pressed"
+      "model": "redstoneutilz:block/copycat_button_birch_pressed"
     },
     "face=floor,facing=south,powered=false,wood_type=birch": {
-      "model": "minecraft:block/birch_button",
+      "model": "redstoneutilz:block/copycat_button_birch",
       "y": 180
     },
     "face=floor,facing=south,powered=true,wood_type=birch": {
-      "model": "minecraft:block/birch_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_birch_pressed",
       "y": 180
     },
     "face=floor,facing=west,powered=false,wood_type=birch": {
-      "model": "minecraft:block/birch_button",
+      "model": "redstoneutilz:block/copycat_button_birch",
       "y": 270
     },
     "face=floor,facing=west,powered=true,wood_type=birch": {
-      "model": "minecraft:block/birch_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_birch_pressed",
       "y": 270
     },
     "face=wall,facing=east,powered=false,wood_type=birch": {
-      "model": "minecraft:block/birch_button",
+      "model": "redstoneutilz:block/copycat_button_birch",
       "uvlock": true,
       "x": 90,
       "y": 90
     },
     "face=wall,facing=east,powered=true,wood_type=birch": {
-      "model": "minecraft:block/birch_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_birch_pressed",
       "uvlock": true,
       "x": 90,
       "y": 90
     },
     "face=wall,facing=north,powered=false,wood_type=birch": {
-      "model": "minecraft:block/birch_button",
+      "model": "redstoneutilz:block/copycat_button_birch",
       "uvlock": true,
       "x": 90
     },
     "face=wall,facing=north,powered=true,wood_type=birch": {
-      "model": "minecraft:block/birch_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_birch_pressed",
       "uvlock": true,
       "x": 90
     },
     "face=wall,facing=south,powered=false,wood_type=birch": {
-      "model": "minecraft:block/birch_button",
+      "model": "redstoneutilz:block/copycat_button_birch",
       "uvlock": true,
       "x": 90,
       "y": 180
     },
     "face=wall,facing=south,powered=true,wood_type=birch": {
-      "model": "minecraft:block/birch_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_birch_pressed",
       "uvlock": true,
       "x": 90,
       "y": 180
     },
     "face=wall,facing=west,powered=false,wood_type=birch": {
-      "model": "minecraft:block/birch_button",
+      "model": "redstoneutilz:block/copycat_button_birch",
       "uvlock": true,
       "x": 90,
       "y": 270
     },
     "face=wall,facing=west,powered=true,wood_type=birch": {
-      "model": "minecraft:block/birch_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_birch_pressed",
       "uvlock": true,
       "x": 90,
       "y": 270
     },
 
     "face=ceiling,facing=east,powered=false,wood_type=acacia": {
-      "model": "minecraft:block/acacia_button",
+      "model": "redstoneutilz:block/copycat_button_acacia",
       "x": 180,
       "y": 270
     },
     "face=ceiling,facing=east,powered=true,wood_type=acacia": {
-      "model": "minecraft:block/acacia_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_acacia_pressed",
       "x": 180,
       "y": 270
     },
     "face=ceiling,facing=north,powered=false,wood_type=acacia": {
-      "model": "minecraft:block/acacia_button",
+      "model": "redstoneutilz:block/copycat_button_acacia",
       "x": 180,
       "y": 180
     },
     "face=ceiling,facing=north,powered=true,wood_type=acacia": {
-      "model": "minecraft:block/acacia_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_acacia_pressed",
       "x": 180,
       "y": 180
     },
     "face=ceiling,facing=south,powered=false,wood_type=acacia": {
-      "model": "minecraft:block/acacia_button",
+      "model": "redstoneutilz:block/copycat_button_acacia",
       "x": 180
     },
     "face=ceiling,facing=south,powered=true,wood_type=acacia": {
-      "model": "minecraft:block/acacia_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_acacia_pressed",
       "x": 180
     },
     "face=ceiling,facing=west,powered=false,wood_type=acacia": {
-      "model": "minecraft:block/acacia_button",
+      "model": "redstoneutilz:block/copycat_button_acacia",
       "x": 180,
       "y": 90
     },
     "face=ceiling,facing=west,powered=true,wood_type=acacia": {
-      "model": "minecraft:block/acacia_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_acacia_pressed",
       "x": 180,
       "y": 90
     },
     "face=floor,facing=east,powered=false,wood_type=acacia": {
-      "model": "minecraft:block/acacia_button",
+      "model": "redstoneutilz:block/copycat_button_acacia",
       "y": 90
     },
     "face=floor,facing=east,powered=true,wood_type=acacia": {
-      "model": "minecraft:block/acacia_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_acacia_pressed",
       "y": 90
     },
     "face=floor,facing=north,powered=false,wood_type=acacia": {
-      "model": "minecraft:block/acacia_button"
+      "model": "redstoneutilz:block/copycat_button_acacia"
     },
     "face=floor,facing=north,powered=true,wood_type=acacia": {
-      "model": "minecraft:block/acacia_button_pressed"
+      "model": "redstoneutilz:block/copycat_button_acacia_pressed"
     },
     "face=floor,facing=south,powered=false,wood_type=acacia": {
-      "model": "minecraft:block/acacia_button",
+      "model": "redstoneutilz:block/copycat_button_acacia",
       "y": 180
     },
     "face=floor,facing=south,powered=true,wood_type=acacia": {
-      "model": "minecraft:block/acacia_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_acacia_pressed",
       "y": 180
     },
     "face=floor,facing=west,powered=false,wood_type=acacia": {
-      "model": "minecraft:block/acacia_button",
+      "model": "redstoneutilz:block/copycat_button_acacia",
       "y": 270
     },
     "face=floor,facing=west,powered=true,wood_type=acacia": {
-      "model": "minecraft:block/acacia_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_acacia_pressed",
       "y": 270
     },
     "face=wall,facing=east,powered=false,wood_type=acacia": {
-      "model": "minecraft:block/acacia_button",
+      "model": "redstoneutilz:block/copycat_button_acacia",
       "uvlock": true,
       "x": 90,
       "y": 90
     },
     "face=wall,facing=east,powered=true,wood_type=acacia": {
-      "model": "minecraft:block/acacia_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_acacia_pressed",
       "uvlock": true,
       "x": 90,
       "y": 90
     },
     "face=wall,facing=north,powered=false,wood_type=acacia": {
-      "model": "minecraft:block/acacia_button",
+      "model": "redstoneutilz:block/copycat_button_acacia",
       "uvlock": true,
       "x": 90
     },
     "face=wall,facing=north,powered=true,wood_type=acacia": {
-      "model": "minecraft:block/acacia_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_acacia_pressed",
       "uvlock": true,
       "x": 90
     },
     "face=wall,facing=south,powered=false,wood_type=acacia": {
-      "model": "minecraft:block/acacia_button",
+      "model": "redstoneutilz:block/copycat_button_acacia",
       "uvlock": true,
       "x": 90,
       "y": 180
     },
     "face=wall,facing=south,powered=true,wood_type=acacia": {
-      "model": "minecraft:block/acacia_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_acacia_pressed",
       "uvlock": true,
       "x": 90,
       "y": 180
     },
     "face=wall,facing=west,powered=false,wood_type=acacia": {
-      "model": "minecraft:block/acacia_button",
+      "model": "redstoneutilz:block/copycat_button_acacia",
       "uvlock": true,
       "x": 90,
       "y": 270
     },
     "face=wall,facing=west,powered=true,wood_type=acacia": {
-      "model": "minecraft:block/acacia_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_acacia_pressed",
       "uvlock": true,
       "x": 90,
       "y": 270
     },
 
     "face=ceiling,facing=east,powered=false,wood_type=jungle": {
-      "model": "minecraft:block/jungle_button",
+      "model": "redstoneutilz:block/copycat_button_jungle",
       "x": 180,
       "y": 270
     },
     "face=ceiling,facing=east,powered=true,wood_type=jungle": {
-      "model": "minecraft:block/jungle_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_jungle_pressed",
       "x": 180,
       "y": 270
     },
     "face=ceiling,facing=north,powered=false,wood_type=jungle": {
-      "model": "minecraft:block/jungle_button",
+      "model": "redstoneutilz:block/copycat_button_jungle",
       "x": 180,
       "y": 180
     },
     "face=ceiling,facing=north,powered=true,wood_type=jungle": {
-      "model": "minecraft:block/jungle_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_jungle_pressed",
       "x": 180,
       "y": 180
     },
     "face=ceiling,facing=south,powered=false,wood_type=jungle": {
-      "model": "minecraft:block/jungle_button",
+      "model": "redstoneutilz:block/copycat_button_jungle",
       "x": 180
     },
     "face=ceiling,facing=south,powered=true,wood_type=jungle": {
-      "model": "minecraft:block/jungle_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_jungle_pressed",
       "x": 180
     },
     "face=ceiling,facing=west,powered=false,wood_type=jungle": {
-      "model": "minecraft:block/jungle_button",
+      "model": "redstoneutilz:block/copycat_button_jungle",
       "x": 180,
       "y": 90
     },
     "face=ceiling,facing=west,powered=true,wood_type=jungle": {
-      "model": "minecraft:block/jungle_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_jungle_pressed",
       "x": 180,
       "y": 90
     },
     "face=floor,facing=east,powered=false,wood_type=jungle": {
-      "model": "minecraft:block/jungle_button",
+      "model": "redstoneutilz:block/copycat_button_jungle",
       "y": 90
     },
     "face=floor,facing=east,powered=true,wood_type=jungle": {
-      "model": "minecraft:block/jungle_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_jungle_pressed",
       "y": 90
     },
     "face=floor,facing=north,powered=false,wood_type=jungle": {
-      "model": "minecraft:block/jungle_button"
+      "model": "redstoneutilz:block/copycat_button_jungle"
     },
     "face=floor,facing=north,powered=true,wood_type=jungle": {
-      "model": "minecraft:block/jungle_button_pressed"
+      "model": "redstoneutilz:block/copycat_button_jungle_pressed"
     },
     "face=floor,facing=south,powered=false,wood_type=jungle": {
-      "model": "minecraft:block/jungle_button",
+      "model": "redstoneutilz:block/copycat_button_jungle",
       "y": 180
     },
     "face=floor,facing=south,powered=true,wood_type=jungle": {
-      "model": "minecraft:block/jungle_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_jungle_pressed",
       "y": 180
     },
     "face=floor,facing=west,powered=false,wood_type=jungle": {
-      "model": "minecraft:block/jungle_button",
+      "model": "redstoneutilz:block/copycat_button_jungle",
       "y": 270
     },
     "face=floor,facing=west,powered=true,wood_type=jungle": {
-      "model": "minecraft:block/jungle_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_jungle_pressed",
       "y": 270
     },
     "face=wall,facing=east,powered=false,wood_type=jungle": {
-      "model": "minecraft:block/jungle_button",
+      "model": "redstoneutilz:block/copycat_button_jungle",
       "uvlock": true,
       "x": 90,
       "y": 90
     },
     "face=wall,facing=east,powered=true,wood_type=jungle": {
-      "model": "minecraft:block/jungle_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_jungle_pressed",
       "uvlock": true,
       "x": 90,
       "y": 90
     },
     "face=wall,facing=north,powered=false,wood_type=jungle": {
-      "model": "minecraft:block/jungle_button",
+      "model": "redstoneutilz:block/copycat_button_jungle",
       "uvlock": true,
       "x": 90
     },
     "face=wall,facing=north,powered=true,wood_type=jungle": {
-      "model": "minecraft:block/jungle_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_jungle_pressed",
       "uvlock": true,
       "x": 90
     },
     "face=wall,facing=south,powered=false,wood_type=jungle": {
-      "model": "minecraft:block/jungle_button",
+      "model": "redstoneutilz:block/copycat_button_jungle",
       "uvlock": true,
       "x": 90,
       "y": 180
     },
     "face=wall,facing=south,powered=true,wood_type=jungle": {
-      "model": "minecraft:block/jungle_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_jungle_pressed",
       "uvlock": true,
       "x": 90,
       "y": 180
     },
     "face=wall,facing=west,powered=false,wood_type=jungle": {
-      "model": "minecraft:block/jungle_button",
+      "model": "redstoneutilz:block/copycat_button_jungle",
       "uvlock": true,
       "x": 90,
       "y": 270
     },
     "face=wall,facing=west,powered=true,wood_type=jungle": {
-      "model": "minecraft:block/jungle_button_pressed",
+      "model": "redstoneutilz:block/copycat_button_jungle_pressed",
       "uvlock": true,
       "x": 90,
       "y": 270
@@ -692,345 +692,345 @@
   },
 
   "face=ceiling,facing=east,powered=false,wood_type=darkoak": {
-    "model": "minecraft:block/dark_oak_button",
+    "model": "redstoneutilz:block/copycat_button_darkoak",
     "x": 180,
     "y": 270
   },
   "face=ceiling,facing=east,powered=true,wood_type=darkoak": {
-    "model": "minecraft:block/dark_oak_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_darkoak_pressed",
     "x": 180,
     "y": 270
   },
   "face=ceiling,facing=north,powered=false,wood_type=darkoak": {
-    "model": "minecraft:block/dark_oak_button",
+    "model": "redstoneutilz:block/copycat_button_darkoak",
     "x": 180,
     "y": 180
   },
   "face=ceiling,facing=north,powered=true,wood_type=darkoak": {
-    "model": "minecraft:block/dark_oak_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_darkoak_pressed",
     "x": 180,
     "y": 180
   },
   "face=ceiling,facing=south,powered=false,wood_type=darkoak": {
-    "model": "minecraft:block/dark_oak_button",
+    "model": "redstoneutilz:block/copycat_button_darkoak",
     "x": 180
   },
   "face=ceiling,facing=south,powered=true,wood_type=darkoak": {
-    "model": "minecraft:block/dark_oak_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_darkoak_pressed",
     "x": 180
   },
   "face=ceiling,facing=west,powered=false,wood_type=darkoak": {
-    "model": "minecraft:block/dark_oak_button",
+    "model": "redstoneutilz:block/copycat_button_darkoak",
     "x": 180,
     "y": 90
   },
   "face=ceiling,facing=west,powered=true,wood_type=darkoak": {
-    "model": "minecraft:block/dark_oak_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_darkoak_pressed",
     "x": 180,
     "y": 90
   },
   "face=floor,facing=east,powered=false,wood_type=darkoak": {
-    "model": "minecraft:block/dark_oak_button",
+    "model": "redstoneutilz:block/copycat_button_darkoak",
     "y": 90
   },
   "face=floor,facing=east,powered=true,wood_type=darkoak": {
-    "model": "minecraft:block/dark_oak_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_darkoak_pressed",
     "y": 90
   },
   "face=floor,facing=north,powered=false,wood_type=darkoak": {
-    "model": "minecraft:block/dark_oak_button"
+    "model": "redstoneutilz:block/copycat_button_darkoak"
   },
   "face=floor,facing=north,powered=true,wood_type=darkoak": {
-    "model": "minecraft:block/dark_oak_button_pressed"
+    "model": "redstoneutilz:block/copycat_button_darkoak_pressed"
   },
   "face=floor,facing=south,powered=false,wood_type=darkoak": {
-    "model": "minecraft:block/dark_oak_button",
+    "model": "redstoneutilz:block/copycat_button_darkoak",
     "y": 180
   },
   "face=floor,facing=south,powered=true,wood_type=darkoak": {
-    "model": "minecraft:block/dark_oak_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_darkoak_pressed",
     "y": 180
   },
   "face=floor,facing=west,powered=false,wood_type=darkoak": {
-    "model": "minecraft:block/dark_oak_button",
+    "model": "redstoneutilz:block/copycat_button_darkoak",
     "y": 270
   },
   "face=floor,facing=west,powered=true,wood_type=darkoak": {
-    "model": "minecraft:block/dark_oak_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_darkoak_pressed",
     "y": 270
   },
   "face=wall,facing=east,powered=false,wood_type=darkoak": {
-    "model": "minecraft:block/dark_oak_button",
+    "model": "redstoneutilz:block/copycat_button_darkoak",
     "uvlock": true,
     "x": 90,
     "y": 90
   },
   "face=wall,facing=east,powered=true,wood_type=darkoak": {
-    "model": "minecraft:block/dark_oak_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_darkoak_pressed",
     "uvlock": true,
     "x": 90,
     "y": 90
   },
   "face=wall,facing=north,powered=false,wood_type=darkoak": {
-    "model": "minecraft:block/dark_oak_button",
+    "model": "redstoneutilz:block/copycat_button_darkoak",
     "uvlock": true,
     "x": 90
   },
   "face=wall,facing=north,powered=true,wood_type=darkoak": {
-    "model": "minecraft:block/dark_oak_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_darkoak_pressed",
     "uvlock": true,
     "x": 90
   },
   "face=wall,facing=south,powered=false,wood_type=darkoak": {
-    "model": "minecraft:block/dark_oak_button",
+    "model": "redstoneutilz:block/copycat_button_darkoak",
     "uvlock": true,
     "x": 90,
     "y": 180
   },
   "face=wall,facing=south,powered=true,wood_type=darkoak": {
-    "model": "minecraft:block/dark_oak_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_darkoak_pressed",
     "uvlock": true,
     "x": 90,
     "y": 180
   },
   "face=wall,facing=west,powered=false,wood_type=darkoak": {
-    "model": "minecraft:block/dark_oak_button",
+    "model": "redstoneutilz:block/copycat_button_darkoak",
     "uvlock": true,
     "x": 90,
     "y": 270
   },
   "face=wall,facing=west,powered=true,wood_type=darkoak": {
-    "model": "minecraft:block/dark_oak_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_darkoak_pressed",
     "uvlock": true,
     "x": 90,
     "y": 270
   },
 
   "face=ceiling,facing=east,powered=false,wood_type=mangrove": {
-    "model": "minecraft:block/mangrove_button",
+    "model": "redstoneutilz:block/copycat_button_mangrove",
     "x": 180,
     "y": 270
   },
   "face=ceiling,facing=east,powered=true,wood_type=mangrove": {
-    "model": "minecraft:block/mangrove_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_mangrove_pressed",
     "x": 180,
     "y": 270
   },
   "face=ceiling,facing=north,powered=false,wood_type=mangrove": {
-    "model": "minecraft:block/mangrove_button",
+    "model": "redstoneutilz:block/copycat_button_mangrove",
     "x": 180,
     "y": 180
   },
   "face=ceiling,facing=north,powered=true,wood_type=mangrove": {
-    "model": "minecraft:block/mangrove_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_mangrove_pressed",
     "x": 180,
     "y": 180
   },
   "face=ceiling,facing=south,powered=false,wood_type=mangrove": {
-    "model": "minecraft:block/mangrove_button",
+    "model": "redstoneutilz:block/copycat_button_mangrove",
     "x": 180
   },
   "face=ceiling,facing=south,powered=true,wood_type=mangrove": {
-    "model": "minecraft:block/mangrove_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_mangrove_pressed",
     "x": 180
   },
   "face=ceiling,facing=west,powered=false,wood_type=mangrove": {
-    "model": "minecraft:block/mangrove_button",
+    "model": "redstoneutilz:block/copycat_button_mangrove",
     "x": 180,
     "y": 90
   },
   "face=ceiling,facing=west,powered=true,wood_type=mangrove": {
-    "model": "minecraft:block/mangrove_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_mangrove_pressed",
     "x": 180,
     "y": 90
   },
   "face=floor,facing=east,powered=false,wood_type=mangrove": {
-    "model": "minecraft:block/mangrove_button",
+    "model": "redstoneutilz:block/copycat_button_mangrove",
     "y": 90
   },
   "face=floor,facing=east,powered=true,wood_type=mangrove": {
-    "model": "minecraft:block/mangrove_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_mangrove_pressed",
     "y": 90
   },
   "face=floor,facing=north,powered=false,wood_type=mangrove": {
-    "model": "minecraft:block/mangrove_button"
+    "model": "redstoneutilz:block/copycat_button_mangrove"
   },
   "face=floor,facing=north,powered=true,wood_type=mangrove": {
-    "model": "minecraft:block/mangrove_button_pressed"
+    "model": "redstoneutilz:block/copycat_button_mangrove_pressed"
   },
   "face=floor,facing=south,powered=false,wood_type=mangrove": {
-    "model": "minecraft:block/mangrove_button",
+    "model": "redstoneutilz:block/copycat_button_mangrove",
     "y": 180
   },
   "face=floor,facing=south,powered=true,wood_type=mangrove": {
-    "model": "minecraft:block/mangrove_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_mangrove_pressed",
     "y": 180
   },
   "face=floor,facing=west,powered=false,wood_type=mangrove": {
-    "model": "minecraft:block/mangrove_button",
+    "model": "redstoneutilz:block/copycat_button_mangrove",
     "y": 270
   },
   "face=floor,facing=west,powered=true,wood_type=mangrove": {
-    "model": "minecraft:block/mangrove_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_mangrove_pressed",
     "y": 270
   },
   "face=wall,facing=east,powered=false,wood_type=mangrove": {
-    "model": "minecraft:block/mangrove_button",
+    "model": "redstoneutilz:block/copycat_button_mangrove",
     "uvlock": true,
     "x": 90,
     "y": 90
   },
   "face=wall,facing=east,powered=true,wood_type=mangrove": {
-    "model": "minecraft:block/mangrove_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_mangrove_pressed",
     "uvlock": true,
     "x": 90,
     "y": 90
   },
   "face=wall,facing=north,powered=false,wood_type=mangrove": {
-    "model": "minecraft:block/mangrove_button",
+    "model": "redstoneutilz:block/copycat_button_mangrove",
     "uvlock": true,
     "x": 90
   },
   "face=wall,facing=north,powered=true,wood_type=mangrove": {
-    "model": "minecraft:block/mangrove_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_mangrove_pressed",
     "uvlock": true,
     "x": 90
   },
   "face=wall,facing=south,powered=false,wood_type=mangrove": {
-    "model": "minecraft:block/mangrove_button",
+    "model": "redstoneutilz:block/copycat_button_mangrove",
     "uvlock": true,
     "x": 90,
     "y": 180
   },
   "face=wall,facing=south,powered=true,wood_type=mangrove": {
-    "model": "minecraft:block/mangrove_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_mangrove_pressed",
     "uvlock": true,
     "x": 90,
     "y": 180
   },
   "face=wall,facing=west,powered=false,wood_type=mangrove": {
-    "model": "minecraft:block/mangrove_button",
+    "model": "redstoneutilz:block/copycat_button_mangrove",
     "uvlock": true,
     "x": 90,
     "y": 270
   },
   "face=wall,facing=west,powered=true,wood_type=mangrove": {
-    "model": "minecraft:block/mangrove_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_mangrove_pressed",
     "uvlock": true,
     "x": 90,
     "y": 270
   },
 
   "face=ceiling,facing=east,powered=false,wood_type=cherry": {
-    "model": "minecraft:block/cherry_button",
+    "model": "redstoneutilz:block/copycat_button_cherry",
     "x": 180,
     "y": 270
   },
   "face=ceiling,facing=east,powered=true,wood_type=cherry": {
-    "model": "minecraft:block/cherry_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_cherry_pressed",
     "x": 180,
     "y": 270
   },
   "face=ceiling,facing=north,powered=false,wood_type=cherry": {
-    "model": "minecraft:block/cherry_button",
+    "model": "redstoneutilz:block/copycat_button_cherry",
     "x": 180,
     "y": 180
   },
   "face=ceiling,facing=north,powered=true,wood_type=cherry": {
-    "model": "minecraft:block/cherry_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_cherry_pressed",
     "x": 180,
     "y": 180
   },
   "face=ceiling,facing=south,powered=false,wood_type=cherry": {
-    "model": "minecraft:block/cherry_button",
+    "model": "redstoneutilz:block/copycat_button_cherry",
     "x": 180
   },
   "face=ceiling,facing=south,powered=true,wood_type=cherry": {
-    "model": "minecraft:block/cherry_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_cherry_pressed",
     "x": 180
   },
   "face=ceiling,facing=west,powered=false,wood_type=cherry": {
-    "model": "minecraft:block/cherry_button",
+    "model": "redstoneutilz:block/copycat_button_cherry",
     "x": 180,
     "y": 90
   },
   "face=ceiling,facing=west,powered=true,wood_type=cherry": {
-    "model": "minecraft:block/cherry_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_cherry_pressed",
     "x": 180,
     "y": 90
   },
   "face=floor,facing=east,powered=false,wood_type=cherry": {
-    "model": "minecraft:block/cherry_button",
+    "model": "redstoneutilz:block/copycat_button_cherry",
     "y": 90
   },
   "face=floor,facing=east,powered=true,wood_type=cherry": {
-    "model": "minecraft:block/cherry_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_cherry_pressed",
     "y": 90
   },
   "face=floor,facing=north,powered=false,wood_type=cherry": {
-    "model": "minecraft:block/cherry_button"
+    "model": "redstoneutilz:block/copycat_button_cherry"
   },
   "face=floor,facing=north,powered=true,wood_type=cherry": {
-    "model": "minecraft:block/cherry_button_pressed"
+    "model": "redstoneutilz:block/copycat_button_cherry_pressed"
   },
   "face=floor,facing=south,powered=false,wood_type=cherry": {
-    "model": "minecraft:block/cherry_button",
+    "model": "redstoneutilz:block/copycat_button_cherry",
     "y": 180
   },
   "face=floor,facing=south,powered=true,wood_type=cherry": {
-    "model": "minecraft:block/cherry_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_cherry_pressed",
     "y": 180
   },
   "face=floor,facing=west,powered=false,wood_type=cherry": {
-    "model": "minecraft:block/cherry_button",
+    "model": "redstoneutilz:block/copycat_button_cherry",
     "y": 270
   },
   "face=floor,facing=west,powered=true,wood_type=cherry": {
-    "model": "minecraft:block/cherry_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_cherry_pressed",
     "y": 270
   },
   "face=wall,facing=east,powered=false,wood_type=cherry": {
-    "model": "minecraft:block/cherry_button",
+    "model": "redstoneutilz:block/copycat_button_cherry",
     "uvlock": true,
     "x": 90,
     "y": 90
   },
   "face=wall,facing=east,powered=true,wood_type=cherry": {
-    "model": "minecraft:block/cherry_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_cherry_pressed",
     "uvlock": true,
     "x": 90,
     "y": 90
   },
   "face=wall,facing=north,powered=false,wood_type=cherry": {
-    "model": "minecraft:block/cherry_button",
+    "model": "redstoneutilz:block/copycat_button_cherry",
     "uvlock": true,
     "x": 90
   },
   "face=wall,facing=north,powered=true,wood_type=cherry": {
-    "model": "minecraft:block/cherry_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_cherry_pressed",
     "uvlock": true,
     "x": 90
   },
   "face=wall,facing=south,powered=false,wood_type=cherry": {
-    "model": "minecraft:block/cherry_button",
+    "model": "redstoneutilz:block/copycat_button_cherry",
     "uvlock": true,
     "x": 90,
     "y": 180
   },
   "face=wall,facing=south,powered=true,wood_type=cherry": {
-    "model": "minecraft:block/cherry_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_cherry_pressed",
     "uvlock": true,
     "x": 90,
     "y": 180
   },
   "face=wall,facing=west,powered=false,wood_type=cherry": {
-    "model": "minecraft:block/cherry_button",
+    "model": "redstoneutilz:block/copycat_button_cherry",
     "uvlock": true,
     "x": 90,
     "y": 270
   },
   "face=wall,facing=west,powered=true,wood_type=cherry": {
-    "model": "minecraft:block/cherry_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_cherry_pressed",
     "uvlock": true,
     "x": 90,
     "y": 270
@@ -1041,345 +1041,345 @@
 
 
   "face=ceiling,facing=east,powered=false,wood_type=crimson": {
-    "model": "minecraft:block/crimson_button",
+    "model": "redstoneutilz:block/copycat_button_crimson",
     "x": 180,
     "y": 270
   },
   "face=ceiling,facing=east,powered=true,wood_type=crimson": {
-    "model": "minecraft:block/crimson_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_crimson_pressed",
     "x": 180,
     "y": 270
   },
   "face=ceiling,facing=north,powered=false,wood_type=crimson": {
-    "model": "minecraft:block/crimson_button",
+    "model": "redstoneutilz:block/copycat_button_crimson",
     "x": 180,
     "y": 180
   },
   "face=ceiling,facing=north,powered=true,wood_type=crimson": {
-    "model": "minecraft:block/crimson_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_crimson_pressed",
     "x": 180,
     "y": 180
   },
   "face=ceiling,facing=south,powered=false,wood_type=crimson": {
-    "model": "minecraft:block/crimson_button",
+    "model": "redstoneutilz:block/copycat_button_crimson",
     "x": 180
   },
   "face=ceiling,facing=south,powered=true,wood_type=crimson": {
-    "model": "minecraft:block/crimson_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_crimson_pressed",
     "x": 180
   },
   "face=ceiling,facing=west,powered=false,wood_type=crimson": {
-    "model": "minecraft:block/crimson_button",
+    "model": "redstoneutilz:block/copycat_button_crimson",
     "x": 180,
     "y": 90
   },
   "face=ceiling,facing=west,powered=true,wood_type=crimson": {
-    "model": "minecraft:block/crimson_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_crimson_pressed",
     "x": 180,
     "y": 90
   },
   "face=floor,facing=east,powered=false,wood_type=crimson": {
-    "model": "minecraft:block/crimson_button",
+    "model": "redstoneutilz:block/copycat_button_crimson",
     "y": 90
   },
   "face=floor,facing=east,powered=true,wood_type=crimson": {
-    "model": "minecraft:block/crimson_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_crimson_pressed",
     "y": 90
   },
   "face=floor,facing=north,powered=false,wood_type=crimson": {
-    "model": "minecraft:block/crimson_button"
+    "model": "redstoneutilz:block/copycat_button_crimson"
   },
   "face=floor,facing=north,powered=true,wood_type=crimson": {
-    "model": "minecraft:block/crimson_button_pressed"
+    "model": "redstoneutilz:block/copycat_button_crimson_pressed"
   },
   "face=floor,facing=south,powered=false,wood_type=crimson": {
-    "model": "minecraft:block/crimson_button",
+    "model": "redstoneutilz:block/copycat_button_crimson",
     "y": 180
   },
   "face=floor,facing=south,powered=true,wood_type=crimson": {
-    "model": "minecraft:block/crimson_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_crimson_pressed",
     "y": 180
   },
   "face=floor,facing=west,powered=false,wood_type=crimson": {
-    "model": "minecraft:block/crimson_button",
+    "model": "redstoneutilz:block/copycat_button_crimson",
     "y": 270
   },
   "face=floor,facing=west,powered=true,wood_type=crimson": {
-    "model": "minecraft:block/crimson_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_crimson_pressed",
     "y": 270
   },
   "face=wall,facing=east,powered=false,wood_type=crimson": {
-    "model": "minecraft:block/crimson_button",
+    "model": "redstoneutilz:block/copycat_button_crimson",
     "uvlock": true,
     "x": 90,
     "y": 90
   },
   "face=wall,facing=east,powered=true,wood_type=crimson": {
-    "model": "minecraft:block/crimson_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_crimson_pressed",
     "uvlock": true,
     "x": 90,
     "y": 90
   },
   "face=wall,facing=north,powered=false,wood_type=crimson": {
-    "model": "minecraft:block/crimson_button",
+    "model": "redstoneutilz:block/copycat_button_crimson",
     "uvlock": true,
     "x": 90
   },
   "face=wall,facing=north,powered=true,wood_type=crimson": {
-    "model": "minecraft:block/crimson_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_crimson_pressed",
     "uvlock": true,
     "x": 90
   },
   "face=wall,facing=south,powered=false,wood_type=crimson": {
-    "model": "minecraft:block/crimson_button",
+    "model": "redstoneutilz:block/copycat_button_crimson",
     "uvlock": true,
     "x": 90,
     "y": 180
   },
   "face=wall,facing=south,powered=true,wood_type=crimson": {
-    "model": "minecraft:block/crimson_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_crimson_pressed",
     "uvlock": true,
     "x": 90,
     "y": 180
   },
   "face=wall,facing=west,powered=false,wood_type=crimson": {
-    "model": "minecraft:block/crimson_button",
+    "model": "redstoneutilz:block/copycat_button_crimson",
     "uvlock": true,
     "x": 90,
     "y": 270
   },
   "face=wall,facing=west,powered=true,wood_type=crimson": {
-    "model": "minecraft:block/crimson_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_crimson_pressed",
     "uvlock": true,
     "x": 90,
     "y": 270
   },
 
   "face=ceiling,facing=east,powered=false,wood_type=warped": {
-    "model": "minecraft:block/warped_button",
+    "model": "redstoneutilz:block/copycat_button_warped",
     "x": 180,
     "y": 270
   },
   "face=ceiling,facing=east,powered=true,wood_type=warped": {
-    "model": "minecraft:block/warped_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_warped_pressed",
     "x": 180,
     "y": 270
   },
   "face=ceiling,facing=north,powered=false,wood_type=warped": {
-    "model": "minecraft:block/warped_button",
+    "model": "redstoneutilz:block/copycat_button_warped",
     "x": 180,
     "y": 180
   },
   "face=ceiling,facing=north,powered=true,wood_type=warped": {
-    "model": "minecraft:block/warped_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_warped_pressed",
     "x": 180,
     "y": 180
   },
   "face=ceiling,facing=south,powered=false,wood_type=warped": {
-    "model": "minecraft:block/warped_button",
+    "model": "redstoneutilz:block/copycat_button_warped",
     "x": 180
   },
   "face=ceiling,facing=south,powered=true,wood_type=warped": {
-    "model": "minecraft:block/warped_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_warped_pressed",
     "x": 180
   },
   "face=ceiling,facing=west,powered=false,wood_type=warped": {
-    "model": "minecraft:block/warped_button",
+    "model": "redstoneutilz:block/copycat_button_warped",
     "x": 180,
     "y": 90
   },
   "face=ceiling,facing=west,powered=true,wood_type=warped": {
-    "model": "minecraft:block/warped_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_warped_pressed",
     "x": 180,
     "y": 90
   },
   "face=floor,facing=east,powered=false,wood_type=warped": {
-    "model": "minecraft:block/warped_button",
+    "model": "redstoneutilz:block/copycat_button_warped",
     "y": 90
   },
   "face=floor,facing=east,powered=true,wood_type=warped": {
-    "model": "minecraft:block/warped_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_warped_pressed",
     "y": 90
   },
   "face=floor,facing=north,powered=false,wood_type=warped": {
-    "model": "minecraft:block/warped_button"
+    "model": "redstoneutilz:block/copycat_button_warped"
   },
   "face=floor,facing=north,powered=true,wood_type=warped": {
-    "model": "minecraft:block/warped_button_pressed"
+    "model": "redstoneutilz:block/copycat_button_warped_pressed"
   },
   "face=floor,facing=south,powered=false,wood_type=warped": {
-    "model": "minecraft:block/warped_button",
+    "model": "redstoneutilz:block/copycat_button_warped",
     "y": 180
   },
   "face=floor,facing=south,powered=true,wood_type=warped": {
-    "model": "minecraft:block/warped_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_warped_pressed",
     "y": 180
   },
   "face=floor,facing=west,powered=false,wood_type=warped": {
-    "model": "minecraft:block/warped_button",
+    "model": "redstoneutilz:block/copycat_button_warped",
     "y": 270
   },
   "face=floor,facing=west,powered=true,wood_type=warped": {
-    "model": "minecraft:block/warped_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_warped_pressed",
     "y": 270
   },
   "face=wall,facing=east,powered=false,wood_type=warped": {
-    "model": "minecraft:block/warped_button",
+    "model": "redstoneutilz:block/copycat_button_warped",
     "uvlock": true,
     "x": 90,
     "y": 90
   },
   "face=wall,facing=east,powered=true,wood_type=warped": {
-    "model": "minecraft:block/warped_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_warped_pressed",
     "uvlock": true,
     "x": 90,
     "y": 90
   },
   "face=wall,facing=north,powered=false,wood_type=warped": {
-    "model": "minecraft:block/warped_button",
+    "model": "redstoneutilz:block/copycat_button_warped",
     "uvlock": true,
     "x": 90
   },
   "face=wall,facing=north,powered=true,wood_type=warped": {
-    "model": "minecraft:block/warped_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_warped_pressed",
     "uvlock": true,
     "x": 90
   },
   "face=wall,facing=south,powered=false,wood_type=warped": {
-    "model": "minecraft:block/warped_button",
+    "model": "redstoneutilz:block/copycat_button_warped",
     "uvlock": true,
     "x": 90,
     "y": 180
   },
   "face=wall,facing=south,powered=true,wood_type=warped": {
-    "model": "minecraft:block/warped_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_warped_pressed",
     "uvlock": true,
     "x": 90,
     "y": 180
   },
   "face=wall,facing=west,powered=false,wood_type=warped": {
-    "model": "minecraft:block/warped_button",
+    "model": "redstoneutilz:block/copycat_button_warped",
     "uvlock": true,
     "x": 90,
     "y": 270
   },
   "face=wall,facing=west,powered=true,wood_type=warped": {
-    "model": "minecraft:block/warped_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_warped_pressed",
     "uvlock": true,
     "x": 90,
     "y": 270
   },
 
   "face=ceiling,facing=east,powered=false,wood_type=bamboo": {
-    "model": "minecraft:block/bamboo_button",
+    "model": "redstoneutilz:block/copycat_button_bamboo",
     "x": 180,
     "y": 270
   },
   "face=ceiling,facing=east,powered=true,wood_type=bamboo": {
-    "model": "minecraft:block/bamboo_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_bamboo_pressed",
     "x": 180,
     "y": 270
   },
   "face=ceiling,facing=north,powered=false,wood_type=bamboo": {
-    "model": "minecraft:block/bamboo_button",
+    "model": "redstoneutilz:block/copycat_button_bamboo",
     "x": 180,
     "y": 180
   },
   "face=ceiling,facing=north,powered=true,wood_type=bamboo": {
-    "model": "minecraft:block/bamboo_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_bamboo_pressed",
     "x": 180,
     "y": 180
   },
   "face=ceiling,facing=south,powered=false,wood_type=bamboo": {
-    "model": "minecraft:block/bamboo_button",
+    "model": "redstoneutilz:block/copycat_button_bamboo",
     "x": 180
   },
   "face=ceiling,facing=south,powered=true,wood_type=bamboo": {
-    "model": "minecraft:block/bamboo_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_bamboo_pressed",
     "x": 180
   },
   "face=ceiling,facing=west,powered=false,wood_type=bamboo": {
-    "model": "minecraft:block/bamboo_button",
+    "model": "redstoneutilz:block/copycat_button_bamboo",
     "x": 180,
     "y": 90
   },
   "face=ceiling,facing=west,powered=true,wood_type=bamboo": {
-    "model": "minecraft:block/bamboo_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_bamboo_pressed",
     "x": 180,
     "y": 90
   },
   "face=floor,facing=east,powered=false,wood_type=bamboo": {
-    "model": "minecraft:block/bamboo_button",
+    "model": "redstoneutilz:block/copycat_button_bamboo",
     "y": 90
   },
   "face=floor,facing=east,powered=true,wood_type=bamboo": {
-    "model": "minecraft:block/bamboo_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_bamboo_pressed",
     "y": 90
   },
   "face=floor,facing=north,powered=false,wood_type=bamboo": {
-    "model": "minecraft:block/bamboo_button"
+    "model": "redstoneutilz:block/copycat_button_bamboo"
   },
   "face=floor,facing=north,powered=true,wood_type=bamboo": {
-    "model": "minecraft:block/bamboo_button_pressed"
+    "model": "redstoneutilz:block/copycat_button_bamboo_pressed"
   },
   "face=floor,facing=south,powered=false,wood_type=bamboo": {
-    "model": "minecraft:block/bamboo_button",
+    "model": "redstoneutilz:block/copycat_button_bamboo",
     "y": 180
   },
   "face=floor,facing=south,powered=true,wood_type=bamboo": {
-    "model": "minecraft:block/bamboo_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_bamboo_pressed",
     "y": 180
   },
   "face=floor,facing=west,powered=false,wood_type=bamboo": {
-    "model": "minecraft:block/bamboo_button",
+    "model": "redstoneutilz:block/copycat_button_bamboo",
     "y": 270
   },
   "face=floor,facing=west,powered=true,wood_type=bamboo": {
-    "model": "minecraft:block/bamboo_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_bamboo_pressed",
     "y": 270
   },
   "face=wall,facing=east,powered=false,wood_type=bamboo": {
-    "model": "minecraft:block/bamboo_button",
+    "model": "redstoneutilz:block/copycat_button_bamboo",
     "uvlock": true,
     "x": 90,
     "y": 90
   },
   "face=wall,facing=east,powered=true,wood_type=bamboo": {
-    "model": "minecraft:block/bamboo_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_bamboo_pressed",
     "uvlock": true,
     "x": 90,
     "y": 90
   },
   "face=wall,facing=north,powered=false,wood_type=bamboo": {
-    "model": "minecraft:block/bamboo_button",
+    "model": "redstoneutilz:block/copycat_button_bamboo",
     "uvlock": true,
     "x": 90
   },
   "face=wall,facing=north,powered=true,wood_type=bamboo": {
-    "model": "minecraft:block/bamboo_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_bamboo_pressed",
     "uvlock": true,
     "x": 90
   },
   "face=wall,facing=south,powered=false,wood_type=bamboo": {
-    "model": "minecraft:block/bamboo_button",
+    "model": "redstoneutilz:block/copycat_button_bamboo",
     "uvlock": true,
     "x": 90,
     "y": 180
   },
   "face=wall,facing=south,powered=true,wood_type=bamboo": {
-    "model": "minecraft:block/bamboo_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_bamboo_pressed",
     "uvlock": true,
     "x": 90,
     "y": 180
   },
   "face=wall,facing=west,powered=false,wood_type=bamboo": {
-    "model": "minecraft:block/bamboo_button",
+    "model": "redstoneutilz:block/copycat_button_bamboo",
     "uvlock": true,
     "x": 90,
     "y": 270
   },
   "face=wall,facing=west,powered=true,wood_type=bamboo": {
-    "model": "minecraft:block/bamboo_button_pressed",
+    "model": "redstoneutilz:block/copycat_button_bamboo_pressed",
     "uvlock": true,
     "x": 90,
     "y": 270
