@@ -115,8 +115,6 @@
       "y": 270
     },
 
-
-
     "face=ceiling,facing=east,powered=false,wood_type=oak": {
       "model": "redstoneutilz:block/copycat_button_oak",
       "x": 180,
@@ -231,8 +229,6 @@
       "x": 90,
       "y": 270
     },
-
-
 
     "face=ceiling,facing=east,powered=false,wood_type=spruce": {
       "model": "redstoneutilz:block/copycat_button_spruce",
@@ -349,10 +345,6 @@
       "y": 270
     },
 
-
-
-
-
     "face=ceiling,facing=east,powered=false,wood_type=birch": {
       "model": "redstoneutilz:block/copycat_button_birch",
       "x": 180,
@@ -467,8 +459,6 @@
       "x": 90,
       "y": 270
     },
-
-
 
     "face=ceiling,facing=east,powered=false,wood_type=acacia": {
       "model": "redstoneutilz:block/copycat_button_acacia",
@@ -585,12 +575,6 @@
       "y": 270
     },
 
-
-
-
-
-
-
     "face=ceiling,facing=east,powered=false,wood_type=jungle": {
       "model": "redstoneutilz:block/copycat_button_jungle",
       "x": 180,
@@ -705,5 +689,584 @@
       "x": 90,
       "y": 270
     }
+  },
+
+  "face=ceiling,facing=east,powered=false,wood_type=darkoak": {
+    "model": "redstoneutilz:block/copycat_button_darkoak",
+    "x": 180,
+    "y": 270
+  },
+  "face=ceiling,facing=east,powered=true,wood_type=darkoak": {
+    "model": "redstoneutilz:block/copycat_button_darkoak_pressed",
+    "x": 180,
+    "y": 270
+  },
+  "face=ceiling,facing=north,powered=false,wood_type=darkoak": {
+    "model": "redstoneutilz:block/copycat_button_darkoak",
+    "x": 180,
+    "y": 180
+  },
+  "face=ceiling,facing=north,powered=true,wood_type=darkoak": {
+    "model": "redstoneutilz:block/copycat_button_darkoak_pressed",
+    "x": 180,
+    "y": 180
+  },
+  "face=ceiling,facing=south,powered=false,wood_type=darkoak": {
+    "model": "redstoneutilz:block/copycat_button_darkoak",
+    "x": 180
+  },
+  "face=ceiling,facing=south,powered=true,wood_type=darkoak": {
+    "model": "redstoneutilz:block/copycat_button_darkoak_pressed",
+    "x": 180
+  },
+  "face=ceiling,facing=west,powered=false,wood_type=darkoak": {
+    "model": "redstoneutilz:block/copycat_button_darkoak",
+    "x": 180,
+    "y": 90
+  },
+  "face=ceiling,facing=west,powered=true,wood_type=darkoak": {
+    "model": "redstoneutilz:block/copycat_button_darkoak_pressed",
+    "x": 180,
+    "y": 90
+  },
+  "face=floor,facing=east,powered=false,wood_type=darkoak": {
+    "model": "redstoneutilz:block/copycat_button_darkoak",
+    "y": 90
+  },
+  "face=floor,facing=east,powered=true,wood_type=darkoak": {
+    "model": "redstoneutilz:block/copycat_button_darkoak_pressed",
+    "y": 90
+  },
+  "face=floor,facing=north,powered=false,wood_type=darkoak": {
+    "model": "redstoneutilz:block/copycat_button_darkoak"
+  },
+  "face=floor,facing=north,powered=true,wood_type=darkoak": {
+    "model": "redstoneutilz:block/copycat_button_darkoak_pressed"
+  },
+  "face=floor,facing=south,powered=false,wood_type=darkoak": {
+    "model": "redstoneutilz:block/copycat_button_darkoak",
+    "y": 180
+  },
+  "face=floor,facing=south,powered=true,wood_type=darkoak": {
+    "model": "redstoneutilz:block/copycat_button_darkoak_pressed",
+    "y": 180
+  },
+  "face=floor,facing=west,powered=false,wood_type=darkoak": {
+    "model": "redstoneutilz:block/copycat_button_darkoak",
+    "y": 270
+  },
+  "face=floor,facing=west,powered=true,wood_type=darkoak": {
+    "model": "redstoneutilz:block/copycat_button_darkoak_pressed",
+    "y": 270
+  },
+  "face=wall,facing=east,powered=false,wood_type=darkoak": {
+    "model": "redstoneutilz:block/copycat_button_darkoak",
+    "uvlock": true,
+    "x": 90,
+    "y": 90
+  },
+  "face=wall,facing=east,powered=true,wood_type=darkoak": {
+    "model": "redstoneutilz:block/copycat_button_darkoak_pressed",
+    "uvlock": true,
+    "x": 90,
+    "y": 90
+  },
+  "face=wall,facing=north,powered=false,wood_type=darkoak": {
+    "model": "redstoneutilz:block/copycat_button_darkoak",
+    "uvlock": true,
+    "x": 90
+  },
+  "face=wall,facing=north,powered=true,wood_type=darkoak": {
+    "model": "redstoneutilz:block/copycat_button_darkoak_pressed",
+    "uvlock": true,
+    "x": 90
+  },
+  "face=wall,facing=south,powered=false,wood_type=darkoak": {
+    "model": "redstoneutilz:block/copycat_button_darkoak",
+    "uvlock": true,
+    "x": 90,
+    "y": 180
+  },
+  "face=wall,facing=south,powered=true,wood_type=darkoak": {
+    "model": "redstoneutilz:block/copycat_button_darkoak_pressed",
+    "uvlock": true,
+    "x": 90,
+    "y": 180
+  },
+  "face=wall,facing=west,powered=false,wood_type=darkoak": {
+    "model": "redstoneutilz:block/copycat_button_darkoak",
+    "uvlock": true,
+    "x": 90,
+    "y": 270
+  },
+  "face=wall,facing=west,powered=true,wood_type=darkoak": {
+    "model": "redstoneutilz:block/copycat_button_darkoak_pressed",
+    "uvlock": true,
+    "x": 90,
+    "y": 270
+  },
+
+  "face=ceiling,facing=east,powered=false,wood_type=mangrove": {
+    "model": "redstoneutilz:block/copycat_button_mangrove",
+    "x": 180,
+    "y": 270
+  },
+  "face=ceiling,facing=east,powered=true,wood_type=mangrove": {
+    "model": "redstoneutilz:block/copycat_button_mangrove_pressed",
+    "x": 180,
+    "y": 270
+  },
+  "face=ceiling,facing=north,powered=false,wood_type=mangrove": {
+    "model": "redstoneutilz:block/copycat_button_mangrove",
+    "x": 180,
+    "y": 180
+  },
+  "face=ceiling,facing=north,powered=true,wood_type=mangrove": {
+    "model": "redstoneutilz:block/copycat_button_mangrove_pressed",
+    "x": 180,
+    "y": 180
+  },
+  "face=ceiling,facing=south,powered=false,wood_type=mangrove": {
+    "model": "redstoneutilz:block/copycat_button_mangrove",
+    "x": 180
+  },
+  "face=ceiling,facing=south,powered=true,wood_type=mangrove": {
+    "model": "redstoneutilz:block/copycat_button_mangrove_pressed",
+    "x": 180
+  },
+  "face=ceiling,facing=west,powered=false,wood_type=mangrove": {
+    "model": "redstoneutilz:block/copycat_button_mangrove",
+    "x": 180,
+    "y": 90
+  },
+  "face=ceiling,facing=west,powered=true,wood_type=mangrove": {
+    "model": "redstoneutilz:block/copycat_button_mangrove_pressed",
+    "x": 180,
+    "y": 90
+  },
+  "face=floor,facing=east,powered=false,wood_type=mangrove": {
+    "model": "redstoneutilz:block/copycat_button_mangrove",
+    "y": 90
+  },
+  "face=floor,facing=east,powered=true,wood_type=mangrove": {
+    "model": "redstoneutilz:block/copycat_button_mangrove_pressed",
+    "y": 90
+  },
+  "face=floor,facing=north,powered=false,wood_type=mangrove": {
+    "model": "redstoneutilz:block/copycat_button_mangrove"
+  },
+  "face=floor,facing=north,powered=true,wood_type=mangrove": {
+    "model": "redstoneutilz:block/copycat_button_mangrove_pressed"
+  },
+  "face=floor,facing=south,powered=false,wood_type=mangrove": {
+    "model": "redstoneutilz:block/copycat_button_mangrove",
+    "y": 180
+  },
+  "face=floor,facing=south,powered=true,wood_type=mangrove": {
+    "model": "redstoneutilz:block/copycat_button_mangrove_pressed",
+    "y": 180
+  },
+  "face=floor,facing=west,powered=false,wood_type=mangrove": {
+    "model": "redstoneutilz:block/copycat_button_mangrove",
+    "y": 270
+  },
+  "face=floor,facing=west,powered=true,wood_type=mangrove": {
+    "model": "redstoneutilz:block/copycat_button_mangrove_pressed",
+    "y": 270
+  },
+  "face=wall,facing=east,powered=false,wood_type=mangrove": {
+    "model": "redstoneutilz:block/copycat_button_mangrove",
+    "uvlock": true,
+    "x": 90,
+    "y": 90
+  },
+  "face=wall,facing=east,powered=true,wood_type=mangrove": {
+    "model": "redstoneutilz:block/copycat_button_mangrove_pressed",
+    "uvlock": true,
+    "x": 90,
+    "y": 90
+  },
+  "face=wall,facing=north,powered=false,wood_type=mangrove": {
+    "model": "redstoneutilz:block/copycat_button_mangrove",
+    "uvlock": true,
+    "x": 90
+  },
+  "face=wall,facing=north,powered=true,wood_type=mangrove": {
+    "model": "redstoneutilz:block/copycat_button_mangrove_pressed",
+    "uvlock": true,
+    "x": 90
+  },
+  "face=wall,facing=south,powered=false,wood_type=mangrove": {
+    "model": "redstoneutilz:block/copycat_button_mangrove",
+    "uvlock": true,
+    "x": 90,
+    "y": 180
+  },
+  "face=wall,facing=south,powered=true,wood_type=mangrove": {
+    "model": "redstoneutilz:block/copycat_button_mangrove_pressed",
+    "uvlock": true,
+    "x": 90,
+    "y": 180
+  },
+  "face=wall,facing=west,powered=false,wood_type=mangrove": {
+    "model": "redstoneutilz:block/copycat_button_mangrove",
+    "uvlock": true,
+    "x": 90,
+    "y": 270
+  },
+  "face=wall,facing=west,powered=true,wood_type=mangrove": {
+    "model": "redstoneutilz:block/copycat_button_mangrove_pressed",
+    "uvlock": true,
+    "x": 90,
+    "y": 270
+  },
+
+  "face=ceiling,facing=east,powered=false,wood_type=cherry": {
+    "model": "redstoneutilz:block/copycat_button_cherry",
+    "x": 180,
+    "y": 270
+  },
+  "face=ceiling,facing=east,powered=true,wood_type=cherry": {
+    "model": "redstoneutilz:block/copycat_button_cherry_pressed",
+    "x": 180,
+    "y": 270
+  },
+  "face=ceiling,facing=north,powered=false,wood_type=cherry": {
+    "model": "redstoneutilz:block/copycat_button_cherry",
+    "x": 180,
+    "y": 180
+  },
+  "face=ceiling,facing=north,powered=true,wood_type=cherry": {
+    "model": "redstoneutilz:block/copycat_button_cherry_pressed",
+    "x": 180,
+    "y": 180
+  },
+  "face=ceiling,facing=south,powered=false,wood_type=cherry": {
+    "model": "redstoneutilz:block/copycat_button_cherry",
+    "x": 180
+  },
+  "face=ceiling,facing=south,powered=true,wood_type=cherry": {
+    "model": "redstoneutilz:block/copycat_button_cherry_pressed",
+    "x": 180
+  },
+  "face=ceiling,facing=west,powered=false,wood_type=cherry": {
+    "model": "redstoneutilz:block/copycat_button_cherry",
+    "x": 180,
+    "y": 90
+  },
+  "face=ceiling,facing=west,powered=true,wood_type=cherry": {
+    "model": "redstoneutilz:block/copycat_button_cherry_pressed",
+    "x": 180,
+    "y": 90
+  },
+  "face=floor,facing=east,powered=false,wood_type=cherry": {
+    "model": "redstoneutilz:block/copycat_button_cherry",
+    "y": 90
+  },
+  "face=floor,facing=east,powered=true,wood_type=cherry": {
+    "model": "redstoneutilz:block/copycat_button_cherry_pressed",
+    "y": 90
+  },
+  "face=floor,facing=north,powered=false,wood_type=cherry": {
+    "model": "redstoneutilz:block/copycat_button_cherry"
+  },
+  "face=floor,facing=north,powered=true,wood_type=cherry": {
+    "model": "redstoneutilz:block/copycat_button_cherry_pressed"
+  },
+  "face=floor,facing=south,powered=false,wood_type=cherry": {
+    "model": "redstoneutilz:block/copycat_button_cherry",
+    "y": 180
+  },
+  "face=floor,facing=south,powered=true,wood_type=cherry": {
+    "model": "redstoneutilz:block/copycat_button_cherry_pressed",
+    "y": 180
+  },
+  "face=floor,facing=west,powered=false,wood_type=cherry": {
+    "model": "redstoneutilz:block/copycat_button_cherry",
+    "y": 270
+  },
+  "face=floor,facing=west,powered=true,wood_type=cherry": {
+    "model": "redstoneutilz:block/copycat_button_cherry_pressed",
+    "y": 270
+  },
+  "face=wall,facing=east,powered=false,wood_type=cherry": {
+    "model": "redstoneutilz:block/copycat_button_cherry",
+    "uvlock": true,
+    "x": 90,
+    "y": 90
+  },
+  "face=wall,facing=east,powered=true,wood_type=cherry": {
+    "model": "redstoneutilz:block/copycat_button_cherry_pressed",
+    "uvlock": true,
+    "x": 90,
+    "y": 90
+  },
+  "face=wall,facing=north,powered=false,wood_type=cherry": {
+    "model": "redstoneutilz:block/copycat_button_cherry",
+    "uvlock": true,
+    "x": 90
+  },
+  "face=wall,facing=north,powered=true,wood_type=cherry": {
+    "model": "redstoneutilz:block/copycat_button_cherry_pressed",
+    "uvlock": true,
+    "x": 90
+  },
+  "face=wall,facing=south,powered=false,wood_type=cherry": {
+    "model": "redstoneutilz:block/copycat_button_cherry",
+    "uvlock": true,
+    "x": 90,
+    "y": 180
+  },
+  "face=wall,facing=south,powered=true,wood_type=cherry": {
+    "model": "redstoneutilz:block/copycat_button_cherry_pressed",
+    "uvlock": true,
+    "x": 90,
+    "y": 180
+  },
+  "face=wall,facing=west,powered=false,wood_type=cherry": {
+    "model": "redstoneutilz:block/copycat_button_cherry",
+    "uvlock": true,
+    "x": 90,
+    "y": 270
+  },
+  "face=wall,facing=west,powered=true,wood_type=cherry": {
+    "model": "redstoneutilz:block/copycat_button_cherry_pressed",
+    "uvlock": true,
+    "x": 90,
+    "y": 270
+  },
+
+
+
+
+
+  "face=ceiling,facing=east,powered=false,wood_type=crimson": {
+    "model": "redstoneutilz:block/copycat_button_crimson",
+    "x": 180,
+    "y": 270
+  },
+  "face=ceiling,facing=east,powered=true,wood_type=crimson": {
+    "model": "redstoneutilz:block/copycat_button_crimson_pressed",
+    "x": 180,
+    "y": 270
+  },
+  "face=ceiling,facing=north,powered=false,wood_type=crimson": {
+    "model": "redstoneutilz:block/copycat_button_crimson",
+    "x": 180,
+    "y": 180
+  },
+  "face=ceiling,facing=north,powered=true,wood_type=crimson": {
+    "model": "redstoneutilz:block/copycat_button_crimson_pressed",
+    "x": 180,
+    "y": 180
+  },
+  "face=ceiling,facing=south,powered=false,wood_type=crimson": {
+    "model": "redstoneutilz:block/copycat_button_crimson",
+    "x": 180
+  },
+  "face=ceiling,facing=south,powered=true,wood_type=crimson": {
+    "model": "redstoneutilz:block/copycat_button_crimson_pressed",
+    "x": 180
+  },
+  "face=ceiling,facing=west,powered=false,wood_type=crimson": {
+    "model": "redstoneutilz:block/copycat_button_crimson",
+    "x": 180,
+    "y": 90
+  },
+  "face=ceiling,facing=west,powered=true,wood_type=crimson": {
+    "model": "redstoneutilz:block/copycat_button_crimson_pressed",
+    "x": 180,
+    "y": 90
+  },
+  "face=floor,facing=east,powered=false,wood_type=crimson": {
+    "model": "redstoneutilz:block/copycat_button_crimson",
+    "y": 90
+  },
+  "face=floor,facing=east,powered=true,wood_type=crimson": {
+    "model": "redstoneutilz:block/copycat_button_crimson_pressed",
+    "y": 90
+  },
+  "face=floor,facing=north,powered=false,wood_type=crimson": {
+    "model": "redstoneutilz:block/copycat_button_crimson"
+  },
+  "face=floor,facing=north,powered=true,wood_type=crimson": {
+    "model": "redstoneutilz:block/copycat_button_crimson_pressed"
+  },
+  "face=floor,facing=south,powered=false,wood_type=crimson": {
+    "model": "redstoneutilz:block/copycat_button_crimson",
+    "y": 180
+  },
+  "face=floor,facing=south,powered=true,wood_type=crimson": {
+    "model": "redstoneutilz:block/copycat_button_crimson_pressed",
+    "y": 180
+  },
+  "face=floor,facing=west,powered=false,wood_type=crimson": {
+    "model": "redstoneutilz:block/copycat_button_crimson",
+    "y": 270
+  },
+  "face=floor,facing=west,powered=true,wood_type=crimson": {
+    "model": "redstoneutilz:block/copycat_button_crimson_pressed",
+    "y": 270
+  },
+  "face=wall,facing=east,powered=false,wood_type=crimson": {
+    "model": "redstoneutilz:block/copycat_button_crimson",
+    "uvlock": true,
+    "x": 90,
+    "y": 90
+  },
+  "face=wall,facing=east,powered=true,wood_type=crimson": {
+    "model": "redstoneutilz:block/copycat_button_crimson_pressed",
+    "uvlock": true,
+    "x": 90,
+    "y": 90
+  },
+  "face=wall,facing=north,powered=false,wood_type=crimson": {
+    "model": "redstoneutilz:block/copycat_button_crimson",
+    "uvlock": true,
+    "x": 90
+  },
+  "face=wall,facing=north,powered=true,wood_type=crimson": {
+    "model": "redstoneutilz:block/copycat_button_crimson_pressed",
+    "uvlock": true,
+    "x": 90
+  },
+  "face=wall,facing=south,powered=false,wood_type=crimson": {
+    "model": "redstoneutilz:block/copycat_button_crimson",
+    "uvlock": true,
+    "x": 90,
+    "y": 180
+  },
+  "face=wall,facing=south,powered=true,wood_type=crimson": {
+    "model": "redstoneutilz:block/copycat_button_crimson_pressed",
+    "uvlock": true,
+    "x": 90,
+    "y": 180
+  },
+  "face=wall,facing=west,powered=false,wood_type=crimson": {
+    "model": "redstoneutilz:block/copycat_button_crimson",
+    "uvlock": true,
+    "x": 90,
+    "y": 270
+  },
+  "face=wall,facing=west,powered=true,wood_type=crimson": {
+    "model": "redstoneutilz:block/copycat_button_crimson_pressed",
+    "uvlock": true,
+    "x": 90,
+    "y": 270
+  },
+
+  "face=ceiling,facing=east,powered=false,wood_type=warped": {
+    "model": "redstoneutilz:block/copycat_button_warped",
+    "x": 180,
+    "y": 270
+  },
+  "face=ceiling,facing=east,powered=true,wood_type=warped": {
+    "model": "redstoneutilz:block/copycat_button_warped_pressed",
+    "x": 180,
+    "y": 270
+  },
+  "face=ceiling,facing=north,powered=false,wood_type=warped": {
+    "model": "redstoneutilz:block/copycat_button_warped",
+    "x": 180,
+    "y": 180
+  },
+  "face=ceiling,facing=north,powered=true,wood_type=warped": {
+    "model": "redstoneutilz:block/copycat_button_warped_pressed",
+    "x": 180,
+    "y": 180
+  },
+  "face=ceiling,facing=south,powered=false,wood_type=warped": {
+    "model": "redstoneutilz:block/copycat_button_warped",
+    "x": 180
+  },
+  "face=ceiling,facing=south,powered=true,wood_type=warped": {
+    "model": "redstoneutilz:block/copycat_button_warped_pressed",
+    "x": 180
+  },
+  "face=ceiling,facing=west,powered=false,wood_type=warped": {
+    "model": "redstoneutilz:block/copycat_button_warped",
+    "x": 180,
+    "y": 90
+  },
+  "face=ceiling,facing=west,powered=true,wood_type=warped": {
+    "model": "redstoneutilz:block/copycat_button_warped_pressed",
+    "x": 180,
+    "y": 90
+  },
+  "face=floor,facing=east,powered=false,wood_type=warped": {
+    "model": "redstoneutilz:block/copycat_button_warped",
+    "y": 90
+  },
+  "face=floor,facing=east,powered=true,wood_type=warped": {
+    "model": "redstoneutilz:block/copycat_button_warped_pressed",
+    "y": 90
+  },
+  "face=floor,facing=north,powered=false,wood_type=warped": {
+    "model": "redstoneutilz:block/copycat_button_warped"
+  },
+  "face=floor,facing=north,powered=true,wood_type=warped": {
+    "model": "redstoneutilz:block/copycat_button_warped_pressed"
+  },
+  "face=floor,facing=south,powered=false,wood_type=warped": {
+    "model": "redstoneutilz:block/copycat_button_warped",
+    "y": 180
+  },
+  "face=floor,facing=south,powered=true,wood_type=warped": {
+    "model": "redstoneutilz:block/copycat_button_warped_pressed",
+    "y": 180
+  },
+  "face=floor,facing=west,powered=false,wood_type=warped": {
+    "model": "redstoneutilz:block/copycat_button_warped",
+    "y": 270
+  },
+  "face=floor,facing=west,powered=true,wood_type=warped": {
+    "model": "redstoneutilz:block/copycat_button_warped_pressed",
+    "y": 270
+  },
+  "face=wall,facing=east,powered=false,wood_type=warped": {
+    "model": "redstoneutilz:block/copycat_button_warped",
+    "uvlock": true,
+    "x": 90,
+    "y": 90
+  },
+  "face=wall,facing=east,powered=true,wood_type=warped": {
+    "model": "redstoneutilz:block/copycat_button_warped_pressed",
+    "uvlock": true,
+    "x": 90,
+    "y": 90
+  },
+  "face=wall,facing=north,powered=false,wood_type=warped": {
+    "model": "redstoneutilz:block/copycat_button_warped",
+    "uvlock": true,
+    "x": 90
+  },
+  "face=wall,facing=north,powered=true,wood_type=warped": {
+    "model": "redstoneutilz:block/copycat_button_warped_pressed",
+    "uvlock": true,
+    "x": 90
+  },
+  "face=wall,facing=south,powered=false,wood_type=warped": {
+    "model": "redstoneutilz:block/copycat_button_warped",
+    "uvlock": true,
+    "x": 90,
+    "y": 180
+  },
+  "face=wall,facing=south,powered=true,wood_type=warped": {
+    "model": "redstoneutilz:block/copycat_button_warped_pressed",
+    "uvlock": true,
+    "x": 90,
+    "y": 180
+  },
+  "face=wall,facing=west,powered=false,wood_type=warped": {
+    "model": "redstoneutilz:block/copycat_button_warped",
+    "uvlock": true,
+    "x": 90,
+    "y": 270
+  },
+  "face=wall,facing=west,powered=true,wood_type=warped": {
+    "model": "redstoneutilz:block/copycat_button_warped_pressed",
+    "uvlock": true,
+    "x": 90,
+    "y": 270
   }
 }
