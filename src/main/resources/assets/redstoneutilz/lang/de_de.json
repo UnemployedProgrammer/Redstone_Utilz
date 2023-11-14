@@ -7,5 +7,20 @@
   "ui.redstoneutilz.copycatconfigurationscreen.title": "Knopf Konfigurieren",
   "ui.redstoneutilz.copycatconfigurationscreen.components.slider_tickspressed.label": " Ticks bleibt der Knopf Gedrückt",
   "ui.redstoneutilz.copycatconfigurationscreen.components.slider_signalstrengh.label": " Ausgangssignalstärke",
-  "ui.redstoneutilz.copycatconfigurationscreen.error_setfailed": "Wir entschuldigen uns sehr! das setzen von den daten hat leider nicht geklappt. Bitte versuche es erneut! Wenn es immer noch nicht funktioniert, bitte melde das hier: https://github.com/sebastianmueller1306/Redstone_Utilz/issues"
+  "ui.redstoneutilz.copycatconfigurationscreen.error_setfailed": "Wir entschuldigen uns sehr! das setzen von den daten hat leider nicht geklappt. Bitte versuche es erneut! Wenn es immer noch nicht funktioniert, bitte melde das hier: https://github.com/sebastianmueller1306/Redstone_Utilz/issues",
+
+  "ui.redstoneutilz.homepage.home": "   Startseite",
+  "ui.redstoneutilz.homepage.wiki": "   Wiki",
+  "ui.redstoneutilz.homepage.settings": "       Einstellungen",
+  "ui.redstoneutilz.homepage.issues": "   Fehler",
+  "ui.redstoneutilz.homepage.versions": "   Versionen",
+  "ui.redstoneutilz.homepage.smap": "      Soziale M., Pla.",
+  "ui.redstoneutilz.homepage.smap.full": "Soziale Medien und Plattformen",
+  "ui.redstoneutilz.homepage.versions.text_no_ver1": "We are so Sorry!",
+  "ui.redstoneutilz.homepage.versions.text_no_ver2": "Currently there are no other Versions.",
+  "ui.redstoneutilz.homepage.versions.text_no_ver3": "The mod is only available in 1.20 currently, because its in development.",
+  "ui.redstoneutilz.homepage.versions.text_no_ver4": "currently, because its in development.",
+
+  "block.redstoneutilz.copycat_button": "Copycat Button",
+  "block.redstoneutilz.copycat_button.err_firstsetvalwithwrench": "▒▒▒ Please set first, what Output Strengh should come out and How long the Button stays pressed. ▒▒▒"
 }

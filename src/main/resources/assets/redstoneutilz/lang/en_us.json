@@ -9,6 +9,19 @@
   "ui.redstoneutilz.copycatconfigurationscreen.components.slider_signalstrengh.label": " Output Redstone Strength",
   "ui.redstoneutilz.copycatconfigurationscreen.error_setfailed": "We are so sorry. It failed to set the slider values to the button data. Please try again! If it still doesn´t work, please report here: https://github.com/sebastianmueller1306/Redstone_Utilz/issues",
 
+  "ui.redstoneutilz.homepage.home": "   Home",
+  "ui.redstoneutilz.homepage.wiki": "   Wiki",
+  "ui.redstoneutilz.homepage.settings": "   Settings",
+  "ui.redstoneutilz.homepage.issues": "   Issues",
+  "ui.redstoneutilz.homepage.versions": "   Versions",
+  "ui.redstoneutilz.homepage.smap": "   Social M., Pla.",
+  "ui.redstoneutilz.homepage.smap.full": "Social Media and Plattforms",
+  "ui.redstoneutilz.homepage.versions.text_no_ver1": "We are so Sorry!",
+  "ui.redstoneutilz.homepage.versions.text_no_ver2": "Currently there are no other Versions.",
+  "ui.redstoneutilz.homepage.versions.text_no_ver3": "The mod is only available in 1.20",
+  "ui.redstoneutilz.homepage.versions.text_no_ver4": "currently, because its in development.",
+
+
   "block.redstoneutilz.copycat_button": "Copycat Button",
   "block.redstoneutilz.copycat_button.err_firstsetvalwithwrench": "▒▒▒ Please set first, what Output Strengh should come out and How long the Button stays pressed. ▒▒▒"
 }
