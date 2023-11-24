@@ -9,10 +9,17 @@ import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.inventory.tooltip.TooltipComponent;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.unemployedgames.redstoneutilz.RedstoneMod;
 import net.unemployedgames.redstoneutilz.content.gui.AllIcons;
 
+import java.time.LocalDate;
+import java.util.Random;
+
+@OnlyIn(Dist.CLIENT)
 public class MainHomePage extends Screen {
 
 
@@ -41,8 +48,26 @@ public class MainHomePage extends Screen {
     //Content
 
     public static ImageWidget modLogo;
-    public static ImageWidget modTitle;
-    public static ImageWidget modDevs;
+    public static ImageWidget modTitleAndDev;
+
+    public enum ModTitleAndDevTexture implements StringRepresentable {
+        NORMAL("mc_font_texts/nameanddevs"),
+        PSST_HIHI("mc_font_texts/do_not_tell_anyone_hihi/psst"),
+        HALLOWEEN("mc_font_texts/halloween"),
+        CHRISTMAS("mc_font_texts/christmas"),
+        BEFORE_NEWYEAR("mc_font_texts/before_new_year"),
+        AFTER_NEWYEAR("mc_font_texts/new_year");
+
+        private final String texture;
+
+        @Override
+        public String getSerializedName() {
+            return this.texture;
+        }
+        ModTitleAndDevTexture(String texture) {
+            this.texture = texture;
+        }
+    }
 
 
     //Animate
@@ -56,7 +81,7 @@ public class MainHomePage extends Screen {
     public Boolean anim;
 
     public MainHomePage(Boolean anm) {
-        super(Component.literal("Home Page of Redstone Utils mod"));
+        super(Component.literal("Home Page of Redstone Utils mod - Narrator not translated"));
         this.anim = anm;
     }
 
@@ -81,8 +106,12 @@ public class MainHomePage extends Screen {
         // Content
 
         this.modLogo = addRenderableWidget(new ImageWidget(width - 150, 10, 140, 140, new ResourceLocation(RedstoneMod.Mod_ID, "logo.png")));
-        this.modTitle = addRenderableWidget(new ImageWidget(width - 310, 10, 150, 20, AllIcons.texture("mc_font_texts/name")));
-        this.modDevs = addRenderableWidget(new ImageWidget(width - 310, 35, 140, 15, AllIcons.texture("mc_font_texts/devs")));
+
+        ModTitleAndDevTexture t = getTypeLogo();
+        this.modTitleAndDev = addRenderableWidget(new ImageWidget(width - 310, 10, 150, 35, AllIcons.texture(t.texture)));
+        if(t == ModTitleAndDevTexture.PSST_HIHI) {
+
+        }
 
         // Animate
         animationTick_FadeIn = 0;
@@ -93,6 +122,36 @@ public class MainHomePage extends Screen {
     public void tick() {
         super.tick();
         animateFadeINTick();
+    }
+
+    public ModTitleAndDevTexture getTypeLogo() {
+        ModTitleAndDevTexture modTitleAndDevTexture = ModTitleAndDevTexture.NORMAL;
+        LocalDate currentDate = LocalDate.now();
+        int month = currentDate.getMonthValue();
+        int day = currentDate.getDayOfMonth();
+        int maxDaysInDecember = currentDate.withMonth(12).lengthOfMonth();
+        int maxDaysInOctober = currentDate.withMonth(10).lengthOfMonth();
+        Random random = new Random();
+        int randomNumber = random.nextInt(200); //BOUNDS=200/WHEN:RELEASE
+        if (randomNumber == 0) {
+            modTitleAndDevTexture = ModTitleAndDevTexture.PSST_HIHI;
+        }
+        Boolean isChristmas = month == 12 && (day >= 24 && day <= 26);
+        Boolean isHalloween = month == 10 && (day == maxDaysInOctober);
+        Boolean isNewYear = month == 1 && day == 1;
+        Boolean isBeforeNewYear = month == 12 && day == maxDaysInDecember;
+
+        if (isChristmas) {
+            modTitleAndDevTexture = ModTitleAndDevTexture.CHRISTMAS;
+        } else if (isHalloween) {
+            modTitleAndDevTexture = ModTitleAndDevTexture.HALLOWEEN;
+        } else if (isBeforeNewYear) {
+            modTitleAndDevTexture = ModTitleAndDevTexture.BEFORE_NEWYEAR;
+        } else if (isNewYear) {
+            modTitleAndDevTexture = ModTitleAndDevTexture.AFTER_NEWYEAR;
+        }
+
+        return modTitleAndDevTexture;
     }
 
     public void animateFadeINTick() {

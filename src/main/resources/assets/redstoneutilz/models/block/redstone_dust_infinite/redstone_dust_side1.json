@@ -1,0 +1,6 @@
+{
+    "parent": "redstoneutilz:block/redstone_dust_infinite/redstone_dust_side",
+    "textures": {
+        "line": "redstoneutilz:block/redstone_dust_infinite/redstone_dust_line1"
+    }
+}

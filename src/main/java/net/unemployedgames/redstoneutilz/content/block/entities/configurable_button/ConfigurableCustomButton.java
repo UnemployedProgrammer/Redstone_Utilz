@@ -1,4 +1,4 @@
-package net.unemployedgames.redstoneutilz.content.block.entities;
+package net.unemployedgames.redstoneutilz.content.block.entities.configurable_button;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.StringRepresentable;
@@ -20,6 +20,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.DistExecutor;
 import net.unemployedgames.redstoneutilz.content.block.custom.ButtonBlockRedstoneMod;
+import net.unemployedgames.redstoneutilz.content.block.entities.RegisterBlockEntities;
 import net.unemployedgames.redstoneutilz.content.util.ClientHooks;
 import org.jetbrains.annotations.Nullable;
 

@@ -8,11 +8,14 @@ import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.unemployedgames.redstoneutilz.RedstoneMod;
 import net.unemployedgames.redstoneutilz.content.gui.AllIcons;
 import net.unemployedgames.redstoneutilz.content.gui.ingame_homepage.Handler;
 import net.unemployedgames.redstoneutilz.content.gui.ingame_homepage.SideBarButton;
 
+@OnlyIn(Dist.CLIENT)
 public class PlattformsAndSocialMedia extends Screen {
     //SideBar
     public static ImageWidget sideBarBackground;

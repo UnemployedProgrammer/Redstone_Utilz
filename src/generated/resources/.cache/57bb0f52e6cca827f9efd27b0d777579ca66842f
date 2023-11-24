@@ -1,1 +1,3 @@
-// 1.20	2023-11-05T08:23:57.9301812	Tags for minecraft:block mod id redstoneutilz
+// 1.20	2023-11-24T21:39:12.2670734	Tags for minecraft:block mod id redstoneutilz
+e77d832bf2fa144f855cd305dd4ee4c644e9b692 data/forge/tags/blocks/needs_netherite_tool.json
+644c31f50693a54fcbca724dda19cccf1890999f data/minecraft/tags/blocks/mineable/pickaxe.json

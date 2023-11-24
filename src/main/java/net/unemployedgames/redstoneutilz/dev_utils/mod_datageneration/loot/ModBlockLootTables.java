@@ -12,6 +12,7 @@ import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 import net.unemployedgames.redstoneutilz.content.block.ModBlocks;
+import net.unemployedgames.redstoneutilz.content.item.ModItems;
 
 import java.util.Set;
 
@@ -24,7 +25,13 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
         this.dropSelf(ModBlocks.COPYCAT_BLOCK.get());
+        this.dropSelf(ModBlocks.ZINC_BLOCK.get());
+        this.dropOther(ModBlocks.ZINK_ORE.get(), ModItems.ZINC_INGOT.get());  //CHANGE TO ZINC ITEM
+        this.dropOther(ModBlocks.DEEPSLATE_ZINK_ORE.get(), ModItems.ZINC_INGOT.get());  //CHANGE TO ZINC ITEM
+        this.dropSelf(ModBlocks.PLACER_BLOCK.get());
         this.dropSelf(ModBlocks.COPYCAT_BUTTON.get());
+        this.dropSelf(ModBlocks.DISPLAY_BLOCK.get());
+        this.dropSelf(ModBlocks.DESTROYER_BLOCK.get());
     }
 
     protected LootTable.Builder createCopperLikeOreDrops(Block pBlock, Item item) {

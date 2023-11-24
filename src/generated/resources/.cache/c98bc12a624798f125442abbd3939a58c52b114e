@@ -1,4 +1,13 @@
-// 1.20	2023-11-05T08:23:57.9281745	Block States: redstoneutilz
+// 1.20	2023-11-24T21:23:33.1593744	Block States: redstoneutilz
 273a88176ec2c08066e05a58f239b2184aa3cde0 assets/redstoneutilz/blockstates/copycat_block.json
+4c41a5a2fe7e9c8c0d2e358e3cb56e1ba12d4f22 assets/redstoneutilz/blockstates/deepslate_zinc_ore.json
+569419e02e3f0c6b3684a80c1cb913b936141cfd assets/redstoneutilz/blockstates/zinc_block.json
+9180e9d516e416b0e1147445a901835b0b514d94 assets/redstoneutilz/blockstates/zinc_ore.json
 bb35ea355c55ee1b52e43838ebfce499b939accf assets/redstoneutilz/models/block/copycat_block.json
+4623560d934d5018108cc600d4ae7c05e5349a85 assets/redstoneutilz/models/block/deepslate_zinc_ore.json
+52890c1234e77c1a8bda7d4afedd07f9a43ab916 assets/redstoneutilz/models/block/zinc_block.json
+77a91629eab41d7a9b8f34a9d46ffe4ca73b76b1 assets/redstoneutilz/models/block/zinc_ore.json
 186306b7eea29a7ccc17c305f2134af623a577be assets/redstoneutilz/models/item/copycat_block.json
+dfe66265d078b4fc2a94ad096551972d33aa5723 assets/redstoneutilz/models/item/deepslate_zinc_ore.json
+59a4137a393c9f1d7fde3876aeffa06192004c02 assets/redstoneutilz/models/item/zinc_block.json
+02680708c8c127da85c43325e6c42760fbc75d9f assets/redstoneutilz/models/item/zinc_ore.json

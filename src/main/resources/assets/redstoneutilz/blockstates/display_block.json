@@ -1,0 +1,23 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "redstoneutilz:block/display_block",
+      "x": 0,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "redstoneutilz:block/display_block",
+      "x": 0
+    },
+    "facing=south": {
+      "model": "redstoneutilz:block/display_block",
+      "x": 0,
+      "y": 180
+    },
+    "facing=west": {
+      "model": "redstoneutilz:block/display_block",
+      "x": 0,
+      "y": 270
+    }
+  }
+}

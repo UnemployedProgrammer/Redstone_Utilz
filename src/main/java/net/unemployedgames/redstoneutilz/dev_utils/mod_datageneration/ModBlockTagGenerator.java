@@ -7,6 +7,7 @@ import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.unemployedgames.redstoneutilz.RedstoneMod;
+import net.unemployedgames.redstoneutilz.content.block.ModBlocks;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -19,6 +20,14 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
+        this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
+                .add(ModBlocks.ZINK_ORE.get())
+                .add(ModBlocks.DEEPSLATE_ZINK_ORE.get());
 
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(
+                        ModBlocks.ZINK_ORE.get(),
+                        ModBlocks.DEEPSLATE_ZINK_ORE.get(),
+                        ModBlocks.ZINC_BLOCK.get());
     }
 }

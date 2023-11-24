@@ -10,12 +10,15 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.gui.widget.ForgeSlider;
 import net.unemployedgames.redstoneutilz.RedstoneMod;
-import net.unemployedgames.redstoneutilz.content.block.entities.ConfigurableCustomButtonEntity;
+import net.unemployedgames.redstoneutilz.content.block.entities.configurable_button.ConfigurableCustomButtonEntity;
 import net.unemployedgames.redstoneutilz.content.networking.pkgs.SSetNbtCopyCatButtonPck;
 import net.unemployedgames.redstoneutilz.content.networking.PkgHandler;
 
+@OnlyIn(Dist.CLIENT)
 public class CopyCatButtonConfigurationScreen extends Screen {
 
     public final BlockPos position;

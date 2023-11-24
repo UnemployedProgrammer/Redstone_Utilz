@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "redstoneutilz:destroyer_block"
+    },
+    "title": "Away, with the Block! (bedrock not included)",
+    "description": "Obtain the destroyer block.",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {},
+        "items": [
+          {
+            "items": [
+              "redstoneutilz:destroyer_block"
+            ],
+            "count": {
+              "min": 1,
+              "max": 999
+            }
+          }
+        ]
+      }
+    }
+  }
+}

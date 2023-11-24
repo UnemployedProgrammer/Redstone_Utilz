@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "redstoneutilz:zinc_block"
+    },
+    "title": "The Powers Merged!",
+    "description": "Get a Zinc block (9x Zinc Ingot, Whow, dude!)",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {},
+        "items": [
+          {
+            "items": [
+              "redstoneutilz:zinc_block"
+            ],
+            "count": {
+              "min": 1,
+              "max": 999
+            }
+          }
+        ]
+      }
+    }
+  }
+}

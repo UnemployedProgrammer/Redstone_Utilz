@@ -1,0 +1,31 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "redstoneutilz:block/destroyer_block",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "redstoneutilz:block/destroyer_block",
+      "x": 0,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "redstoneutilz:block/destroyer_block",
+      "x": 0
+    },
+    "facing=south": {
+      "model": "redstoneutilz:block/destroyer_block",
+      "x": 0,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "redstoneutilz:block/destroyer_block",
+      "x": 270
+    },
+    "facing=west": {
+      "model": "redstoneutilz:block/destroyer_block",
+      "x": 0,
+      "y": 270
+    }
+  }
+}

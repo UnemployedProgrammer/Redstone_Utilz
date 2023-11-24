@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "redstoneutilz:zinc_ingot"
+    },
+    "title": "Now I can be lazy!",
+    "description": "With zinc you can build redstone machines to automate things.",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {},
+        "items": [
+          {
+            "items": [
+              "redstoneutilz:zinc_ingot"
+            ],
+            "count": {
+              "min": 1,
+              "max": 999
+            }
+          }
+        ]
+      }
+    }
+  }
+}

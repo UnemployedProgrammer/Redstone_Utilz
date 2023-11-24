@@ -25,7 +25,14 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("creativetab.redstone_utilz.main"))
                     .displayItems((pParameters, pOutput) -> {
 
+                    pOutput.accept(ModBlocks.ZINK_ORE.get());
+                    pOutput.accept(ModBlocks.DEEPSLATE_ZINK_ORE.get());
+                    pOutput.accept(ModBlocks.ZINC_BLOCK.get());
                     pOutput.accept(ModBlocks.COPYCAT_BLOCK.get());
+                    pOutput.accept(ModBlocks.COPYCAT_BUTTON.get());
+                    pOutput.accept(ModBlocks.PLACER_BLOCK.get());
+                    pOutput.accept(ModBlocks.DESTROYER_BLOCK.get());
+                    pOutput.accept(ModBlocks.DISPLAY_BLOCK.get());
 
                     })
                     .build());

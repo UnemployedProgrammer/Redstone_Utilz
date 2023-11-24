@@ -16,6 +16,7 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.unemployedgames.redstoneutilz.RedstoneMod;
+import net.unemployedgames.redstoneutilz.content.item.ModItems;
 
 import java.util.LinkedHashMap;
 
@@ -40,8 +41,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-
-
+        simpleItem(ModItems.ZINC_INGOT);
     }
 
     private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {

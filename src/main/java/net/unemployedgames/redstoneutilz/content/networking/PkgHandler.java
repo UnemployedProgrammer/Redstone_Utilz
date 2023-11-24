@@ -21,11 +21,5 @@ public class PkgHandler {
                 .decoder(SSetNbtCopyCatButtonPck::new)
                 .consumerMainThread(SSetNbtCopyCatButtonPck::handle)
                 .add();
-
-        INSTANCE.messageBuilder(COpenModScreen.class, 1, NetworkDirection.PLAY_TO_CLIENT)
-                .encoder(COpenModScreen::encode)
-                .decoder(COpenModScreen::new)
-                .consumerMainThread(COpenModScreen::handle)
-                .add();
     }
 }

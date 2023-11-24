@@ -1,3 +1,9 @@
-// 1.20	2023-11-05T11:46:27.4274456	Loot Tables
+// 1.20	2023-11-24T21:17:52.8760833	Loot Tables
 bf09ba05376540ac873e5f1f3748576d4e63c5ce data/redstoneutilz/loot_tables/blocks/copycat_block.json
 430e68c42129cc719a7c9e244e6a12e9a88b3a82 data/redstoneutilz/loot_tables/blocks/copycat_button.json
+458649f4fb8fdaca701076cf1b129bb0be2d65d4 data/redstoneutilz/loot_tables/blocks/deepslate_zinc_ore.json
+d7538467e31845c269a38a2e14fca0659ff772e8 data/redstoneutilz/loot_tables/blocks/destroyer_block.json
+4c3096bea2155de257055603db7e3400c194739a data/redstoneutilz/loot_tables/blocks/display_block.json
+55b6988057cbaf9b89ce02e65dc2860edf4ec65e data/redstoneutilz/loot_tables/blocks/placer_block.json
+5ddb7466ab8ae20d55edfe7e568cc593a749dff7 data/redstoneutilz/loot_tables/blocks/zinc_block.json
+cd0e1c4a0a5e1ca3c3e08174c881bee40d89e101 data/redstoneutilz/loot_tables/blocks/zinc_ore.json
