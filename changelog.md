@@ -8,9 +8,18 @@
 1.0.1
 ====
  - Added Copycat Button[BETA]
-   - Screen
+ - Screen
    - Destroy Method
    - NBT
    - Custom Texture Blockstates
-     -      You Can customize the texture of the Button, by Right-Clicking with an !!!VANILLA!!! woodtype. (Means that only applys wood textures. 🫡)
+     - You Can customize the texture of the Button, by Right-Clicking with an !!!VANILLA!!! woodtype. (Means that only applys wood textures. 🫡)
  - Added Creative Mode Tabs
+
+1.0.2
+====
+- Added Copycat Button
+- Added Zinc Ore
+- Added Deepslate Zinc Ore
+- Added Zinc Ingot
+- Added Placer Block Ingot
+- Added Destroyer Block Ingot
