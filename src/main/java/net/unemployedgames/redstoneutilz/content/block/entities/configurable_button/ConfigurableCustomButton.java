@@ -1,6 +1,10 @@
 package net.unemployedgames.redstoneutilz.content.block.entities.configurable_button;
 
+import net.minecraft.advancements.Advancement;
+import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -22,6 +26,7 @@ import net.minecraftforge.fml.DistExecutor;
 import net.unemployedgames.redstoneutilz.content.block.custom.ButtonBlockRedstoneMod;
 import net.unemployedgames.redstoneutilz.content.block.entities.RegisterBlockEntities;
 import net.unemployedgames.redstoneutilz.content.util.ClientHooks;
+import net.unemployedgames.redstoneutilz.infrastructure.content.advancements.ModAdvancements;
 import org.jetbrains.annotations.Nullable;
 
 public class ConfigurableCustomButton extends ButtonBlockRedstoneMod implements EntityBlock {
@@ -86,6 +91,7 @@ public class ConfigurableCustomButton extends ButtonBlockRedstoneMod implements 
                 hasConfigItem = pPlayer.getItemInHand(InteractionHand.MAIN_HAND).is(Items.REDSTONE);
                 if (hasConfigItem) {
                     DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> ClientHooks.openCopyCatButtonConfigurationScreen(pPos));
+                    awardAdvancement(ModAdvancements.CONFIGURED_CUSTOM_BUTTON_CHANGE, pPlayer);
                     return InteractionResult.SUCCESS;
                 }
             }
@@ -98,7 +104,6 @@ public class ConfigurableCustomButton extends ButtonBlockRedstoneMod implements 
                 hasConfigItem = pPlayer.getItemInHand(InteractionHand.MAIN_HAND).is(Items.REDSTONE);
                 if (!hasConfigItem && getWoodTypeFromPlayerHandString(pPlayer, pHand) == "_" && !pPlayer.isShiftKeyDown()) {
                     super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
-                    System.out.println("Button Vals, S: " + this.signalStrengh + " | T: " + this.ticksToStayPressed);
                 } else if(!(getWoodTypeFromPlayerHandString(pPlayer, pHand) == "_")) {
                     String strtype = getWoodTypeFromPlayerHandString(pPlayer, pHand);
                     if(!(getBlockStateType(pState, pPos, pLevel).name == Wood_Types_Vanilla.NOT_SET.name))
@@ -151,6 +156,7 @@ public class ConfigurableCustomButton extends ButtonBlockRedstoneMod implements 
                     if(strtype == Wood_Types_Vanilla.NOT_SET.name) {
                         updateBlockState(pState, pPos, pLevel, Wood_Types_Vanilla.NOT_SET);
                     }
+                    awardAdvancement(ModAdvancements.CONFIGURED_CUSTOM_BUTTON_CHANGE_WOOD, pPlayer);
                 }
             }
 
@@ -204,6 +210,18 @@ public class ConfigurableCustomButton extends ButtonBlockRedstoneMod implements 
 
             item.setDeltaMovement(0.0, 0.2, 0.0);
         }
+    }
+
+    private void awardAdvancement(ModAdvancements advancement, Player player) {
+        if (player instanceof ServerPlayer _player) {
+            Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation(advancement.getId()));
+            AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+            if (!_ap.isDone()) {
+                for (String criteria : _ap.getRemainingCriteria())
+                    _player.getAdvancements().award(_adv, criteria);
+            }
+        }
+
     }
 
     public static String getWoodTypeFromPlayerHandString(Player pPlayer, InteractionHand pHand) {

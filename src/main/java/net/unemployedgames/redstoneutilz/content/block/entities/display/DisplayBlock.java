@@ -1,6 +1,10 @@
 package net.unemployedgames.redstoneutilz.content.block.entities.display;
 
+import com.mojang.logging.LogUtils;
 import net.minecraft.ChatFormatting;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.components.toasts.SystemToast;
+import net.minecraft.client.gui.components.toasts.ToastComponent;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -84,6 +88,12 @@ public class DisplayBlock extends Block implements EntityBlock {
                     displayBlockEntity.addLine("display_group2", "  - Tubes: 345", 15, ChatFormatting.WHITE, 4);
                     displayBlockEntity.addLine("display_group3", "  - Wood: 10245211", 15, ChatFormatting.WHITE, 5);
                 }
+
+                ToastComponent toastcomponent = Minecraft.getInstance().getToasts();
+                //SystemToast.addOrUpdate(toastcomponent, SystemToast.SystemToastIds.PERIODIC_NOTIFICATION, Component.literal("Text: "+dbl.getText()), (Component)null);
+                //SystemToast.addOrUpdate(toastcomponent, SystemToast.SystemToastIds.PERIODIC_NOTIFICATION, Component.literal("FontSize: "+dbl.getLineData().getFontSize()), (Component)null);
+                //SystemToast.addOrUpdate(toastcomponent, SystemToast.SystemToastIds.PERIODIC_NOTIFICATION, Component.literal("FontColor: "+dbl.getLineData().getFontStringColor()), (Component)null);
+                //SystemToast.addOrUpdate(toastcomponent, SystemToast.SystemToastIds.PERIODIC_NOTIFICATION, Component.literal("UUID: "+dbl.getUuid()), (Component)null);
             }
         }
     }
@@ -92,13 +102,27 @@ public class DisplayBlock extends Block implements EntityBlock {
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
         if(pHand == InteractionHand.MAIN_HAND) {
             activate(pState, pLevel, pPos, pPlayer);
-            pPlayer.sendSystemMessage(Component.literal("X Start: "+ DisplayHelper.get1stDisplayPosition_X_OR_Y(pLevel, pPos, pState.getValue(FACING)).z_y));
-            pPlayer.sendSystemMessage(Component.literal("X End: "+ DisplayHelper.get2stDisplayPosition_X_OR_Y(pLevel, pPos, pState.getValue(FACING)).z_y));
-            pPlayer.sendSystemMessage(Component.literal("X Count: "+ DisplayHelper.countXAmountDisplays(pLevel, pPos, pState.getValue(FACING))));
-            pPlayer.sendSystemMessage(Component.literal(""));
-            pPlayer.sendSystemMessage(Component.literal("Y Start: "+ DisplayHelper.get1stDisplayPosition_Y(pLevel, pPos)));
-            pPlayer.sendSystemMessage(Component.literal("Y End: "+ DisplayHelper.get2stDisplayPosition_Y(pLevel, pPos)));
-            pPlayer.sendSystemMessage(Component.literal("Y Count: "+ DisplayHelper.countYAmountDisplays(pLevel, pPos)));
+            //pPlayer.sendSystemMessage(Component.literal("X Start: "+ DisplayHelper.get1stDisplayPosition_X_OR_Y(pLevel, pPos, pState.getValue(FACING)).z_y));
+            //pPlayer.sendSystemMessage(Component.literal("X End: "+ DisplayHelper.get2stDisplayPosition_X_OR_Y(pLevel, pPos, pState.getValue(FACING)).z_y));
+            //pPlayer.sendSystemMessage(Component.literal("X Count: "+ DisplayHelper.countXAmountDisplays(pLevel, pPos, pState.getValue(FACING))));
+            //pPlayer.sendSystemMessage(Component.literal(""));
+            //pPlayer.sendSystemMessage(Component.literal("Y Start: "+ DisplayHelper.get1stDisplayPosition_Y(pLevel, pPos)));
+            //pPlayer.sendSystemMessage(Component.literal("Y End: "+ DisplayHelper.get2stDisplayPosition_Y(pLevel, pPos)));
+            //pPlayer.sendSystemMessage(Component.literal("Y Count: "+ DisplayHelper.countYAmountDisplays(pLevel, pPos)));
+            if(pLevel.getBlockEntity(pPos) instanceof DisplayBlockEntity displayBlockEntity) {
+                DisplayBlockLine dbl = new DisplayBlockLine(displayBlockEntity.getTEXT(), displayBlockEntity.getDATA(), displayBlockEntity.getUUDIS_FOR_TEXTS_AND_DATA(), 6);
+                if(dbl.exists()) {
+                    pPlayer.sendSystemMessage(Component.literal("Text: "+dbl.getText()));
+                    pPlayer.sendSystemMessage(Component.literal("Size: "+dbl.getLineData().getFontSize()));
+                    pPlayer.sendSystemMessage(Component.literal("Color: "+dbl.getLineData().getFontStringColor()));
+                    pPlayer.sendSystemMessage(Component.literal("UUID: "+dbl.getUuid()));
+                } else  {
+                    ToastComponent toastcomponenterr = Minecraft.getInstance().getToasts();
+                    SystemToast.addOrUpdate(toastcomponenterr, SystemToast.SystemToastIds.PERIODIC_NOTIFICATION, Component.literal("[REDSTONEUTILZ]: Line not Found (not a error, ignore)"), (Component)null);
+                }
+            }
+            ToastComponent toastcomponent = Minecraft.getInstance().getToasts();
+            //SystemToast.addOrUpdate(toastcomponent, SystemToast.SystemToastIds.PERIODIC_NOTIFICATION, Component.literal("[REDSTONEUTILZ]: Display is still in Development"), (Component)null);
         }
         return InteractionResult.SUCCESS;
     }

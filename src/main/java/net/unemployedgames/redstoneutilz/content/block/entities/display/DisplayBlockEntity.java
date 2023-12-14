@@ -150,6 +150,18 @@ public class DisplayBlockEntity extends BlockEntity implements TickableBlockEnti
         return "fontsize:"+fontSize+"|textcolor:"+textColor.getName()+"|row:"+row;
     }
 
+    public HashMap<String, String> getDATA() {
+        return DATA;
+    }
+
+    public HashMap<String, String> getTEXT() {
+        return TEXT;
+    }
+
+    public HashMap<String, String> getUUDIS_FOR_TEXTS_AND_DATA() {
+        return UUDIS_FOR_TEXTS_AND_DATA;
+    }
+
     @Override
     public void tick() {
         if(this.level == null || this.level.isClientSide())

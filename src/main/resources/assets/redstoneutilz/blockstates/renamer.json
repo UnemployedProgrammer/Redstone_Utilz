@@ -1,0 +1,138 @@
+{
+  "variants": {
+    "facing=east,chute=false,belt=false,powered=false": {
+      "model": "redstoneutilz:block/renamer/off",
+      "y": 270
+    },
+    "facing=north,chute=false,belt=false,powered=false": {
+      "model": "redstoneutilz:block/renamer/off",
+      "y": 180
+    },
+    "facing=south,chute=false,belt=false,powered=false": {
+      "model": "redstoneutilz:block/renamer/off"
+    },
+    "facing=west,chute=false,belt=false,powered=false": {
+      "model": "redstoneutilz:block/renamer/off",
+      "y": 90
+    },
+
+    "facing=east,chute=false,belt=false,powered=true": {
+      "model": "redstoneutilz:block/renamer/on",
+      "y": 270
+    },
+    "facing=north,chute=false,belt=false,powered=true": {
+      "model": "redstoneutilz:block/renamer/on",
+      "y": 180
+    },
+    "facing=south,chute=false,belt=false,powered=true": {
+      "model": "redstoneutilz:block/renamer/on"
+    },
+    "facing=west,chute=false,belt=false,powered=true": {
+      "model": "redstoneutilz:block/renamer/on",
+      "y": 90
+    },
+
+
+
+      "facing=east,chute=true,belt=false,powered=false": {
+        "model": "redstoneutilz:block/renamer/off",
+        "y": 270
+      },
+      "facing=north,chute=true,belt=false,powered=false": {
+        "model": "redstoneutilz:block/renamer/off",
+        "y": 180
+      },
+      "facing=south,chute=true,belt=false,powered=false": {
+        "model": "redstoneutilz:block/renamer/off"
+      },
+      "facing=west,chute=true,belt=false,powered=false": {
+        "model": "redstoneutilz:block/renamer/off",
+        "y": 90
+      },
+
+
+      "facing=east,chute=true,belt=false,powered=true": {
+        "model": "redstoneutilz:block/renamer/off",
+        "y": 270
+      },
+      "facing=north,chute=true,belt=false,powered=true": {
+        "model": "redstoneutilz:block/renamer/off",
+        "y": 180
+      },
+      "facing=south,chute=true,belt=false,powered=true": {
+        "model": "redstoneutilz:block/renamer/off"
+      },
+      "facing=west,chute=true,belt=false,powered=true": {
+        "model": "redstoneutilz:block/renamer/off",
+        "y": 90
+      },
+
+
+
+    "facing=east,chute=false,belt=true,powered=false": {
+      "model": "redstoneutilz:block/renamer/off",
+      "y": 270
+    },
+    "facing=north,chute=false,belt=true,powered=false": {
+      "model": "redstoneutilz:block/renamer/off",
+      "y": 180
+    },
+    "facing=south,chute=false,belt=true,powered=false": {
+      "model": "redstoneutilz:block/renamer/off"
+    },
+    "facing=west,chute=false,belt=true,powered=false": {
+      "model": "redstoneutilz:block/renamer/off",
+      "y": 90
+    },
+
+    "facing=east,chute=false,belt=true,powered=true": {
+      "model": "redstoneutilz:block/renamer/off",
+      "y": 270
+    },
+    "facing=north,chute=false,belt=true,powered=true": {
+      "model": "redstoneutilz:block/renamer/off",
+      "y": 180
+    },
+    "facing=south,chute=false,belt=true,powered=true": {
+      "model": "redstoneutilz:block/renamer/off"
+    },
+    "facing=west,chute=false,belt=true,powered=true": {
+      "model": "redstoneutilz:block/renamer/off",
+      "y": 90
+    },
+
+
+
+    "facing=east,chute=true,belt=true,powered=false": {
+      "model": "redstoneutilz:block/renamer/off",
+      "y": 270
+    },
+    "facing=north,chute=true,belt=true,powered=false": {
+      "model": "redstoneutilz:block/renamer/off",
+      "y": 180
+    },
+    "facing=south,chute=true,belt=true,powered=false": {
+      "model": "redstoneutilz:block/renamer/off"
+    },
+    "facing=west,chute=true,belt=true,powered=false": {
+      "model": "redstoneutilz:block/renamer/off",
+      "y": 90
+    },
+
+    "facing=east,chute=true,belt=true,powered=true": {
+      "model": "redstoneutilz:block/renamer/on",
+      "y": 270
+    },
+    "facing=north,chute=true,belt=true,powered=true": {
+      "model": "redstoneutilz:block/renamer/on",
+      "y": 180
+    },
+    "facing=south,chute=true,belt=true,powered=true": {
+      "model": "redstoneutilz:block/renamer/on"
+    },
+    "facing=west,chute=true,belt=true,powered=true": {
+      "model": "redstoneutilz:block/renamer/on",
+      "y": 90
+    }
+  }
+}

@@ -7,6 +7,7 @@ import net.minecraftforge.network.simple.SimpleChannel;
 import net.unemployedgames.redstoneutilz.RedstoneMod;
 import net.unemployedgames.redstoneutilz.content.networking.pkgs.SSetNbtCopyCatButtonPck;
 import net.unemployedgames.redstoneutilz.content.networking.pkgs.COpenModScreen;
+import net.unemployedgames.redstoneutilz.content.networking.pkgs.SSetNbtRenamerBlockPkg;
 
 public class PkgHandler {
 
@@ -20,6 +21,12 @@ public class PkgHandler {
                 .encoder(SSetNbtCopyCatButtonPck::encode)
                 .decoder(SSetNbtCopyCatButtonPck::new)
                 .consumerMainThread(SSetNbtCopyCatButtonPck::handle)
+                .add();
+
+        INSTANCE.messageBuilder(SSetNbtRenamerBlockPkg.class, 2, NetworkDirection.PLAY_TO_SERVER)
+                .encoder(SSetNbtRenamerBlockPkg::encode)
+                .decoder(SSetNbtRenamerBlockPkg::new)
+                .consumerMainThread(SSetNbtRenamerBlockPkg::handle)
                 .add();
     }
 }

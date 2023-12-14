@@ -3,8 +3,12 @@
     "icon": {
       "item": "redstoneutilz:copycat_block"
     },
-    "title": "Getting Started, with these things!",
-    "description": "You can now start automating!",
+    "title": {
+      "translate": "advancements.redstoneutilz.copycat_block_get.title"
+    },
+    "description": {
+      "translate": "advancements.redstoneutilz.copycat_block_get.descr"
+    },
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
@@ -28,5 +32,6 @@
         ]
       }
     }
-  }
+  },
+  "parent": "redstoneutilz:block_zinc_get"
 }

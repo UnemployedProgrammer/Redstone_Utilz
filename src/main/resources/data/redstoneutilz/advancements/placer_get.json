@@ -3,8 +3,12 @@
     "icon": {
       "item": "redstoneutilz:placer_block"
     },
-    "title": "Place, but not Bedrock!",
-    "description": "Get the Placer and Place things.",
+    "title": {
+      "translate": "advancements.redstoneutilz.placer_block_get.title"
+    },
+    "description": {
+      "translate": "advancements.redstoneutilz.placer_block_get.descr"
+    },
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
@@ -28,5 +32,6 @@
         ]
       }
     }
-  }
+  },
+  "parent": "redstoneutilz:copycat_block_get"
 }

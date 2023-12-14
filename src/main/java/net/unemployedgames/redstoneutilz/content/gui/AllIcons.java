@@ -18,4 +18,7 @@ public class AllIcons {
     public static ResourceLocation GITHUB = texture("gui/icons/github");
     public static ResourceLocation CURSEFORGE = texture("gui/icons/curseforge");
     public static ResourceLocation MODRINTH = texture("gui/icons/modrinth");
+    public static ResourceLocation TRUE = texture("gui/icons/boolean/true");
+    public static ResourceLocation FALSE = texture("gui/icons/boolean/false");
+
 }

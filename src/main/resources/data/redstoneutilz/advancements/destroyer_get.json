@@ -3,8 +3,12 @@
     "icon": {
       "item": "redstoneutilz:destroyer_block"
     },
-    "title": "Away, with the Block! (bedrock not included)",
-    "description": "Obtain the destroyer block.",
+    "title": {
+      "translate": "advancements.redstoneutilz.destroyer_block_get.title"
+    },
+    "description": {
+      "translate": "advancements.redstoneutilz.destroyer_block_get.descr"
+    },
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
@@ -28,5 +32,6 @@
         ]
       }
     }
-  }
+  },
+  "parent": "redstoneutilz:copycat_block_get"
 }

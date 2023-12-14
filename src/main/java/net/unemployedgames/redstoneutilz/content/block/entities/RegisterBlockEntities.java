@@ -10,6 +10,7 @@ import net.unemployedgames.redstoneutilz.content.block.ModBlocks;
 import net.unemployedgames.redstoneutilz.content.block.entities.configurable_button.ConfigurableCustomButtonEntity;
 import net.unemployedgames.redstoneutilz.content.block.entities.display.DisplayBlockEntity;
 import net.unemployedgames.redstoneutilz.content.block.entities.placer.PlacerBlockEntity;
+import net.unemployedgames.redstoneutilz.content.block.entities.renamer.RenamerBlockEntity;
 
 public class RegisterBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPE_DEFERRED_REGISTER = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, RedstoneMod.Mod_ID);
@@ -22,4 +23,7 @@ public class RegisterBlockEntities {
 
     public static final RegistryObject<BlockEntityType<DisplayBlockEntity>> DISPLAY_BLOCK_ENTITY = BLOCK_ENTITY_TYPE_DEFERRED_REGISTER.register("display_block",
             () -> BlockEntityType.Builder.of(DisplayBlockEntity::new, Blocks.NETHERITE_BLOCK).build(null));
+
+    public static final RegistryObject<BlockEntityType<RenamerBlockEntity>> RENAMER_BLOCK_ENTITY = BLOCK_ENTITY_TYPE_DEFERRED_REGISTER.register("renamer_block",
+            () -> BlockEntityType.Builder.of(RenamerBlockEntity::new, Blocks.STONE).build(null));
 }

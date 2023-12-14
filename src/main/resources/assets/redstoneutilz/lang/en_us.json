@@ -1,6 +1,8 @@
 {
   "creativetab.redstone_utilz.main": "Redstone Utils",
 
+
+
   "ui.redstoneutilz.misc.done": "Done",
   "ui.redstoneutilz.misc.close": "Close",
   "ui.redstoneutilz.misc.error": "Error!",
@@ -8,6 +10,10 @@
   "ui.redstoneutilz.copycatconfigurationscreen.components.slider_tickspressed.label": " Ticks Pressed",
   "ui.redstoneutilz.copycatconfigurationscreen.components.slider_signalstrengh.label": " Output Redstone Strength",
   "ui.redstoneutilz.copycatconfigurationscreen.error_setfailed": "We are so sorry. It failed to set the slider values to the button data. Please try again! If it still doesn´t work, please report here: https://github.com/sebastianmueller1306/Redstone_Utilz/issues",
+
+  "settings.redstoneutilz.mainHomePage_canShowFoolLogo": "Can Show Fool Logo",
+  "settings.redstoneutilz.mainHomePage_canShowFestivalsLogo": "Can Show Festival Logo",
+  "settings.redstoneutilz.ui_showsCursedGameTextures": "Cursed UI Textures",
 
   "ui.redstoneutilz.homepage.home": "   Home",
   "ui.redstoneutilz.homepage.wiki": "   Wiki",
@@ -22,6 +28,45 @@
   "ui.redstoneutilz.homepage.versions.text_no_ver4": "currently, because its in development.",
 
 
+
+  "block.redstoneutilz.copycat_block": "Copycat Block",
+  "block.redstoneutilz.zinc_block": "Zinc Block",
+  "block.redstoneutilz.zinc_ore": "Zinc Ore",
+  "block.redstoneutilz.deepslate_zinc_ore": "Deepslate Zinc Ore",
   "block.redstoneutilz.copycat_button": "Copycat Button",
-  "block.redstoneutilz.copycat_button.err_firstsetvalwithwrench": "▒▒▒ Please set first, what Output Strengh should come out and How long the Button stays pressed. ▒▒▒"
+  "block.redstoneutilz.placer_block": "Placer Block",
+  "block.redstoneutilz.destroyer_block": "Destroyer Block",
+  "block.redstoneutilz.display_block": "Display Block",
+  "block.redstoneutilz.copycat_button.err_firstsetvalwithwrench": "▒▒▒ Please set first, what Output Strengh should come out and How long the Button stays pressed. ▒▒▒",
+
+
+
+  "item.redstoneutilz.zinc_ingot": "Zinc Ingot",
+
+
+
+  "advancements.redstoneutilz.zinc_block_get.title": "The Powers Combined!",
+  "advancements.redstoneutilz.zinc_block_get.descr": "Get a Zinc Block.",
+
+  "advancements.redstoneutilz.configurable_copycat_button_get.title": "How is this possible?",
+  "advancements.redstoneutilz.configurable_copycat_button_get.descr": "Get a Configurable Copycat Button.",
+
+  "advancements.redstoneutilz.copycat_block_get.title": "Getting Started, with these things!",
+  "advancements.redstoneutilz.copycat_block_get.descr": "Get a Copycat Block.",
+
+  "advancements.redstoneutilz.zinc_ingot_get.title": "The Power of Zinc!",
+  "advancements.redstoneutilz.zinc_ingot_get.descr": "Get a Zinc Ingot.",
+
+  "advancements.redstoneutilz.destroyer_block_get.title": "Away with the Blocks! (not including Bedrock)",
+  "advancements.redstoneutilz.destroyer_block_get.descr": "Get a Destroyer Block.",
+
+  "advancements.redstoneutilz.placer_block_get.title": "There you go ->",
+  "advancements.redstoneutilz.placer_block_get.descr": "Get a Placer Block.",
+
+  "advancements.redstoneutilz.configurable_copycat_button_change.title": "Ticks??? 10 Seconds??? Redstone Power??? WHAT???",
+  "advancements.redstoneutilz.configurable_copycat_button_change.descr": "Configure a Configurable Copycat Button.",
+
+  "advancements.redstoneutilz.configurable_copycat_button_change_wood.title": "Birch, Warped??? How the!?!",
+  "advancements.redstoneutilz.configurable_copycat_button_change_wood.descr": "Configure the Wood type of a Configurable Copycat Button."
+
 }

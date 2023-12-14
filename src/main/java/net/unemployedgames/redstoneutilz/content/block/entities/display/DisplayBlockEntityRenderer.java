@@ -9,6 +9,8 @@ import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
+import net.minecraft.client.renderer.entity.DisplayRenderer;
+import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -29,9 +31,11 @@ import java.util.List;
 
 public class DisplayBlockEntityRenderer implements BlockEntityRenderer<DisplayBlockEntity> {
     private final Font font;
+    private final ItemRenderer itemRenderer;
 
     public DisplayBlockEntityRenderer(BlockEntityRendererProvider.Context context) {
         this.font = context.getFont();
+        this.itemRenderer = context.getItemRenderer();
     }
 
     @Override
@@ -39,11 +43,12 @@ public class DisplayBlockEntityRenderer implements BlockEntityRenderer<DisplayBl
         Font fontRenderer = Minecraft.getInstance().font;
 
         pPoseStack.pushPose();
-        pPoseStack.translate(0.5f, 1f, 0.5f);
+        pPoseStack.translate(0.5f, 1.1f, 0.5f);
         pPoseStack.scale(0.5f, 0.5f, 0.5f);
+        pPoseStack.mulPose(Axis.XP.rotationDegrees(270));
 
         //renderTextLine(pBlockEntity.getBlockPos(), pBlockEntity.getLevel(), Direction.NORTH, Component.literal("Test"), pPoseStack, 100, 100, pBuffer, 0);
-        Minecraft.getInstance().getItemRenderer().renderStatic(new ItemStack(Items.REDSTONE), ItemDisplayContext.FIXED, getLightLevel(pBlockEntity.getLevel(), pBlockEntity.getBlockPos()), OverlayTexture.NO_OVERLAY, pPoseStack, pBuffer, pBlockEntity.getLevel(), 1);
+        itemRenderer.renderStatic(new ItemStack(Items.REDSTONE), ItemDisplayContext.FIXED, getLightLevel(pBlockEntity.getLevel(), pBlockEntity.getBlockPos()), OverlayTexture.NO_OVERLAY, pPoseStack, pBuffer, pBlockEntity.getLevel(), 1);
         pPoseStack.popPose();
     }
 
@@ -55,6 +60,6 @@ public class DisplayBlockEntityRenderer implements BlockEntityRenderer<DisplayBl
 
     private void renderTextLine(BlockPos pPos, Level lvl, Direction direction, Component pText, PoseStack pPoseStack, int pMaxWidth, int pMaxHeight, MultiBufferSource pBuffer, int pLineHeight) {
         float f = (float)(-this.font.width(pText) / 2);
-        this.font.drawInBatch(pText, f, pLineHeight, 0xFFFFFF, false, pPoseStack.last().pose(), pBuffer, Font.DisplayMode.POLYGON_OFFSET, 0xFFFFFF, getLightLevel(lvl, pPos));
+        this.font.drawInBatch(pText, f, pLineHeight, 0xFFFFFF, false, pPoseStack.last().pose(), pBuffer, Font.DisplayMode.POLYGON_OFFSET, 0, getLightLevel(lvl, pPos));
     }
 }

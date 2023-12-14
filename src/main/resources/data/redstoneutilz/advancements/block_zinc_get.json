@@ -3,8 +3,12 @@
     "icon": {
       "item": "redstoneutilz:zinc_block"
     },
-    "title": "The Powers Merged!",
-    "description": "Get a Zinc block (9x Zinc Ingot, Whow, dude!)",
+    "title": {
+      "translate": "advancements.redstoneutilz.zinc_block_get.title"
+    },
+    "description": {
+      "translate": "advancements.redstoneutilz.zinc_block_get.descr"
+    },
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
@@ -28,5 +32,6 @@
         ]
       }
     }
-  }
+  },
+  "parent": "redstoneutilz:ingot_zinc_get"
 }

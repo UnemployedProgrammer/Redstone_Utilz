@@ -9,7 +9,7 @@ import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 
 public class SideBarButton extends Button {
-    private SideBarImg img;
+    public SideBarImg img;
     public static CreateNarration DEF_NARR = DEFAULT_NARRATION;
 
     public static class SideBarImg {

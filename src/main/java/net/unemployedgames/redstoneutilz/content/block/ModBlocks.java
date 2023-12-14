@@ -23,6 +23,7 @@ import net.unemployedgames.redstoneutilz.content.block.entities.configurable_but
 import net.unemployedgames.redstoneutilz.content.block.entities.destroyer.DestroyerBlock;
 import net.unemployedgames.redstoneutilz.content.block.entities.display.DisplayBlock;
 import net.unemployedgames.redstoneutilz.content.block.entities.placer.PlacerBlock;
+import net.unemployedgames.redstoneutilz.content.block.entities.renamer.RenamerBlock;
 import net.unemployedgames.redstoneutilz.content.item.ModItems;
 
 import java.util.function.Supplier;
@@ -87,6 +88,16 @@ public class ModBlocks {
                     .strength(2f, 1f)
                     .pushReaction(PushReaction.BLOCK)
                     .sound(SoundType.STONE)
+                    .mapColor(DyeColor.GRAY)
+                    .noOcclusion()
+            ));
+
+    public static final RegistryObject<Block> RENAMER = registerBlock("renamer",
+            () -> new RenamerBlock(BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2f, 1f)
+                    .pushReaction(PushReaction.DESTROY)
+                    .sound(SoundType.METAL)
                     .mapColor(DyeColor.GRAY)
                     .noOcclusion()
             ));

@@ -1,10 +1,15 @@
 {
   "display": {
+    "background": "redstoneutilz:textures/block/zinc_block.png",
     "icon": {
       "item": "redstoneutilz:zinc_ingot"
     },
-    "title": "Now I can be lazy!",
-    "description": "With zinc you can build redstone machines to automate things.",
+    "title": {
+      "translate": "advancements.redstoneutilz.zinc_ingot_get.title"
+    },
+    "description": {
+      "translate": "advancements.redstoneutilz.zinc_ingot_get.descr"
+    },
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,

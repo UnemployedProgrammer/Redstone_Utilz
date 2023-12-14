@@ -1,10 +1,12 @@
 package net.unemployedgames.redstoneutilz.content.gui.ingame_homepage;
 
 import it.unimi.dsi.fastutil.booleans.BooleanConsumer;
+import net.minecraft.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.ConfirmLinkScreen;
 import net.unemployedgames.redstoneutilz.content.gui.ingame_homepage.pages.PlattformsAndSocialMedia;
 import net.unemployedgames.redstoneutilz.content.gui.ingame_homepage.pages.Versions;
+import net.unemployedgames.redstoneutilz.content.gui.ingame_homepage.pages.settings.SettingsScreen;
 
 public class Handler {
 
@@ -49,6 +51,7 @@ public class Handler {
         }
         if(sidebarButtonType==SidebarButtonType.SETTINGS) {
             //minecraft.setScreen(new MainHomePage());
+            //minecraft.setScreen(new SettingsScreen());
             openURL("https://gist.github.com/sebastianmueller1306/8532ac7c323f32ba49eae9d9e6273697", minecraft);
         }
         if(sidebarButtonType==SidebarButtonType.VERSIONS) {
@@ -77,11 +80,11 @@ public class Handler {
     }
 
     public static void openURL(String url_with_http_s, Minecraft minecraft) {
-        minecraft.setScreen(new ConfirmLinkScreen(new BooleanConsumer() {
-            @Override
-            public void accept(boolean t) {
-                reactToSidebarButtonClick(SidebarButtonType.HOME, minecraft);
-            }
+        minecraft.setScreen(new ConfirmLinkScreen((p_213069_2_) -> {
+            if (p_213069_2_)
+                Util.getPlatform()
+                        .openUri(url_with_http_s);
+            minecraft.setScreen(new MainHomePage(false));
         }, url_with_http_s, true));
     }
 
