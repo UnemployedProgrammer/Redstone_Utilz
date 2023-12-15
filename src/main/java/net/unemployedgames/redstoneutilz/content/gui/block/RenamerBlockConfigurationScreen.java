@@ -73,7 +73,7 @@ public class RenamerBlockConfigurationScreen extends Screen {
 
         this.renameBox = new EditBox(this.font, this.leftpos + ((imageWidth / 2) - 100) , this.topPos + 40, 200, 20, this.renameBox, Component.translatable("selectWorld.search"));
         this.renameBox.setCanLoseFocus(false);
-        this.renameBox.setMaxLength(50);
+        this.renameBox.setMaxLength(500);
         this.renameBox.setFocused(true);
     }
 
@@ -83,6 +83,7 @@ public class RenamerBlockConfigurationScreen extends Screen {
             //this.sliderButtonTickPressed.getValueInt(), this.sliderButtonPowerStrengh.getValueInt()
 
         } catch (Exception e) {
+            assert this.minecraft != null;
             this.minecraft.setScreen(new AlertScreen(() -> System.out.println("Error screen clicked away"),
                     Component.translatable("ui.redstoneutilz.misc.error"),
                     Component.translatable("ui.redstoneutilz.copycatconfigurationscreen.error_setfailed")));
@@ -92,6 +93,8 @@ public class RenamerBlockConfigurationScreen extends Screen {
 
     public boolean keyPressed(int pKeyCode, int pScanCode, int pModifiers) {
         if (pKeyCode == 256) {
+            assert this.minecraft != null;
+            assert this.minecraft.player != null;
             this.minecraft.player.closeContainer();
         }
 
@@ -118,6 +121,8 @@ public class RenamerBlockConfigurationScreen extends Screen {
 
     @Override
     public void onClose() {
+        assert this.minecraft != null;
+        assert this.minecraft.player != null;
         this.minecraft.player.closeContainer();
     }
 }

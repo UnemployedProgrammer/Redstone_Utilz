@@ -1,11 +1,21 @@
 package net.unemployedgames.redstoneutilz.content.block.entities.renamer;
 
+import com.mojang.logging.LogUtils;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.components.toasts.SystemToast;
+import net.minecraft.client.gui.components.toasts.ToastComponent;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -22,11 +32,14 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.DistExecutor;
+import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.unemployedgames.redstoneutilz.content.block.ModBlocks;
 import net.unemployedgames.redstoneutilz.content.block.entities.RegisterBlockEntities;
-import net.unemployedgames.redstoneutilz.content.block.entities.configurable_button.ConfigurableCustomButton;
+import net.unemployedgames.redstoneutilz.content.block.entities.placer.PlacerBlockEntity;
 import net.unemployedgames.redstoneutilz.content.util.ClientHooks;
 import net.unemployedgames.redstoneutilz.infrastructure.content.misc.Identifier;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class RenamerBlock extends Block implements EntityBlock {
@@ -48,6 +61,7 @@ public class RenamerBlock extends Block implements EntityBlock {
 
     public RenamerBlock(Properties pProperties) {
         super(pProperties);
+        this.defaultBlockState().setValue(POWERED, false);
     }
 
     @Nullable
@@ -61,20 +75,77 @@ public class RenamerBlock extends Block implements EntityBlock {
         updateConnectionProperties(pState, pPos, pLevel);
     }
 
-    public static void updateConnectionProperties(BlockState state, BlockPos pos, Level level) {
-        boolean isChute = isSpecificBlockAbove(level, pos, new Identifier("create", "chute")) || isSpecificBlockAbove((Level) level, pos, new Identifier("create", "smart_chute"));
+    public void updateConnectionProperties(BlockState state, BlockPos pos, Level level) {
+        boolean isChute = isSpecificBlockAbove(level, pos, new Identifier("create", "chute")) || isSpecificBlockAbove(level, pos, new Identifier("create", "smart_chute"));
         boolean isBelt = isSpecificBlockAbove(level, pos, new Identifier("create", "belt"));
         boolean isPowered = level.hasNeighborSignal(pos) || level.hasNeighborSignal(pos.above());
+        if(!(isChute == getProp(CREATE_CHUTE_CONNECTED, state)))
+            updateBooleanBlockStateProperty(state, pos, level, CREATE_CHUTE_CONNECTED, RenamerBlockHelper.isCreateModLoaded() && isChute);
+        if(!(isBelt == getProp(CREATE_BELT_CONNECTED, state)))
+            updateBooleanBlockStateProperty(state, pos, level, CREATE_BELT_CONNECTED, RenamerBlockHelper.isCreateModLoaded() && isBelt);
+        if(!(isPowered == getProp(POWERED, state)))
+            updateBooleanBlockStateProperty(state, pos, level, POWERED, isPowered);
+    }
 
-        updateBooleanBlockStateProperty(state, pos, level, CREATE_CHUTE_CONNECTED, isChute);
-        updateBooleanBlockStateProperty(state, pos, level, CREATE_BELT_CONNECTED, isBelt);
-        updateBooleanBlockStateProperty(state, pos, level, POWERED, isPowered);
+    public boolean getProp(BooleanProperty bp, @NotNull BlockState bs) {
+        return bs.getValue(bp);
     }
 
     @Override
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
-        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> ClientHooks.openRenamerBlockConfigurationScreen(pPos));
+        if (!(pHand == InteractionHand.MAIN_HAND)) return InteractionResult.PASS;
+        if(pLevel.isClientSide()) {
+            DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> ClientHooks.openRenamerBlockConfigurationScreen(pPos));
+        }
         return InteractionResult.SUCCESS;
+    }
+
+    @Override
+    public void onPlace(BlockState pState, Level pLevel, BlockPos pPos, BlockState pOldState, boolean pIsMoving) {
+        super.onPlace(pState, pLevel, pPos, pOldState, pIsMoving);
+        //updateBooleanBlockStateProperty(pState, pPos, pLevel, CREATE_CHUTE_CONNECTED, false);
+        //updateBooleanBlockStateProperty(pState, pPos, pLevel, CREATE_BELT_CONNECTED, false);
+        //updateBooleanBlockStateProperty(pState, pPos, pLevel, POWERED, false);
+        updateConnectionProperties(pState, pPos, pLevel);
+    }
+
+    @Override
+    public void tick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
+        super.tick(pState, pLevel, pPos, pRandom);
+        LogUtils.getLogger().info("Ticked");
+        //if(!pLevel.isClientSide()) {
+            //if(pLevel.getBlockEntity(pPos) instanceof RenamerBlockEntity renamerBlockEntity) {
+                //renamerBlockEntity.renameOneItem();
+            //}
+        //}
+    }
+
+    @Override
+    public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
+        if(!pLevel.isClientSide() && !pLevel.getBlockState(pPos).is(ModBlocks.RENAMER.get()))
+            if(pLevel.getBlockEntity(pPos) instanceof RenamerBlockEntity renamerBlockEntity) {
+                ItemStackHandler in = renamerBlockEntity.getInputInventory();
+                ItemStackHandler out = renamerBlockEntity.getOutputInventory();
+                try {
+                    for (int index = 0; index < in.getSlots(); index++) {
+                        ItemStack stack = in.getStackInSlot(index);
+                        if(stack.isEmpty() || stack.is(Items.AIR)) return;
+                        ItemEntity itemEntity = new ItemEntity(pLevel, pPos.getX(), pPos.getY()+0.5, pPos.getZ()+0.5, stack);
+                        pLevel.addFreshEntity(itemEntity);
+                    }
+                    for (int index = 0; index < out.getSlots(); index++) {
+                        ItemStack stack = out.getStackInSlot(index);
+                        if(stack.isEmpty() || stack.is(Items.AIR)) return;
+                        ItemEntity itemEntity = new ItemEntity(pLevel, pPos.getX(), pPos.getY()+0.5, pPos.getZ()+0.5, stack);
+                        pLevel.addFreshEntity(itemEntity);
+                    }
+                } catch (Exception e) {
+                    ToastComponent toastcomponenterr = Minecraft.getInstance().getToasts();
+                    SystemToast.addOrUpdate(toastcomponenterr, SystemToast.SystemToastIds.PERIODIC_NOTIFICATION, Component.literal("[REDSTONEUTILZ]: Failed to drop items."), (Component)null);
+                }
+            }
+
+        super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
     }
 
     public static void updateBooleanBlockStateProperty(BlockState blockState, BlockPos blockPos, Level world, BooleanProperty property, boolean val) {

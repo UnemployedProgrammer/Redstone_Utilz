@@ -7,9 +7,11 @@
   "ui.redstoneutilz.misc.close": "Close",
   "ui.redstoneutilz.misc.error": "Error!",
   "ui.redstoneutilz.copycatconfigurationscreen.title": "Configure Button",
+  "ui.redstoneutilz.renamerconfigurationscreen.title": "Configure Renamer",
   "ui.redstoneutilz.copycatconfigurationscreen.components.slider_tickspressed.label": " Ticks Pressed",
   "ui.redstoneutilz.copycatconfigurationscreen.components.slider_signalstrengh.label": " Output Redstone Strength",
   "ui.redstoneutilz.copycatconfigurationscreen.error_setfailed": "We are so sorry. It failed to set the slider values to the button data. Please try again! If it still doesn´t work, please report here: https://github.com/sebastianmueller1306/Redstone_Utilz/issues",
+  "ui.redstoneutilz.renamerconfigurationscreen.error_setfailed": "We are so sorry. It failed to set the text values to the block data. Please try again! If it still doesn´t work, please report here: https://github.com/sebastianmueller1306/Redstone_Utilz/issues",
 
   "settings.redstoneutilz.mainHomePage_canShowFoolLogo": "Can Show Fool Logo",
   "settings.redstoneutilz.mainHomePage_canShowFestivalsLogo": "Can Show Festival Logo",
@@ -37,6 +39,7 @@
   "block.redstoneutilz.placer_block": "Placer Block",
   "block.redstoneutilz.destroyer_block": "Destroyer Block",
   "block.redstoneutilz.display_block": "Display Block",
+  "block.redstoneutilz.renamer": "Renamer",
   "block.redstoneutilz.copycat_button.err_firstsetvalwithwrench": "▒▒▒ Please set first, what Output Strengh should come out and How long the Button stays pressed. ▒▒▒",
 
 
@@ -62,6 +65,9 @@
 
   "advancements.redstoneutilz.placer_block_get.title": "There you go ->",
   "advancements.redstoneutilz.placer_block_get.descr": "Get a Placer Block.",
+
+  "advancements.redstoneutilz.renamer_get.title": "Your new name is...",
+  "advancements.redstoneutilz.renamer_get.descr": "Get a Renamer.",
 
   "advancements.redstoneutilz.configurable_copycat_button_change.title": "Ticks??? 10 Seconds??? Redstone Power??? WHAT???",
   "advancements.redstoneutilz.configurable_copycat_button_change.descr": "Configure a Configurable Copycat Button.",

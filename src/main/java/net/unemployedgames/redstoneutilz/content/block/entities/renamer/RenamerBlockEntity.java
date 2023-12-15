@@ -1,5 +1,6 @@
 package net.unemployedgames.redstoneutilz.content.block.entities.renamer;
 
+import com.mojang.logging.LogUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -7,11 +8,12 @@ import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.items.ItemStackHandler;
 import net.unemployedgames.redstoneutilz.content.block.entities.RegisterBlockEntities;
 import net.unemployedgames.redstoneutilz.content.util.TickableBlockEntity;
 import net.unemployedgames.redstoneutilz.infrastructure.content.blocks.RootInputAndOutputSlotInventoryBlockEntity;
 
-public class RenamerBlockEntity extends RootInputAndOutputSlotInventoryBlockEntity implements TickableBlockEntity {
+public class RenamerBlockEntity extends RootInputAndOutputSlotInventoryBlockEntity {
     private String rename_to = "";
     private boolean isJson = false;
     public RenamerBlockEntity(BlockPos pPos, BlockState pBlockState) {
@@ -52,7 +54,7 @@ public class RenamerBlockEntity extends RootInputAndOutputSlotInventoryBlockEnti
             name.setHoverName(validateText(getRename_to()));
             name.setCount(getOutputItem().getCount() + 1);
             setOutputItem(name);
-        }
+        } else LogUtils.getLogger().info("Cannot Craft");
     }
 
     public boolean canName() {
@@ -63,7 +65,17 @@ public class RenamerBlockEntity extends RootInputAndOutputSlotInventoryBlockEnti
     }
 
     @Override
-    public void tick() {
-        renameOneItem();
+    public ItemStackHandler getInputInventory() {
+        return super.getInputInventory();
     }
+
+    @Override
+    public ItemStackHandler getOutputInventory() {
+        return super.getOutputInventory();
+    }
+
+    //@Override
+    //public void tick() {
+        //renameOneItem();
+    //}
 }

@@ -85,6 +85,7 @@ public class RedstoneMod
 
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.COPYCAT_BLOCK.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.COPYCAT_BUTTON.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.RENAMER.get(), RenderType.translucent());
 
             SettingsSystem.createSettings(); //CREATE SETTINGS FILE(IF NOT THERE)
         }
