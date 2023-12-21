@@ -22,6 +22,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
@@ -38,6 +40,7 @@ import net.unemployedgames.redstoneutilz.content.block.ModBlocks;
 import net.unemployedgames.redstoneutilz.content.block.entities.RegisterBlockEntities;
 import net.unemployedgames.redstoneutilz.content.block.entities.placer.PlacerBlockEntity;
 import net.unemployedgames.redstoneutilz.content.util.ClientHooks;
+import net.unemployedgames.redstoneutilz.content.util.TickableBlockEntity;
 import net.unemployedgames.redstoneutilz.infrastructure.content.misc.Identifier;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -110,17 +113,6 @@ public class RenamerBlock extends Block implements EntityBlock {
     }
 
     @Override
-    public void tick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
-        super.tick(pState, pLevel, pPos, pRandom);
-        LogUtils.getLogger().info("Ticked");
-        //if(!pLevel.isClientSide()) {
-            //if(pLevel.getBlockEntity(pPos) instanceof RenamerBlockEntity renamerBlockEntity) {
-                //renamerBlockEntity.renameOneItem();
-            //}
-        //}
-    }
-
-    @Override
     public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
         if(!pLevel.isClientSide() && !pLevel.getBlockState(pPos).is(ModBlocks.RENAMER.get()))
             if(pLevel.getBlockEntity(pPos) instanceof RenamerBlockEntity renamerBlockEntity) {
@@ -132,12 +124,15 @@ public class RenamerBlock extends Block implements EntityBlock {
                         if(stack.isEmpty() || stack.is(Items.AIR)) return;
                         ItemEntity itemEntity = new ItemEntity(pLevel, pPos.getX(), pPos.getY()+0.5, pPos.getZ()+0.5, stack);
                         pLevel.addFreshEntity(itemEntity);
+                        renamerBlockEntity.setInputItem(ItemStack.EMPTY);
+
                     }
                     for (int index = 0; index < out.getSlots(); index++) {
                         ItemStack stack = out.getStackInSlot(index);
                         if(stack.isEmpty() || stack.is(Items.AIR)) return;
                         ItemEntity itemEntity = new ItemEntity(pLevel, pPos.getX(), pPos.getY()+0.5, pPos.getZ()+0.5, stack);
                         pLevel.addFreshEntity(itemEntity);
+                        renamerBlockEntity.setOutputItem(ItemStack.EMPTY);
                     }
                 } catch (Exception e) {
                     ToastComponent toastcomponenterr = Minecraft.getInstance().getToasts();
@@ -166,13 +161,32 @@ public class RenamerBlock extends Block implements EntityBlock {
 
     @Override
     public boolean canConnectRedstone(BlockState state, BlockGetter level, BlockPos pos, @Nullable Direction direction) {
-        return direction == Direction.NORTH;
+        return direction == state.getValue(FACING).getOpposite();
     }
 
     public static boolean isSpecificBlockAbove(Level world, BlockPos pos, Identifier blockRegistryName) {
         Block blockAbove = world.getBlockState(pos).getBlock();
         Block blockToCheck = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(blockRegistryName.getNamespace(), blockRegistryName.getObject()));
         return blockAbove == blockToCheck;
+    }
+
+    public void dropOutputItems(Level world, BlockPos pos, RenamerBlockEntity blockEntity) {
+        if(!world.isClientSide() && !world.getBlockState(pos).is(ModBlocks.RENAMER.get())) {
+                ItemStackHandler out = blockEntity.getOutputInventory();
+                try {
+                    for (int index = 0; index < out.getSlots(); index++) {
+                        ItemStack stack = out.getStackInSlot(index);
+                        if(stack.isEmpty() || stack.is(Items.AIR)) return;
+                        BlockPos itempos = pos.relative(world.getBlockState(pos).getValue(FACING));
+                        ItemEntity itemEntity = new ItemEntity(world, itempos.getX(), itempos.getY()+0.5, itempos.getZ()+0.5, stack);
+                        world.addFreshEntity(itemEntity);
+                        blockEntity.setOutputItem(ItemStack.EMPTY);
+                    }
+                } catch (Exception e) {
+                    ToastComponent toastcomponenterr = Minecraft.getInstance().getToasts();
+                    SystemToast.addOrUpdate(toastcomponenterr, SystemToast.SystemToastIds.PERIODIC_NOTIFICATION, Component.literal("[REDSTONEUTILZ]: Failed to drop items."), (Component)null);
+                }
+            }
     }
 
     @Override
@@ -191,5 +205,26 @@ public class RenamerBlock extends Block implements EntityBlock {
 
     public BlockState rotate(BlockState pState, Rotation pRot) {
         return pState.setValue(FACING, pRot.rotate(pState.getValue(FACING)));
+    }
+
+    //@Override
+    //public void tick(Level pLevel, BlockPos pPos, BlockState pState, RenamerBlockEntity pBlockEntity) {
+    //    System.out.println("Ticked");
+    //}
+
+    // if(pLevel.getBlockEntity(pPos) instanceof RenamerBlockEntity renamerBlockEntity) {
+    //            renamerBlockEntity.tick();
+    //            if(pLevel.getBlockState(pPos).getValue(CREATE_BELT_CONNECTED)) {
+    //                dropOutputItems(pLevel, pPos, renamerBlockEntity);
+    //            } else {
+    //
+    //            }
+    //        }
+
+
+    @Nullable
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(@NotNull Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
+        return TickableBlockEntity.getTickerHelper(pLevel);
     }
 }

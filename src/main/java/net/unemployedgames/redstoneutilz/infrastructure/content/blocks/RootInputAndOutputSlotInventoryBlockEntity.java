@@ -102,9 +102,9 @@ public class RootInputAndOutputSlotInventoryBlockEntity extends BlockEntity {
         this.input.setStackInSlot(0, itemStack);
     }
     public ItemStack getOutputItem() {
-        return this.input.getStackInSlot(0);
+        return this.output.getStackInSlot(0);
     }
     public void setOutputItem(ItemStack itemStack) {
-        this.input.setStackInSlot(0, itemStack);
+        this.output.setStackInSlot(0, itemStack);
     }
 }

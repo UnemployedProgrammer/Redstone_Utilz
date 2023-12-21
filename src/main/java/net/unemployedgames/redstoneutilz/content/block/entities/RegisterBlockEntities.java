@@ -25,5 +25,5 @@ public class RegisterBlockEntities {
             () -> BlockEntityType.Builder.of(DisplayBlockEntity::new, Blocks.NETHERITE_BLOCK).build(null));
 
     public static final RegistryObject<BlockEntityType<RenamerBlockEntity>> RENAMER_BLOCK_ENTITY = BLOCK_ENTITY_TYPE_DEFERRED_REGISTER.register("renamer_block",
-            () -> BlockEntityType.Builder.of(RenamerBlockEntity::new, Blocks.STONE).build(null));
+            () -> BlockEntityType.Builder.of(RenamerBlockEntity::new, ModBlocks.RENAMER.get()).build(null));
 }
