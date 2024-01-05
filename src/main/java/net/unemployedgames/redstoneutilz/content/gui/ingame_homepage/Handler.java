@@ -4,9 +4,16 @@ import it.unimi.dsi.fastutil.booleans.BooleanConsumer;
 import net.minecraft.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.ConfirmLinkScreen;
+import net.minecraft.resources.ResourceLocation;
+import net.unemployedgames.redstoneutilz.content.gui.ingame_homepage.pages.Error404Screen;
 import net.unemployedgames.redstoneutilz.content.gui.ingame_homepage.pages.PlattformsAndSocialMedia;
 import net.unemployedgames.redstoneutilz.content.gui.ingame_homepage.pages.Versions;
 import net.unemployedgames.redstoneutilz.content.gui.ingame_homepage.pages.settings.SettingsScreen;
+
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.net.URL;
 
 public class Handler {
 
@@ -47,12 +54,14 @@ public class Handler {
             minecraft.setScreen(new PlattformsAndSocialMedia());
         }
         if(sidebarButtonType==SidebarButtonType.WIKI) {
-            openURL("https://gist.github.com/sebastianmueller1306/8532ac7c323f32ba49eae9d9e6273697", minecraft);
+            //openURL("https://gist.github.com/sebastianmueller1306/8532ac7c323f32ba49eae9d9e6273697", minecraft);
+            minecraft.setScreen(new Error404Screen());
         }
         if(sidebarButtonType==SidebarButtonType.SETTINGS) {
             //minecraft.setScreen(new MainHomePage());
             //minecraft.setScreen(new SettingsScreen());
-            openURL("https://gist.github.com/sebastianmueller1306/8532ac7c323f32ba49eae9d9e6273697", minecraft);
+            minecraft.setScreen(new Error404Screen());
+            //openURL("https://gist.github.com/sebastianmueller1306/8532ac7c323f32ba49eae9d9e6273697", minecraft);
         }
         if(sidebarButtonType==SidebarButtonType.VERSIONS) {
             //minecraft.setScreen(new MainHomePage());
@@ -72,10 +81,11 @@ public class Handler {
             openURL("https://github.com/sebastianmueller1306/Redstone_Utilz", minecraft);
         }
         if(sidebarButtonType==SidebarButtonType.CURSEFORGE) {
-            openURL("https://gist.github.com/sebastianmueller1306/8532ac7c323f32ba49eae9d9e6273697", minecraft);
+            minecraft.setScreen(new Error404Screen());
+            //openURL("https://gist.github.com/sebastianmueller1306/8532ac7c323f32ba49eae9d9e6273697", minecraft);
         }
         if(sidebarButtonType==SidebarButtonType.MODRINTH) {
-            openURL("https://gist.github.com/sebastianmueller1306/8532ac7c323f32ba49eae9d9e6273697", minecraft);
+            openURL("https://modrinth.com/mod/redstone-utils", minecraft);
         }
     }
 
@@ -99,5 +109,9 @@ public class Handler {
         int scaledWidth = (int) (originalWidth * scaleFactor);
         int scaledHeight = (int) (originalHeight * scaleFactor);
         return new GuiVec2(scaledWidth, scaledHeight);
+    }
+
+    public static String getPlayerBufferedHeadImage(String username) {
+        return "https://mc-heads.net/avatar/"+username;
     }
 }

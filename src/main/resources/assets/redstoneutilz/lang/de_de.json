@@ -5,25 +5,31 @@
 
   "ui.redstoneutilz.misc.done": "Fertig",
   "ui.redstoneutilz.misc.close": "Schließen",
+  "ui.redstoneutilz.misc.back": "Zurück",
   "ui.redstoneutilz.misc.error": "Fehler!",
   "ui.redstoneutilz.copycatconfigurationscreen.title": "Knopf Konfigurieren",
+  "ui.redstoneutilz.renamerconfigurationscreen.title": "Configure Renamer",
   "ui.redstoneutilz.copycatconfigurationscreen.components.slider_tickspressed.label": " Ticks bleibt der Knopf Gedrückt",
   "ui.redstoneutilz.copycatconfigurationscreen.components.slider_signalstrengh.label": " Ausgangssignalstärke",
   "ui.redstoneutilz.copycatconfigurationscreen.error_setfailed": "Wir entschuldigen uns sehr! das setzen von den daten hat leider nicht geklappt. Bitte versuche es erneut! Wenn es immer noch nicht funktioniert, bitte melde das hier: https://github.com/sebastianmueller1306/Redstone_Utilz/issues",
+  "ui.redstoneutilz.renamerconfigurationscreen.error_setfailed": "We are so sorry. It failed to set the text values to the block data. Please try again! If it still doesn´t work, please report here: https://github.com/sebastianmueller1306/Redstone_Utilz/issues",
 
-
+  "settings.redstoneutilz.mainHomePage_canShowFoolLogo": "Can Show Fool Logo",
+  "settings.redstoneutilz.mainHomePage_canShowFestivalsLogo": "Can Show Festival Logo",
+  "settings.redstoneutilz.ui_showsCursedGameTextures": "Cursed UI Textures",
 
   "ui.redstoneutilz.homepage.home": "   Startseite",
   "ui.redstoneutilz.homepage.wiki": "   Wiki",
-  "ui.redstoneutilz.homepage.settings": "       Einstellungen",
+  "ui.redstoneutilz.homepage.settings": "         Einstellungen",
   "ui.redstoneutilz.homepage.issues": "   Fehler",
   "ui.redstoneutilz.homepage.versions": "   Versionen",
-  "ui.redstoneutilz.homepage.smap": "      Soziale M., Pla.",
+  "ui.redstoneutilz.homepage.smap": "            Soziale M., Pla.",
   "ui.redstoneutilz.homepage.smap.full": "Soziale Medien und Plattformen",
-  "ui.redstoneutilz.homepage.versions.text_no_ver1": "We are so Sorry!",
-  "ui.redstoneutilz.homepage.versions.text_no_ver2": "Currently there are no other Versions.",
-  "ui.redstoneutilz.homepage.versions.text_no_ver3": "The mod is only available in 1.20 currently, because its in development.",
-  "ui.redstoneutilz.homepage.versions.text_no_ver4": "currently, because its in development.",
+  "ui.redstoneutilz.homepage.versions.text_no_ver1": "Wir Entschuldigen uns vielmals!",
+  "ui.redstoneutilz.homepage.versions.text_no_ver2": "Leider gibt es im Moment keine anderen Versionen.",
+  "ui.redstoneutilz.homepage.versions.text_no_ver3": "Die Mod ist aktuell nur in der 1.20",
+  "ui.redstoneutilz.homepage.versions.text_no_ver4": "verfügbar, weil die Mod den Entwicklungsstatus besitzt.",
+
 
 
   "block.redstoneutilz.copycat_block": "Nachmacher Block",
@@ -34,6 +40,7 @@
   "block.redstoneutilz.placer_block": "Plazier Block",
   "block.redstoneutilz.destroyer_block": "Zerstör Block",
   "block.redstoneutilz.display_block": "Display Block",
+  "block.redstoneutilz.renamer": "Renamer",
   "block.redstoneutilz.copycat_button.err_firstsetvalwithwrench": "▒▒▒ Please set first, what Output Strengh should come out and How long the Button stays pressed. ▒▒▒",
 
 
@@ -60,10 +67,12 @@
   "advancements.redstoneutilz.placer_block_get.title": "Da gehörst du hin ->",
   "advancements.redstoneutilz.placer_block_get.descr": "Bekomme ein Plazier Block.",
 
+  "advancements.redstoneutilz.renamer_get.title": "Your new name is...",
+  "advancements.redstoneutilz.renamer_get.descr": "Get a Renamer.",
+
   "advancements.redstoneutilz.configurable_copycat_button_change.title": "Ticks??? 10 Sekunden??? Redstone Kraft??? WAS???",
   "advancements.redstoneutilz.configurable_copycat_button_change.descr": "Konfiguriere ein Konfigurierbaren Nachahmer Knopf.",
 
   "advancements.redstoneutilz.configurable_copycat_button_change_wood.title": "Birke, Eiche??? Wie zum!?!",
   "advancements.redstoneutilz.configurable_copycat_button_change_wood.descr": "Konfiguriere den Holz-Typ von einem Konfigurierbaren Nachahmer Knopf."
-
 }

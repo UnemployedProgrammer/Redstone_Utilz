@@ -1,6 +1,7 @@
 package net.unemployedgames.redstoneutilz;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
@@ -21,6 +22,7 @@ import net.unemployedgames.redstoneutilz.content.item.ModCreativeModTabs;
 import net.unemployedgames.redstoneutilz.content.item.ModItems;
 import net.unemployedgames.redstoneutilz.content.util.registerOwns.OwnWikiEntrys;
 import net.unemployedgames.redstoneutilz.infrastructure.SettingsSystem;
+import net.unemployedgames.redstoneutilz.infrastructure.content.DownloadPlayerHead;
 import net.unemployedgames.redstoneutilz.infrastructure.registry.FinalRegisterStorage;
 import org.slf4j.Logger;
 
@@ -83,11 +85,14 @@ public class RedstoneMod
         {
             // Some client setup code
 
+            LogUtils.getLogger().info("Logging in with UUID " + Minecraft.getInstance().getUser().getUuid());
+
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.COPYCAT_BLOCK.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.COPYCAT_BUTTON.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.RENAMER.get(), RenderType.translucent());
 
             SettingsSystem.createSettings(); //CREATE SETTINGS FILE(IF NOT THERE)
+            DownloadPlayerHead.download();
         }
     }
 }

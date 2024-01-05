@@ -1,6 +1,7 @@
 package net.unemployedgames.redstoneutilz.content.block.entities.renamer;
 
 import com.mojang.logging.LogUtils;
+import it.unimi.dsi.fastutil.ints.IntSets;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -13,6 +14,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.ChestBlockEntity;
 import net.minecraft.world.level.block.entity.HopperBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
@@ -23,6 +25,7 @@ import net.unemployedgames.redstoneutilz.content.util.TickableBlockEntity;
 import net.unemployedgames.redstoneutilz.infrastructure.content.blocks.RootInputAndOutputSlotInventoryBlockEntity;
 
 import java.util.Objects;
+import java.util.UUID;
 
 public class RenamerBlockEntity extends RootInputAndOutputSlotInventoryBlockEntity implements TickableBlockEntity {
     private String rename_to = "";
@@ -64,14 +67,56 @@ public class RenamerBlockEntity extends RootInputAndOutputSlotInventoryBlockEnti
 
     public void renameOneItem() {
         if(canName()) {
-            ItemStack minus = getInputItem();
-            ItemStack name = getInputItem();
-            minus.shrink(1);
-            setInputItem(minus);
-            name.setHoverName(validateText(getRename_to()));
-            name.setCount(getOutputItem().getCount() + 1);
-            setOutputItem(name);
+            AddOneItemToSlotMethodOutput returnval =  addItemsToSlot(getOutputItem(), getInputItem().copyWithCount(1));
+            if(returnval.wasSuccessful) {
+                getInputItem().shrink(1);
+                setOutputItem(returnval.outputStack);
+                renameWholeOutputSlot(validateText(getRename_to()));
+            }
+            printDetails();
         } else LogUtils.getLogger().info("Cannot Craft");
+    }
+
+    public void printDetails() {
+        System.out.println("DEBUGGING_RENAMER_RENAME - REDSTONEUTILS | " + System.nanoTime()+"/"+ UUID.randomUUID());
+        System.out.println("Input Item Count: " + getInputItem().getCount());
+        System.out.println("Output Item Count: " + getOutputItem().getCount());
+        System.out.println("");
+        System.out.println("Input Item: " + getInputItem().getItem().getDescription().getString());
+        System.out.println("Output Item: " + getOutputItem().getItem().getDescription().getString());
+        System.out.println("");
+        System.out.println("Input Item Name: " + getInputItem().getDisplayName().getString());
+        System.out.println("Output Item Name: " + getOutputItem().getDisplayName().getString());
+    }
+
+    public void renameWholeOutputSlot(Component name) {
+        getOutputInventory().getStackInSlot(0).setHoverName(name);
+    }
+
+    public static class AddOneItemToSlotMethodOutput {
+        public boolean wasSuccessful;
+        public ItemStack outputStack;
+
+        public AddOneItemToSlotMethodOutput(ItemStack outputStack, boolean wasSuccessful) {
+            this.outputStack = outputStack;
+            this.wasSuccessful = wasSuccessful;
+        }
+    }
+
+    public AddOneItemToSlotMethodOutput addItemsToSlot(ItemStack itemStack, ItemStack add) {
+        ItemStack copy = itemStack.copy();
+
+        if(copy.isEmpty()) {
+            copy = add;
+            return new AddOneItemToSlotMethodOutput(copy, true);
+        }
+
+        if(!copy.isEmpty() && copy.is(add.getItem())) {
+            copy.grow(add.getCount());
+            return new AddOneItemToSlotMethodOutput(copy, true);
+        }
+
+        return new AddOneItemToSlotMethodOutput(itemStack, false);
     }
 
     public boolean canName() {
@@ -94,7 +139,7 @@ public class RenamerBlockEntity extends RootInputAndOutputSlotInventoryBlockEnti
     public void moveItems() {
         if(!level.isClientSide()) {
             BlockPos pos = worldPosition.relative(level.getBlockState(worldPosition).getValue(HorizontalDirectionalBlock.FACING).getOpposite());
-            spawnItemStack(pos.getX() + 0.5 , pos.getY() + 1.5, pos.getZ() + 0.5, level, getInputItem());
+            spawnItemStack(pos.getX() + 0.5 , pos.getY() + 1.5, pos.getZ() + 0.5, level, getOutputItem());
             setInputItem(ItemStack.EMPTY);
             setOutputItem(ItemStack.EMPTY);
         }
@@ -113,10 +158,12 @@ public class RenamerBlockEntity extends RootInputAndOutputSlotInventoryBlockEnti
             return;
         else {
             progress++;
-            if(progress >= 20) {
-                renameOneItem();
-                if(!getOutputItem().isEmpty())
-                    moveItems();
+            if(progress >= 10) {
+                if(level.getBlockState(worldPosition).getValue(BooleanProperty.create("powered"))) {
+                    renameOneItem();
+                    if (!getOutputItem().isEmpty())
+                        moveItems();
+                }
                 progress = 0;
             }
         }

@@ -120,10 +120,10 @@ public class Versions extends Screen {
         Handler.GuiVec2 scaledDims = Handler.getScaledDims(new SideBarButton.SideBarImg(sideBarBackgroundImg, 106, 240), width, height);
         pGuiGraphics.blit(sideBarBackgroundImg, 0, 0, 0, 0, scaledDims.getX(), scaledDims.getY(),106 ,240);
         pGuiGraphics.drawString(this.font, Component.literal("Redstone Utils"), 10, 10, 0X404040, false);
-        pGuiGraphics.drawCenteredString(this.font, Component.translatable("ui.redstoneutilz.homepage.versions.text_no_ver1"), width / 2 + 106, 10, 0xFFFFFF);
-        pGuiGraphics.drawCenteredString(this.font, Component.translatable("ui.redstoneutilz.homepage.versions.text_no_ver2"), width / 2 + 106, 25, 0xFFFFFF);
-        pGuiGraphics.drawCenteredString(this.font, Component.translatable("ui.redstoneutilz.homepage.versions.text_no_ver3"), width / 2 + 106, 50, 0xFFFFFF);
-        pGuiGraphics.drawCenteredString(this.font, Component.translatable("ui.redstoneutilz.homepage.versions.text_no_ver4"), width / 2 + 106, 75, 0xFFFFFF);
+        pGuiGraphics.drawString(this.font, Component.translatable("ui.redstoneutilz.homepage.versions.text_no_ver1"), 120, 10, 0xFFFFFF);
+        pGuiGraphics.drawString(this.font, Component.translatable("ui.redstoneutilz.homepage.versions.text_no_ver2"), 120, 25, 0xFFFFFF);
+        pGuiGraphics.drawString(this.font, Component.translatable("ui.redstoneutilz.homepage.versions.text_no_ver3"), 120, 50, 0xFFFFFF);
+        pGuiGraphics.drawString(this.font, Component.translatable("ui.redstoneutilz.homepage.versions.text_no_ver4"), 120, 75, 0xFFFFFF);
         // IMPORTANT: AT LAST
         super.render(pGuiGraphics, pMouseX, pMouseY, pPartialTick);
     }
